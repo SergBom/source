@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "fssptable",
+        "designer|userClassName": "fssp.table",
+        "model": "fssp.table",
+        "storeId": "fssp.table"
+    },
+    "name": "MyJsonStore",
+    "designerId": "2c56c5d0-cc2b-485f-a340-ec6cd9d9f98a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{dateBegin:'',dateEnd:'',Otdel:''}"
+                ],
+                "url": "data/fssp/table.php"
+            },
+            "name": "MyAjaxProxy3",
+            "designerId": "8a363260-516e-488b-890f-97a1dafdda7f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "record": null,
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader4",
+                    "designerId": "26ebab9d-c0f9-4cb9-be1f-beae612907c4"
+                }
+            ]
+        }
+    ]
+}

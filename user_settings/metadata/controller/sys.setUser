@@ -1,0 +1,17 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sys.setUser",
+        "views": [
+            "sys.setUser.main",
+            "sys.setUser.SetFoto"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "dcb06b4b-27d0-466c-b20e-60c62d3afc8f"
+}

@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "fsspfssp",
+        "designer|userClassName": "fssp.fsspViewController"
+    },
+    "designerId": "28e9c881-2904-4db7-b8c7-c38bceda1ab7"
+}

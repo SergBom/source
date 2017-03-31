@@ -1,0 +1,84 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivesparamsgroupedit",
+        "designer|userClassName": "EvalEffectives.ParamsGroupEditViewModel"
+    },
+    "designerId": "d113163a-0811-46ad-be25-7476ea9bd23b",
+    "cn": [
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storeParamsGroup"
+            },
+            "name": "MyJsonStore3",
+            "designerId": "de25349e-bef4-41b1-988b-7634ac0975a6",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "url": "data/EvalEffectives/ParamsGroup-list.php"
+                    },
+                    "name": "MyAjaxProxy7",
+                    "designerId": "d20c91f1-b0e2-4a8c-9190-9cf6d440a45d",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "name": "MyJsonReader7",
+                            "designerId": "583cf36e-3725-48ae-baee-8d883c1a7be1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "id"
+                    },
+                    "name": "MyField45",
+                    "designerId": "612c3ba4-c76c-48a1-b380-5ae8f2b446d6"
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "R"
+                    },
+                    "name": "MyField46",
+                    "designerId": "77cf59c9-b02b-470e-a000-88077dfc2bc7"
+                }
+            ]
+        }
+    ]
+}

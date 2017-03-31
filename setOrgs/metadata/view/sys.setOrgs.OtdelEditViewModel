@@ -1,0 +1,84 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "syssetorgsotdeledit",
+        "designer|userClassName": "sys.setOrgs.OtdelEditViewModel"
+    },
+    "designerId": "a609f773-5477-489a-8ef2-ee328d875632",
+    "cn": [
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "OtdelList"
+            },
+            "name": "MyJsonStore",
+            "designerId": "dae8b723-1a51-488f-870b-3c510e01e8be",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "url": "data/sys/setOrgs/otdels-list.php"
+                    },
+                    "name": "MyAjaxProxy3",
+                    "designerId": "baae0a68-428d-4a8d-94d2-80f205d35a64",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "name": "MyJsonReader3",
+                            "designerId": "72e784c9-ab05-4d3b-8af0-6ee5d57dc5cf"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "id"
+                    },
+                    "name": "MyField24",
+                    "designerId": "55c4c375-05fa-4e5e-970e-ecb218a659fd"
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "name"
+                    },
+                    "name": "MyField25",
+                    "designerId": "ffa753d7-a046-4aac-b644-b15ba5350b88"
+                }
+            ]
+        }
+    ]
+}

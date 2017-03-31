@@ -1,0 +1,72 @@
+{
+    "name": "DCV2",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "urlPrefix": "http://localhost:1841/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "exportPath": "E:/wamp/www/apps/DCV",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "installStatus": "Not Installed",
+        "urlPrefixTemplate": "http://localhost:{port}/{path}"
+    },
+    "xdsVersion": "4.1.1",
+    "xdsBuild": 123,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext62",
+    "viewOrderMap": {
+        "view": [
+            "f7383c49-dcbb-4672-ad47-090778e03c9f",
+            "3bc39b25-4e87-473d-98cd-42f073526e57",
+            "5ac90bf7-cbd0-40dd-b879-a487083342de",
+            "44fa10f0-9dd1-474c-8d50-f45555a263a3",
+            "449fcf8c-d7fc-4c10-a966-7f49f34c19e7",
+            "2d7b0d07-425c-4b26-9b80-e5774a34cd20",
+            "07b11b92-f36a-4761-8a29-d3d8c17669c7",
+            "c48e90f6-5dc6-487a-aa5c-a33647c35d73",
+            "5c518385-9527-41e8-85c0-897e7cbbb028",
+            "847ec0e8-c5b4-4033-bfd7-d957a3014d85",
+            "2ecf6329-cee2-4867-b7cb-670f301ff2b0",
+            "9356b3f1-85d8-4cea-bcc8-3b14f3da4ade",
+            "8a06fb52-2d47-4bcb-84ad-4487b917d3b8",
+            "3f3a79cf-fd8b-46a7-9c6d-fc36c7423016",
+            "a3324bcd-8fc1-4f36-8961-991b4db0b8d1",
+            "bcefe0b3-ae84-4224-a4eb-785970f02bef",
+            "e6b4e691-ea3c-41c8-a97d-a8c620668718",
+            "15fe5456-7e50-4982-9cff-34f5b7dd10a3",
+            "0b8b5fc9-4200-4996-b15e-c301cfd8fc00",
+            "7c01c344-58b7-4693-a08a-5f6d2ec19fe9",
+            "9f60f829-c1c6-4fe5-81f1-fc54411dbb7d"
+        ],
+        "store": [],
+        "controller": [
+            "c452ca41-5058-4ee8-bdc2-0fe5e94f49c6"
+        ],
+        "model": [],
+        "resource": [
+            "c5eb8746-0a11-40e2-89fd-f5179102dd80",
+            "f5fe7239-723a-469e-b067-c05661f87ce3",
+            "10b8f2e2-cef8-4b46-9538-39a31507805c"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

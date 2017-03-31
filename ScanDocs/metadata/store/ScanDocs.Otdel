@@ -1,0 +1,59 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "Otdel",
+        "designer|userClassName": "ScanDocs.Otdel",
+        "model": "ScanDocs.Otdel",
+        "storeId": "ScanDocs.Otdel"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "designerId": "a561050b-9ef0-4718-95be-bb5f2e1ea33c",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/ScanDocs/otdels.json.php"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy2",
+            "designerId": "c1676562-5951-486f-8daf-65fceb8b8dc3",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "05ccff16-825b-47ff-a254-2697044b7621"
+                }
+            ]
+        }
+    ]
+}

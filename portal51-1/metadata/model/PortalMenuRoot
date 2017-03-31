@@ -1,0 +1,89 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PortalMenuRoot"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "designerId": "37962c3b-b229-43e0-86e5-4db0acca463d",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField5",
+            "designerId": "97f77f90-f8a1-4698-8d7a-ff389475f2a8"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "iconCls"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField6",
+            "designerId": "b6399854-bb7c-4eee-b43f-bd57ceb0c87c"
+        },
+        {
+            "type": "Ext.data.legacy.HasManyAssociation",
+            "reference": {
+                "name": "hasMany",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associationKey": null,
+                "designer|displayName": "hasManyPortalMenuItem",
+                "foreignKey": "menu_id",
+                "model": "PortalMenuItem",
+                "name": "items"
+            },
+            "configAlternates": {
+                "associationKey": "string",
+                "designer|displayName": "string",
+                "foreignKey": "string",
+                "model": "model",
+                "name": "string"
+            },
+            "name": "MyHasManyAssociation",
+            "designerId": "99030f85-c0b9-4e79-b2de-8f14827a7fbb"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField7",
+            "designerId": "0793375e-bf37-4033-818f-c3fa30181b71"
+        }
+    ]
+}

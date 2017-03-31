@@ -1,0 +1,75 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "egrp.fns",
+        "designer|userClassName": "EGRP.fnsViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "cd42f8e0-af84-4039-bd2f-9a24957089ea",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "LoadData",
+                "implHandler": [
+                    "var r=this.getReferences(),",
+                    "    s=r.cbProtocol.getValue(),",
+                    "    o=r.cbOtdel.getValue();",
+                    "if(s&&o){",
+                    "this.getStore('Main').loadPage(1,{params:{session:s,otdel:o}});",
+                    "r.form.getForm().reset();}"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "LoadData",
+            "designerId": "85ea9eca-af64-4f0f-9739-157195d36798"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "v"
+                ],
+                "fn": "cE",
+                "implHandler": [
+                    "switch(v){",
+                    "case \"0\":return '<img src=\"/resources/images/diagona/02/10/21.png\" alt=\"Bad\">';",
+                    "case \"1\":return '<img src=\"/resources/images/diagona/02/10/22.png\" alt=\"Ok\">';",
+                    "case \"2\":return '<img src=\"/resources/images/diagona/02/10/24.png\" alt=\"Not\">';",
+                    "case \"3\":return '<img src=\"/resources/images/diagona/02/10/23.png\" alt=\"No Err\">';",
+                    "case \"4\":return '<img src=\"/resources/images/flag/png/ru.png\">';",
+                    "}",
+                    "return v;"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "cE",
+            "designerId": "5d58c25e-2ec0-4dbe-8a67-f3156b810375"
+        }
+    ]
+}

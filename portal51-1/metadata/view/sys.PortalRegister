@@ -1,0 +1,602 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoShow": true,
+        "closable": false,
+        "designer|userAlias": "sys.portalregister",
+        "designer|userClassName": "sys.PortalRegister",
+        "height": 305,
+        "layout": "fit",
+        "modal": true,
+        "resizable": false,
+        "title": "Регистрация",
+        "width": 460
+    },
+    "configAlternates": {
+        "resizable": "boolean",
+        "autoShow": "boolean",
+        "closable": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow1",
+    "designerId": "1c0345d7-f5e3-443d-b444-fd5ab41c6193",
+    "viewControllerInstanceId": "aa7b8ab8-24ff-4fdc-b623-b1dc1d3a3487",
+    "viewModelInstanceId": "f8007679-b529-4c78-8f17-4a7af3ac44ac",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": null,
+                "container|align": "stretch",
+                "header": false,
+                "itemId": "formRegister",
+                "layout": "vbox",
+                "reference": "formRegister",
+                "title": null
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "container|align": "string",
+                "header": "boolean",
+                "itemId": "string",
+                "layout": "string",
+                "reference": "string",
+                "title": "string"
+            },
+            "name": "MyForm2",
+            "designerId": "38b60bed-4b5f-4cfc-85a7-b6674bb161f1",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|padding": 5,
+                        "height": 114,
+                        "layout": "border"
+                    },
+                    "configAlternates": {
+                        "container|padding": "auto",
+                        "height": "auto",
+                        "layout": "string"
+                    },
+                    "name": "MyContainer",
+                    "designerId": "fa13769e-c428-4dbc-9e0e-c12aa04497fd",
+                    "cn": [
+                        {
+                            "type": "Ext.form.FieldContainer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": null,
+                                "layout": "fit",
+                                "layout|region": "west",
+                                "width": 125
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout": "string",
+                                "layout|region": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyFieldContainer4",
+                            "designerId": "42c7d620-f588-4e98-8cb9-4c6fd5b7f997",
+                            "cn": [
+                                {
+                                    "type": "Ext.Img",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "imgCls": "people-royal",
+                                        "reference": "ImageReg",
+                                        "width": null
+                                    },
+                                    "configAlternates": {
+                                        "imgCls": "string",
+                                        "reference": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyImg2",
+                                    "designerId": "3e2e23aa-be2f-4859-8f75-42ef0cb03228"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "form",
+                                "layout|region": "center",
+                                "padding": 5
+                            },
+                            "configAlternates": {
+                                "layout": "string",
+                                "layout|region": "string",
+                                "padding": "auto"
+                            },
+                            "name": "MyFieldSet1",
+                            "designerId": "4613d5a3-7d23-4990-b026-6e84af22dd4c",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "fieldLabel": "Фамилия",
+                                        "labelWidth": 80,
+                                        "maskRe": null,
+                                        "name": "userFm",
+                                        "regex": null,
+                                        "vtype": null,
+                                        "width": null
+                                    },
+                                    "configAlternates": {
+                                        "allowBlank": "boolean",
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "maskRe": "regex",
+                                        "name": "string",
+                                        "regex": "regex",
+                                        "vtype": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextField2",
+                                    "designerId": "eed34581-8a1a-4fd0-91fc-e4002b0def0a",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validator",
+                                                "implHandler": [
+                                                    "var tn = value.replace(/[А-Я]+/i,''),",
+                                                    "errMsg = \"Должны быть только Русские буквы\";",
+                                                    "//console.log(tn);",
+                                                    "return (tn.length === 0) ? true : errMsg;"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validator",
+                                            "designerId": "d38b32e2-f065-4719-8628-a2fedb5881e9"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "fieldLabel": "Имя",
+                                        "labelWidth": 80,
+                                        "name": "userIm",
+                                        "width": null
+                                    },
+                                    "configAlternates": {
+                                        "allowBlank": "boolean",
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextField3",
+                                    "designerId": "49d72ce8-0999-43c3-ba3a-bfc0a13f445d",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validator",
+                                                "implHandler": [
+                                                    "var tn = value.replace(/[А-Я]+/i,''),",
+                                                    "errMsg = \"Должны быть только Русские буквы\";",
+                                                    "//console.log(tn);",
+                                                    "return (tn.length === 0) ? true : errMsg;"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validator",
+                                            "designerId": "5d94e361-17ec-431a-a46e-cd865c8ef2e6"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "fieldLabel": "Отчество",
+                                        "labelWidth": 80,
+                                        "name": "userOt",
+                                        "width": null
+                                    },
+                                    "configAlternates": {
+                                        "allowBlank": "boolean",
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextField4",
+                                    "designerId": "e0151d68-3243-4ab4-97d9-f2f11e26d0d5",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validator",
+                                                "implHandler": [
+                                                    "var tn = value.replace(/[А-Я]+/i,''),",
+                                                    "errMsg = \"Должны быть только Русские буквы\";",
+                                                    "//console.log(tn);",
+                                                    "return (tn.length === 0) ? true : errMsg;"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validator",
+                                            "designerId": "8a506b60-a236-42ef-bc93-81ba27184e17"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onTextfieldKeydown",
+                                                "name": "keydown",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onTextfieldKeydown",
+                                            "designerId": "a937df9e-1963-4a17-9c56-a5d5954f7f4f"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Данные авторизации"
+                    },
+                    "configAlternates": {
+                        "title": "string"
+                    },
+                    "name": "MyFieldSet",
+                    "designerId": "ae9c4875-50b5-47cd-92f7-40ae940247e4",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "fieldLabel": "Логин",
+                                "layout|anchor": "100%",
+                                "name": "username",
+                                "regex": null
+                            },
+                            "configAlternates": {
+                                "allowBlank": "boolean",
+                                "fieldLabel": "string",
+                                "layout|anchor": "string",
+                                "name": "string",
+                                "regex": "regex"
+                            },
+                            "name": "MyTextField5",
+                            "designerId": "3e8fd6c1-c6a3-45a8-8700-e3a8f01ce61e"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "fieldLabel": "Пароль",
+                                "inputType": "password",
+                                "itemId": "NamePassword",
+                                "layout|anchor": "100%",
+                                "name": "password",
+                                "reference": "password"
+                            },
+                            "configAlternates": {
+                                "allowBlank": "boolean",
+                                "fieldLabel": "string",
+                                "inputType": "string",
+                                "itemId": "string",
+                                "layout|anchor": "string",
+                                "name": "string",
+                                "reference": "string"
+                            },
+                            "name": "MyTextField6",
+                            "designerId": "ca9e7cc8-0110-4bfb-9c07-8b776c5bb469"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "enableKeyEvents": true,
+                                "fieldLabel": "Пароль еще раз",
+                                "inputType": "password",
+                                "itemId": "passowrd2",
+                                "labelClsExtra": null,
+                                "labelStyle": "",
+                                "layout|anchor": "100%",
+                                "name": "password2",
+                                "reference": "password2"
+                            },
+                            "configAlternates": {
+                                "allowBlank": "boolean",
+                                "enableKeyEvents": "boolean",
+                                "fieldLabel": "string",
+                                "inputType": "string",
+                                "itemId": "string",
+                                "labelClsExtra": "string",
+                                "labelStyle": "string",
+                                "layout|anchor": "string",
+                                "name": "string",
+                                "reference": "string"
+                            },
+                            "name": "MyTextField7",
+                            "designerId": "b4408af5-108a-48a1-be0b-4d7be02e7292"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldContainer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|snapToGrid": 10,
+                        "fieldLabel": null,
+                        "height": 34,
+                        "layout": "absolute",
+                        "layout|flex": 1,
+                        "width": 440
+                    },
+                    "configAlternates": {
+                        "designer|snapToGrid": "number",
+                        "fieldLabel": "string",
+                        "height": "auto",
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "width": "auto"
+                    },
+                    "name": "MyFieldContainer3",
+                    "designerId": "f021af4e-fe05-424c-ac16-4acb511dedc4",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "formBind": false,
+                                "iconCls": "dialog-ok",
+                                "itemId": "btnRegister",
+                                "layout|x": 200,
+                                "layout|y": 10,
+                                "text": "Зарегистрироваться"
+                            },
+                            "configAlternates": {
+                                "formBind": "boolean",
+                                "iconCls": "string",
+                                "itemId": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton4",
+                            "designerId": "0ecbd877-57c4-4e26-87e7-a6155e38f64a",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnRegisterClick",
+                                        "implHandler": [
+                                            "var me = this,",
+                                            "       form = me.lookupReference('formRegister');",
+                                            "if (form.isValid()) {",
+                                            "",
+                                            "    me.getView().mask('Регистрация... Подождите...');",
+                                            "",
+                                            "        form.submit({",
+                                            "            clientValidation: true,",
+                                            "            url: 'data/PortalSecurity/register.php',",
+                                            "            scope: me,",
+                                            "            success: function(form, action) {",
+                                            "                this.getView().unmask();",
+                                            "                Portal.util.Util.handleFormSuccess(action);",
+                                            "                this.getView().close();",
+                                            "            },",
+                                            "            failure: function(form, action) {",
+                                            "                this.getView().unmask();",
+                                            "                Portal.util.Util.handleFormFailure(action);",
+                                            "            }",
+                                            "        });",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnRegisterClick",
+                                    "designerId": "b694e782-6860-4cc9-a102-ea3e2421cdbe"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "formBind": false,
+                                "glyph": null,
+                                "iconCls": "dialog-cancel",
+                                "itemId": "btnCancel",
+                                "layout|x": 350,
+                                "layout|y": 10,
+                                "text": "Отмена",
+                                "width": 90
+                            },
+                            "configAlternates": {
+                                "formBind": "boolean",
+                                "glyph": "auto",
+                                "iconCls": "string",
+                                "itemId": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton5",
+                            "designerId": "61a35eed-357c-4cd5-84e7-e745aa487a5d",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnCancelClick",
+                                        "implHandler": [
+                                            "    this.getView().close();",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnCancelClick",
+                                    "designerId": "d91d8328-6e7b-4b3f-8dd7-1f59257b6fff"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,205 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivesjobersgroupedit",
+        "designer|userClassName": "EvalEffectives.JobersGroupEdit",
+        "height": 155,
+        "layout": "fit",
+        "modal": true,
+        "title": "Группа доступа",
+        "width": 463
+    },
+    "name": "MyWindow",
+    "designerId": "3e556403-5f83-4b7a-bdfe-3096daaf4ef2",
+    "viewControllerInstanceId": "93692b04-caa9-49e6-ad55-a196469171f9",
+    "viewModelInstanceId": "9efb9824-cee1-40fd-8aa3-3f74f1a16cfd",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "bottom",
+                "height": null,
+                "padding": 5
+            },
+            "name": "MyToolbar3",
+            "designerId": "2d8d2d50-e515-4475-83cc-a8458c6cd326",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "padding": 5
+                    },
+                    "name": "MyContainer",
+                    "designerId": "35c7ce72-7047-4b02-ab08-f349b7fbfa58",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "dialog-save",
+                                "text": "Сохранить"
+                            },
+                            "name": "MyButton8",
+                            "designerId": "880611bf-46a4-4871-80ad-5b68be51b15c",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick1",
+                                        "implHandler": [
+                                            "var me = this,",
+                                            "    form = me.down('form'),",
+                                            "    values = form.getValues(),",
+                                            "    store = Ext.getStore('EvalEffectives.JobersGroup');",
+                                            "",
+                                            "if (form.isValid()) {",
+                                            "    me.mask('Подождите...');",
+                                            "",
+                                            "    Ext.Ajax.request({",
+                                            "        url: 'data/EvalEffectives/JobersGroup-edit.php',",
+                                            "        params: values,",
+                                            "        success: function(r) {",
+                                            "            store.load();",
+                                            "        }",
+                                            "    });",
+                                            "    me.unmask();",
+                                            "    me.close();",
+                                            "}",
+                                            "//this.close();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick1",
+                                    "designerId": "e5f3c17c-d473-469a-8e56-aa5ff610a7ad"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "dialog-cancel",
+                                "text": "Отмена"
+                            },
+                            "name": "MyButton9",
+                            "designerId": "6a92987f-0960-46bf-9bd5-54684aa4b9e2",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "this.close();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick",
+                                    "designerId": "a4b2237b-a548-433e-9c14-fd2ca864eebc"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "reference": "form",
+                "title": null
+            },
+            "name": "MyForm",
+            "designerId": "8f81fe0e-6014-4551-a801-093c3d90bacd",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Наименование",
+                        "layout|anchor": "100%",
+                        "name": "groupname"
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "25ad2ec3-331b-4997-a2bd-73051a87df53"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Описание",
+                        "layout|anchor": "100%",
+                        "name": "info"
+                    },
+                    "name": "MyTextField3",
+                    "designerId": "5530781e-f6ab-4aa4-9536-f2ac7b3b7bd9"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "id"
+                    },
+                    "name": "MyHiddenField",
+                    "designerId": "35eae308-e71b-4589-8eeb-1da349b2a9c5"
+                }
+            ]
+        }
+    ]
+}

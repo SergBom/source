@@ -1,0 +1,43 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "ScanDocs.ScanDocs"
+        ],
+        "name": "Portal"
+    },
+    "configAlternates": {
+        "controllers": "typedarray",
+        "name": "string",
+        "stores": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "Ext.direct.Manager.addProvider(Ext.REMOTING_API);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "launch",
+            "designerId": "92d5b6b0-768b-44f1-8ce4-3568056973bd"
+        }
+    ]
+}

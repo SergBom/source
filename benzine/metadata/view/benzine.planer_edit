@@ -1,0 +1,1034 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": false,
+        "designer|userAlias": "benzineplaner_edit",
+        "designer|userClassName": "benzine.planer_edit",
+        "height": 472,
+        "id": "benzineplaner_edit",
+        "layout": "fit",
+        "modal": true,
+        "title": "Редактирование поездки",
+        "width": 625
+    },
+    "configAlternates": {
+        "closable": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "id": "string",
+        "layout": "string",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "5e2199a5-fcde-4cb7-99aa-e7407326d610",
+    "viewControllerInstanceId": "8508cb49-5ab4-4ebd-b804-6e7d9de83a1b",
+    "viewModelInstanceId": "df0cf2e2-d591-4736-89c0-1ba2411f743a",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "container|align": "stretch",
+                "header": false,
+                "itemId": null,
+                "layout": "vbox",
+                "reference": "formPlaner",
+                "standardSubmit": null,
+                "title": null,
+                "url": "data/benzine/planer-edit.php"
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "container|align": "string",
+                "header": "boolean",
+                "itemId": "string",
+                "layout": "string",
+                "reference": "string",
+                "standardSubmit": "boolean",
+                "title": "string",
+                "url": "string"
+            },
+            "name": "MyForm1",
+            "designerId": "5a1132a6-44ea-4e55-9809-0a4d3d8dde24",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox",
+                        "layout|flex": null,
+                        "padding": "0 5 5 5",
+                        "title": "Временной интервал"
+                    },
+                    "configAlternates": {
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "padding": "auto",
+                        "title": "string"
+                    },
+                    "name": "MyFieldSet1",
+                    "designerId": "2b9a7926-5864-4648-8ef9-53ad88ae0a94",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "editable": false,
+                                "fieldLabel": "Дата",
+                                "format": "Y-m-d",
+                                "labelWidth": 35,
+                                "name": "begin_date",
+                                "padding": "0 5 0 5",
+                                "width": 150
+                            },
+                            "configAlternates": {
+                                "allowBlank": "boolean",
+                                "editable": "boolean",
+                                "fieldLabel": "string",
+                                "format": "string",
+                                "labelWidth": "number",
+                                "name": "string",
+                                "padding": "auto",
+                                "width": "auto"
+                            },
+                            "name": "MyDateField",
+                            "designerId": "446be780-460f-4bbc-aaf4-a768f20904c9",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onDatefieldChange",
+                                        "implHandler": [
+                                            "this.getReferences().btnBenzinePlanerSave.setDisabled(false);"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onDatefieldChange",
+                                    "designerId": "dd75703c-504e-4772-aee2-5c16911d77e1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Time",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "editable": false,
+                                "fieldLabel": "Время начала",
+                                "format": "H:i",
+                                "labelWidth": 90,
+                                "minValue": "6:00 AM",
+                                "name": "begin_time",
+                                "padding": "0 5 0 5",
+                                "width": 200
+                            },
+                            "configAlternates": {
+                                "allowBlank": "boolean",
+                                "editable": "boolean",
+                                "fieldLabel": "string",
+                                "format": "string",
+                                "labelWidth": "number",
+                                "minValue": "time",
+                                "name": "string",
+                                "padding": "auto",
+                                "width": "auto"
+                            },
+                            "name": "MyTimeField",
+                            "designerId": "46d0fb7b-b853-403e-b48d-74d687acb742"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "fieldLabel": "Продолжительность, ч",
+                                "labelPad": null,
+                                "labelWidth": 140,
+                                "name": "duration",
+                                "padding": "0 5 0 5",
+                                "width": 200
+                            },
+                            "configAlternates": {
+                                "allowBlank": "boolean",
+                                "fieldLabel": "string",
+                                "labelPad": "number",
+                                "labelWidth": "number",
+                                "name": "string",
+                                "padding": "auto",
+                                "width": "auto"
+                            },
+                            "name": "MyTextField1",
+                            "designerId": "99e75358-9885-481b-a5c8-aac7e3758ad6"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "container|padding": "5 0 5 0",
+                        "height": 139,
+                        "layout": "vbox",
+                        "layout|flex": 1,
+                        "title": ""
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|padding": "auto",
+                        "height": "auto",
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "title": "string"
+                    },
+                    "name": "MyFieldSet2",
+                    "designerId": "d43526a3-00ca-4111-965d-6672dd15e054",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "displayField": "name",
+                                "editable": false,
+                                "fieldLabel": "Отдел",
+                                "layout|flex": null,
+                                "name": "otdel",
+                                "store": "benzine.otdel",
+                                "valueField": "name"
+                            },
+                            "configAlternates": {
+                                "allowBlank": "boolean",
+                                "displayField": "datafield",
+                                "editable": "boolean",
+                                "fieldLabel": "string",
+                                "layout|flex": "number",
+                                "name": "string",
+                                "store": "store",
+                                "valueField": "datafield"
+                            },
+                            "name": "MyComboBox6",
+                            "designerId": "08034b3d-2554-445a-8aee-88a73d3098e4"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "displayField": "name",
+                                "fieldLabel": "Тип поездки",
+                                "name": "type_tour",
+                                "store": "benzine.type_tour",
+                                "valueField": "name"
+                            },
+                            "configAlternates": {
+                                "allowBlank": "boolean",
+                                "displayField": "datafield",
+                                "fieldLabel": "string",
+                                "name": "string",
+                                "store": "store",
+                                "valueField": "datafield"
+                            },
+                            "name": "MyComboBox",
+                            "designerId": "9db8db8b-ad76-4910-9215-4a1f57f678e4"
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "formBind": false,
+                                "layout|flex": 1,
+                                "reference": "gridTour",
+                                "store": "benzine.tour",
+                                "title": "Маршрут"
+                            },
+                            "configAlternates": {
+                                "formBind": "boolean",
+                                "layout|flex": "number",
+                                "reference": "string",
+                                "store": "store",
+                                "title": "string"
+                            },
+                            "name": "MyGridPanel2",
+                            "designerId": "7343f80b-ebb1-4d9e-8d1f-bb5722457a48",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.RowNumberer",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "number",
+                                        "text": "",
+                                        "width": 32
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "string",
+                                        "text": "string",
+                                        "width": "number"
+                                    },
+                                    "name": "MyRowNumberer5",
+                                    "designerId": "f0dcfc1c-b708-49d1-b537-12a8f6c1f9b2"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "tour_from",
+                                        "flex": 1,
+                                        "text": "Откуда"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyColumn2",
+                                    "designerId": "c2d7313f-d957-4e37-bfd8-5b486ee5a649"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "tour_to",
+                                        "flex": 1,
+                                        "text": "Куда"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyColumn3",
+                                    "designerId": "d3013203-285b-414f-8cde-529a6d56e3e1"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Number",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "distance",
+                                        "format": "0000",
+                                        "text": "Примерное расстояние, км",
+                                        "width": 90
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "format": "string",
+                                        "text": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyNumberColumn1",
+                                    "designerId": "9e19f740-6030-49c3-bfcb-2ba32a6e3390"
+                                },
+                                {
+                                    "type": "Ext.view.Table",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "tableBenzineTour"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string"
+                                    },
+                                    "name": "MyTable2",
+                                    "designerId": "d2c6c5bc-0b3b-4686-990a-3c9ac2dfef7d",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onTableBenzineTourSelectionChange",
+                                                "implHandler": [
+                                                    "this.getReferences().btnBenzineFormPlanerTourDelete.setDisabled(selected.length === 0);"
+                                                ],
+                                                "name": "selectionchange",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onTableBenzineTourSelectionChange",
+                                            "designerId": "eab2bfea-0115-4d97-b421-ecfcf3e4a131"
+                                        },
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onTableBenzineTourItemDblClick",
+                                                "implHandler": [
+                                                    "var edit=Ext.create('Portal.view.benzine.Tour_Edit').show();",
+                                                    "edit.getReferences().formTourEdit.getForm().loadRecord(record);"
+                                                ],
+                                                "name": "itemdblclick",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onTableBenzineTourItemDblClick",
+                                            "designerId": "1bbae6a1-c3ea-4629-b98d-6c32b7fe126a"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top"
+                                    },
+                                    "configAlternates": {
+                                        "dock": "string"
+                                    },
+                                    "name": "MyToolbar2",
+                                    "designerId": "6f65cc3b-8d81-48d7-b2fd-f4b204435fc0",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "icon-db-add",
+                                                "id": "btnBenzineFormPlanerTourAdd",
+                                                "layout|flex": null,
+                                                "text": "Добавить"
+                                            },
+                                            "configAlternates": {
+                                                "iconCls": "string",
+                                                "id": "string",
+                                                "layout|flex": "number",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton9",
+                                            "designerId": "ef9109fc-2b99-48ae-b0ce-ad07c9ae0286",
+                                            "cn": [
+                                                {
+                                                    "type": "viewcontrollereventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onBtnBenzineFormPlanerTourAddClick",
+                                                        "implHandler": [
+                                                            "var tour_id=this.getReferences().formPlaner.getValues().id,",
+                                                            "edit=Ext.create('Portal.view.benzine.Tour_Edit').show();",
+                                                            "edit.getReferences().formTourEdit.getForm().setValues({",
+                                                            "    id: 0,",
+                                                            "    tour_id:tour_id",
+                                                            "});"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "configAlternates": {
+                                                        "fn": "string",
+                                                        "implHandler": "code",
+                                                        "name": "string",
+                                                        "scope": "string"
+                                                    },
+                                                    "name": "onBtnBenzineFormPlanerTourAddClick",
+                                                    "designerId": "869161c8-c7f4-41ea-90bf-ccb8f212ddb6"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "iconCls": "icon-db-del",
+                                                "id": "btnBenzineFormPlanerTourDelete",
+                                                "layout|flex": null,
+                                                "reference": "btnBenzineFormPlanerTourDelete",
+                                                "text": "Удалить"
+                                            },
+                                            "configAlternates": {
+                                                "disabled": "boolean",
+                                                "iconCls": "string",
+                                                "id": "string",
+                                                "layout|flex": "number",
+                                                "reference": "string",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton10",
+                                            "designerId": "c1002ca1-ea27-4d35-91ba-2fefb8f5a178",
+                                            "cn": [
+                                                {
+                                                    "type": "viewcontrollereventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onBtnBenzineFormPlanerTourDeleteClick",
+                                                        "implHandler": [
+                                                            "var record = this.getReferences().gridTour.getSelectionModel().getSelection(),",
+                                                            "store = Ext.getStore('benzine.tour');",
+                                                            "Portal.util.Util.deleteRecord(record,store);"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "configAlternates": {
+                                                        "fn": "string",
+                                                        "implHandler": "code",
+                                                        "name": "string",
+                                                        "scope": "string"
+                                                    },
+                                                    "name": "onBtnBenzineFormPlanerTourDeleteClick",
+                                                    "designerId": "b6237843-85e9-4cb4-8791-0d1298a98df2"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "collapsed": true,
+                        "collapsible": true,
+                        "height": 138,
+                        "layout|flex": 1,
+                        "padding": 5,
+                        "title": "Пояснительная запись"
+                    },
+                    "configAlternates": {
+                        "collapsed": "boolean",
+                        "collapsible": "boolean",
+                        "height": "auto",
+                        "layout|flex": "number",
+                        "padding": "auto",
+                        "title": "string"
+                    },
+                    "name": "MyFieldSet",
+                    "designerId": "3bd34e07-07e4-417c-8263-5b42715e47c0",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.HtmlEditor",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": null,
+                                "height": 150,
+                                "layout|anchor": "100%",
+                                "name": "reference"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "height": "auto",
+                                "layout|anchor": "string",
+                                "name": "string"
+                            },
+                            "name": "MyHtmlEditor",
+                            "designerId": "08e42865-9100-43b2-87c8-f59e655e65e1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|flex": 1,
+                        "name": "id"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|flex": "number",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField8",
+                    "designerId": "80c237df-4496-4db6-8f11-d947a572579a"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|flex": 1,
+                        "name": "new"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|flex": "number",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField9",
+                    "designerId": "6c040a7f-82b9-4219-86f9-9731058acf2f"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|flex": 1,
+                        "name": "tour_success"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|flex": "number",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField12",
+                    "designerId": "dbe1613d-3505-43a8-bdfe-5152fc8b9143"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "end",
+                        "dock": "bottom",
+                        "formBind": false,
+                        "height": 53,
+                        "layout|flex": 1
+                    },
+                    "configAlternates": {
+                        "container|pack": "string",
+                        "dock": "string",
+                        "formBind": "boolean",
+                        "height": "auto",
+                        "layout|flex": "number"
+                    },
+                    "name": "MyToolbar5",
+                    "designerId": "2f7878b5-3c16-4380-9106-2fcfd325d8c2",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyContainer9",
+                            "designerId": "b18ca0b3-8097-4ecf-b0c4-119ff5442aa1",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Display",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": null,
+                                        "name": "user",
+                                        "value": null
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "value": "string"
+                                    },
+                                    "name": "MyDisplayField",
+                                    "designerId": "1a115712-7cd1-4b74-9a9f-b4b8ff2cc81c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Separator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MySeparator",
+                            "designerId": "8173854d-aa4e-48f5-9b98-54aded8861e3"
+                        },
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "padding": 5
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "padding": "auto"
+                            },
+                            "name": "MyContainer7",
+                            "designerId": "7dbd600c-98fe-4413-b044-28b6eb4c5102",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": true,
+                                        "hidden": true,
+                                        "iconCls": "dialog-ok",
+                                        "id": "btnBenzinePlanerTourSuccess",
+                                        "reference": "btnBenzinePlanerTourSuccess",
+                                        "text": "Поездка состоялась"
+                                    },
+                                    "configAlternates": {
+                                        "disabled": "boolean",
+                                        "hidden": "boolean",
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "reference": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton26",
+                                    "designerId": "2cc980b3-c521-4476-b9af-75c3512015ea",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnBenzinePlanerTourSuccessClick",
+                                                "implHandler": [
+                                                    "var me = this,",
+                                                    "id = me.getReferences().formPlaner.getValues().id;",
+                                                    "Ext.Msg.show({",
+                                                    "    title:'Внимание',",
+                                                    "    message: 'Данным действием Вы подтверждаете, что данная поездка состоялась в полном объеме!',",
+                                                    "    buttons: Ext.Msg.YESNO,",
+                                                    "    icon: Ext.Msg.QUESTION,",
+                                                    "    fn: function(btn) {",
+                                                    "        if (btn === 'yes') {",
+                                                    "            me.getView().mask('Подождите...');",
+                                                    "            Ext.Ajax.request({",
+                                                    "                url: 'data/benzine/planer-confirm.php',",
+                                                    "                params: {",
+                                                    "                    id: id,",
+                                                    "                    confirm: true",
+                                                    "                },",
+                                                    "                success: function(response){",
+                                                    "                    Ext.getStore('benzine.planer').reload();",
+                                                    "                }",
+                                                    "            });",
+                                                    "            me.getView().unmask();",
+                                                    "            me.getView().close();",
+                                                    "        }",
+                                                    "    }",
+                                                    "});"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnBenzinePlanerTourSuccessClick",
+                                            "designerId": "939bb4ca-b054-4a7b-a9b4-29b4991ae0f6"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "formBind": true,
+                                        "iconCls": "dialog-save",
+                                        "itemId": "btnBenzinePlanerSave",
+                                        "reference": "btnBenzinePlanerSave",
+                                        "text": "Сохранить"
+                                    },
+                                    "configAlternates": {
+                                        "formBind": "boolean",
+                                        "iconCls": "string",
+                                        "itemId": "string",
+                                        "reference": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton6",
+                                    "designerId": "944ceea5-02ed-49ab-8b37-de9954cffa47",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnBenzinePlanerSaveClick",
+                                                "implHandler": [
+                                                    "var me = this,",
+                                                    "    formPlaner = me.getReferences().formPlaner,",
+                                                    "    values = formPlaner.getValues();",
+                                                    "",
+                                                    "if(Ext.getStore('benzine.tour').getCount()===0){",
+                                                    "    Portal.util.Util.showErrorMsg('Вы не заполнили маршрут');",
+                                                    "}else{",
+                                                    "    if (formPlaner.isValid()) {",
+                                                    "        me.getView().mask('Подождите...');",
+                                                    "        values.new=0;",
+                                                    "        Ext.Ajax.request({",
+                                                    "            url: 'data/benzine/planer-edit1.php',",
+                                                    "            params: values,",
+                                                    "            success: function(response){",
+                                                    "                Ext.getStore('benzine.planer').reload();",
+                                                    "            }",
+                                                    "        });",
+                                                    "        me.getView().unmask();",
+                                                    "        me.getView().close();",
+                                                    "    }",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnBenzinePlanerSaveClick",
+                                            "designerId": "e9ca7f4a-9366-4d29-ad42-afe39aaddced"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "dialog-cancel",
+                                        "id": "btnBenzinePanerCancel",
+                                        "itemId": null,
+                                        "text": "Отмена"
+                                    },
+                                    "configAlternates": {
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "itemId": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton7",
+                                    "designerId": "0ab43bbb-1541-446c-a684-84ec7f81dbba",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnBenzinePanerCancelClick",
+                                                "implHandler": [
+                                                    "values = this.getReferences().formPlaner.getValues();",
+                                                    "if(values.new==1){",
+                                                    "    Ext.Ajax.request({",
+                                                    "        url: 'data/benzine/planer-delete.php',",
+                                                    "        params: values,",
+                                                    "        success: function(r){}",
+                                                    "    });",
+                                                    "}",
+                                                    "this.getView().close();"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnBenzinePanerCancelClick",
+                                            "designerId": "93b0e955-e7e4-41a9-9f7e-a4795a801340"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBenzineplaner_editShow",
+                "implHandler": [
+                    "Ext.getStore('benzine.tour').load({",
+                    "    params:{",
+                    "        tour_id:this.getReferences().formPlaner.getValues().id",
+                    "    }",
+                    "});"
+                ],
+                "name": "show",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onBenzineplaner_editShow",
+            "designerId": "09e09602-93d0-4df2-aca1-a9148423028a"
+        }
+    ]
+}

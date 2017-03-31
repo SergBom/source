@@ -1,0 +1,253 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "container|pack": "end",
+        "designer|userAlias": "benzinecity_edit",
+        "designer|userClassName": "benzine.City_Edit",
+        "height": 140,
+        "layout": "vbox",
+        "modal": true,
+        "title": "Введите наименование",
+        "width": 400
+    },
+    "configAlternates": {
+        "container|align": "string",
+        "container|pack": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "bb1deb41-c4bb-4ea9-9afc-c98e0e474449",
+    "viewControllerInstanceId": "7dccec80-0226-41fe-b927-8c91eb319519",
+    "viewModelInstanceId": "4067a1e6-8231-41d8-ac2b-49f030126d4c",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "layout|flex": 1,
+                "reference": "formCityEdit",
+                "title": null
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "layout|flex": "number",
+                "reference": "string",
+                "title": "string"
+            },
+            "name": "MyForm3",
+            "designerId": "84483d88-9792-4e12-869a-a8477eabff8d",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "id"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField2",
+                    "designerId": "1d25ee8e-e848-4381-8099-fa5e4ebd95d2"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "layout|anchor": "100%",
+                        "name": "name"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyTextField3",
+                    "designerId": "4e60e580-c485-40b4-b5ba-2e78fa484ca9"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "new"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField3",
+                    "designerId": "84a16da6-0c31-4137-9064-d40fe3d8b0bb"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "middle",
+                "container|pack": "end",
+                "container|padding": 10,
+                "layout": "hbox"
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "container|padding": "auto",
+                "layout": "string"
+            },
+            "name": "MyContainer4",
+            "designerId": "167a9297-bc0f-425a-81b8-355e8fb107a2",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "dialog-save",
+                        "id": "btnCityEditSave",
+                        "text": "Сохранить"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "id": "string",
+                        "text": "string"
+                    },
+                    "name": "MyButton17",
+                    "designerId": "55c17e8b-17dd-45be-a62e-45715fe00d0e",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnCityEditSaveClick",
+                                "implHandler": [
+                                    "var me = this,",
+                                    "    form = me.lookupReference('formCityEdit'),",
+                                    "    values = form.getValues(),",
+                                    "    store = Ext.getStore('benzine.city');",
+                                    "",
+                                    "if (form.isValid()) {",
+                                    "    me.getView().mask('Подождите...');",
+                                    "",
+                                    "    Ext.Ajax.request({",
+                                    "        url: 'data/benzine/city-edit.php',",
+                                    "        params: values,",
+                                    "        success: function(r) {",
+                                    "            store.load();",
+                                    "        }",
+                                    "    });",
+                                    "    me.getView().unmask();",
+                                    "    me.getView().close();",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBtnCityEditSaveClick",
+                            "designerId": "0a22ed4b-5ffd-4a92-a8fd-15a7f227b52f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "dialog-cancel",
+                        "id": "btnCityEditCancel",
+                        "text": "Отмена"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "id": "string",
+                        "text": "string"
+                    },
+                    "name": "MyButton18",
+                    "designerId": "b5e1246c-0fc8-41b7-81db-dbbd65419af6",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnCityEditCancelClick",
+                                "implHandler": [
+                                    "this.getView().close();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBtnCityEditCancelClick",
+                            "designerId": "ff76e231-a635-49b0-abce-a124b7786fca"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

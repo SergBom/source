@@ -1,0 +1,56 @@
+{
+    "name": "fssp",
+    "settings": {
+        "cmd": {},
+        "lockUrlPrefix": true,
+        "exportPath": "E:/wamp/www/apps/fssp",
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "urlPrefix": "http://localhost:1841/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        }
+    },
+    "xdsVersion": "3.5.1",
+    "xdsBuild": 348,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext51",
+    "viewOrderMap": {
+        "view": [
+            "d953c82c-1892-475f-92de-828958dc25e9",
+            "1e39c979-ebd2-4538-b19b-c5869caf6d73",
+            "28e9c881-2904-4db7-b8c7-c38bceda1ab7"
+        ],
+        "store": [
+            "980186cb-4f93-4f77-be28-4af6886a2ba6",
+            "338f3780-6917-464e-b17d-f0e72e075c4a",
+            "2c56c5d0-cc2b-485f-a340-ec6cd9d9f98a"
+        ],
+        "controller": [
+            "426173a0-9dab-4ade-9c36-5c2bb386bfd8"
+        ],
+        "model": [
+            "bc30bb9d-9259-4fab-96d0-60c3aad85f6e",
+            "e9c526eb-d50b-4d14-8a17-f3bad3876310"
+        ],
+        "resource": [
+            "e142a8bf-dea5-4773-b185-aab25ca4f057",
+            "6aa011b0-219f-4dbd-9196-897245329333",
+            "e2aafd43-0a51-4089-b1ca-d0e347ea3fa2"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

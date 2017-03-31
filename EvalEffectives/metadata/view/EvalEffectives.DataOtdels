@@ -1,0 +1,310 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivesdataotdels",
+        "designer|userClassName": "EvalEffectives.DataOtdels",
+        "height": 404,
+        "layout": "fit",
+        "maximizable": true,
+        "modal": true,
+        "title": "Данные по ",
+        "width": 579
+    },
+    "name": "MyWindow",
+    "designerId": "aaf051e7-a00f-402f-915c-2f1ce4c07364",
+    "viewControllerInstanceId": "7cf732e4-d7f5-4dce-a49f-62838270a1bf",
+    "viewModelInstanceId": "15cfbee9-ec63-40dd-919d-342e3ed92cae",
+    "cn": [
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowAfterRender",
+                "implHandler": [
+                    "var de=new Date(),",
+                    "db=new Date(de.getFullYear(),de.getMonth(),1),",
+                    "r=this.getReferences();",
+                    "r.dateB.setValue(db);",
+                    "r.dateE.setValue(de);"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onWindowAfterRender",
+            "designerId": "8fd3a038-01d7-41fe-a453-2c6aab7d305a"
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "store": [
+                    "{OnUsers}"
+                ],
+                "title": null
+            },
+            "name": "MyGridPanel11",
+            "configAlternates": {
+                "store": "binding"
+            },
+            "designerId": "ae61ad98-66cc-482f-bb51-2ebd4714069f",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "R1",
+                        "text": "Параметр"
+                    },
+                    "name": "MyColumn9",
+                    "designerId": "ba495c02-2357-4d54-bddc-6e380fd56c6b",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.filters.filter.List",
+                            "reference": {
+                                "name": "filter",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "store": null
+                            },
+                            "name": "MyListFilter1",
+                            "designerId": "d0d6b24f-fb65-41c0-b42b-eb499099132a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "dataIndex": "value",
+                        "format": "0",
+                        "text": "Значение"
+                    },
+                    "name": "MyNumberColumn8",
+                    "designerId": "1faf9ab8-23fc-4461-b603-f83968e3605b"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "dateOtchet",
+                        "format": "Y-m-d",
+                        "text": "Дата",
+                        "width": 80
+                    },
+                    "name": "MyDateColumn3",
+                    "designerId": "910377b5-50e3-487e-9e7a-0d3f25c30b78"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "FIO",
+                        "text": "Кто внёс",
+                        "width": 153
+                    },
+                    "name": "MyColumn23",
+                    "designerId": "bfbe6a3c-2a0f-4d8b-a0f6-f831f4a9788f",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.filters.filter.List",
+                            "reference": {
+                                "name": "filter",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "loadingText": "Загружаю...",
+                                "value": null
+                            },
+                            "name": "MyListFilter2",
+                            "designerId": "e165b491-6214-4745-867b-3bb675af7cab"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "otdel",
+                        "flex": 1,
+                        "text": "Отдел"
+                    },
+                    "name": "MyColumn24",
+                    "designerId": "611ff7e7-5a61-416c-bde0-e8b64f4178c6",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.filters.filter.List",
+                            "reference": {
+                                "name": "filter",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyListFilter",
+                            "designerId": "60d3c179-0d75-4657-ba09-3e968797fcc8"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable11",
+                    "designerId": "d2277b64-fdc2-476f-9688-54e65c48863d"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "name": "MyToolbar16",
+                    "designerId": "3f99bb57-2336-46e9-82ff-37a4e9304dcb",
+                    "cn": [
+                        {
+                            "type": "Ext.container.ButtonGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "columns": 3,
+                                "layout|flex": null,
+                                "title": "Показать за период"
+                            },
+                            "name": "MyButtonGroup6",
+                            "designerId": "e8637f43-31a6-4f8d-aa9e-e7f23a1ce2be",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Date",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "С",
+                                        "format": "Y-m-d",
+                                        "labelWidth": 20,
+                                        "reference": "dateB",
+                                        "width": 135
+                                    },
+                                    "name": "MyDateField6",
+                                    "designerId": "1a294c79-6c37-4b11-9b31-4217e9c3114c"
+                                },
+                                {
+                                    "type": "Ext.form.field.Date",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "По",
+                                        "format": "Y-m-d",
+                                        "labelWidth": 20,
+                                        "reference": "dateE",
+                                        "width": 135
+                                    },
+                                    "name": "MyDateField7",
+                                    "designerId": "e8289e5c-5a4f-4a1f-9028-38d0b56b702e"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "icon-say",
+                                        "text": "Показать"
+                                    },
+                                    "name": "MyButton35",
+                                    "designerId": "ebd17af5-9dc7-438f-b937-42e8ceeca045",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onButtonClick",
+                                                "implHandler": [
+                                                    "var ref=this.getReferences();",
+                                                    "var db=ref.dateB.getValue(),de=ref.dateE.getValue();",
+                                                    "this.getViewModel().getStore('OnUsers').load({",
+                                                    "    params:{db:db,de:de}",
+                                                    "});"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onButtonClick",
+                                            "designerId": "89e183d1-4aec-4c79-9b2b-df667a05940f"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.filters.Filters",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridFiltersPlugin",
+                    "designerId": "41cb5217-4008-4372-a566-44d20dfd4e13"
+                }
+            ]
+        }
+    ]
+}

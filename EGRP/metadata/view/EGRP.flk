@@ -1,0 +1,1526 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "egrp.flk",
+        "designer|userClassName": "EGRP.flk",
+        "height": 541,
+        "layout": "border",
+        "reference": null,
+        "scrollable": false,
+        "title": "My Window",
+        "width": 977
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "reference": "string",
+        "scrollable": "auto"
+    },
+    "designerId": "e9799c30-db13-48c3-b923-3fc3db108f14",
+    "viewControllerInstanceId": "a9dd2d6a-bd43-4ea8-a64a-01a3cbe223f7",
+    "viewModelInstanceId": "87fd7cc2-e2cf-4f4f-a9a0-3dda812ef36a",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "configAlternates": {
+                "dock": "string"
+            },
+            "name": "MyToolbar",
+            "designerId": "3d497992-b82d-4b89-8555-6d52b92f4c84",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "period",
+                        "editable": false,
+                        "emptyText": "Период",
+                        "fieldLabel": null,
+                        "layout|flex": null,
+                        "reference": "cbProtocol",
+                        "store": [
+                            "{Protocol}"
+                        ],
+                        "valueField": "session",
+                        "width": 303
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|flex": "number",
+                        "store": "binding",
+                        "displayField": "datafield",
+                        "editable": "boolean",
+                        "emptyText": "string",
+                        "reference": "string",
+                        "valueField": "datafield",
+                        "width": "auto"
+                    },
+                    "name": "MyComboBox",
+                    "designerId": "43e326c5-0918-4549-b030-16c916389f0d",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onProtocolChange",
+                                "implHandler": [
+                                    "this.LoadData();"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onProtocolChange",
+                            "designerId": "6d2e1df3-c2e6-4b5e-b39e-af54e2657f20"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "NAME",
+                        "editable": false,
+                        "emptyText": "Отдел",
+                        "fieldLabel": null,
+                        "layout|flex": null,
+                        "reference": "cbOtdel",
+                        "store": [
+                            "{Otdel}"
+                        ],
+                        "valueField": "ID",
+                        "width": 202
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|flex": "number",
+                        "store": "binding",
+                        "displayField": "datafield",
+                        "editable": "boolean",
+                        "emptyText": "string",
+                        "reference": "string",
+                        "valueField": "datafield",
+                        "width": "auto"
+                    },
+                    "name": "MyComboBox1",
+                    "designerId": "aab04622-99d2-4eca-8e93-fbec0cfd8092",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onOtdelChange",
+                                "implHandler": [
+                                    "this.LoadData();"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onOtdelChange",
+                            "designerId": "e31202da-98c8-41dd-b0c1-62068104c23b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "name",
+                        "editable": false,
+                        "emptyText": "Тип системы",
+                        "fieldLabel": null,
+                        "layout|flex": null,
+                        "reference": "cbTypeSys",
+                        "store": [
+                            "{TypeSys}"
+                        ],
+                        "valueField": "stype"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|flex": "number",
+                        "store": "binding",
+                        "displayField": "datafield",
+                        "editable": "boolean",
+                        "emptyText": "string",
+                        "reference": "string",
+                        "valueField": "datafield"
+                    },
+                    "name": "MyComboBox2",
+                    "designerId": "adeed60a-b2b7-45c1-9159-39f9530fa386",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTypeSysChange",
+                                "implHandler": [
+                                    "this.LoadData();"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onTypeSysChange",
+                            "designerId": "4962ab00-b549-4a8a-8464-fbc3de42a3b4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "layout|split": true,
+                "reference": "grid",
+                "store": [
+                    "{Main}"
+                ],
+                "title": "Список ошибок"
+            },
+            "configAlternates": {
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "title": "string",
+                "store": "binding",
+                "reference": "string"
+            },
+            "name": "MyGridPanel1",
+            "designerId": "8e3c7b76-91ca-400d-bae0-3483ddf2767e",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "RW",
+                        "text": "№",
+                        "width": 36
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn7",
+                    "designerId": "2c53629b-3b9a-494f-8b9e-557df8264df3"
+                },
+                {
+                    "type": "Ext.grid.column.Template",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "STATUS_ERROR",
+                        "text": "Статус",
+                        "width": 30
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyTemplateColumn",
+                    "designerId": "75bbb3de-e19b-466f-8a96-9987b8ceb341",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "tpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "tpl",
+                                "implHandler": [
+                                    "{PICTURE}"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "tpl",
+                            "designerId": "df4d7a66-bde6-48b4-b948-b5855d7f44be"
+                        },
+                        {
+                            "type": "Ext.grid.filters.filter.List",
+                            "reference": {
+                                "name": "filter",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyListFilter2",
+                            "designerId": "143ad6d1-5338-45a2-a237-d3d42c121780"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "KLADR_NY",
+                        "text": "Кладр",
+                        "width": 33
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn4",
+                    "designerId": "ec051d42-4a2a-45f9-8604-39f586fc3244"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "RF",
+                        "text": "РФ",
+                        "width": 30
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn5",
+                    "designerId": "8d0f8897-b46e-4f04-bc71-8b77a6baa3fd"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ESSENCE_TYPE",
+                        "text": "Сущность",
+                        "width": 73
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn6",
+                    "designerId": "8bb55585-925c-4df7-8c10-f90d1a3df89a",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.filters.filter.List",
+                            "reference": {
+                                "name": "filter",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyListFilter",
+                            "designerId": "56307be9-ee9e-4b2a-b088-9c18267ed9a2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "CONCADNUM",
+                        "flex": 1,
+                        "text": "Кад/Усл номер"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyColumn2",
+                    "designerId": "0ab71fae-fefe-4dba-afb2-1b03abed481c",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.filters.filter.String",
+                            "reference": {
+                                "name": "filter",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyStringFilter",
+                            "designerId": "4990daec-6450-4b0a-9b02-bb8aaaa23520"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "DESCRIPTION",
+                        "flex": 2,
+                        "text": "Описание"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyColumn3",
+                    "designerId": "4d3e8402-5f9f-4465-8476-0d45f38616d5",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.filters.filter.List",
+                            "reference": {
+                                "name": "filter",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyListFilter1",
+                            "designerId": "2e5aa55d-8545-48ab-a080-f3846b2aaf3d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable1",
+                    "designerId": "bc700b42-cb47-4c09-abb3-b02e059202f1"
+                },
+                {
+                    "type": "Ext.toolbar.Paging",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayInfo": true,
+                        "dock": "bottom",
+                        "store": [
+                            "{Main}"
+                        ],
+                        "width": 360
+                    },
+                    "configAlternates": {
+                        "displayInfo": "boolean",
+                        "dock": "string",
+                        "width": "auto",
+                        "store": "binding"
+                    },
+                    "name": "MyPagingToolbar",
+                    "designerId": "b450aa1a-ebdd-44fc-8124-1dcf4abb2601",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onPtbarChange",
+                                "implHandler": [
+                                    "var r=this.getReferences(),s=r.cbProtocol.getValue(),",
+                                    "o=r.cbOtdel.getValue(),t=r.cbTypeSys.getValue();",
+                                    "this.getStore('Main').getProxy().setConfig({extraParams:{",
+                                    "session:s,otdel:o,stype:t",
+                                    "}});",
+                                    "r.btSave.setDisabled(true);",
+                                    "r.btRefError.setDisabled(true);",
+                                    "r.btDetail.setDisabled(true);",
+                                    "r.btDiagram.setDisabled(true);"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onPtbarChange",
+                            "designerId": "4c0fbd37-b9d9-47b9-8d22-f587aa74d57b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar1",
+                    "designerId": "1a232d9d-d39f-4c0a-8603-4dabbfebc4b4"
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onMSelectionChange",
+                        "implHandler": [
+                            "var r=this.getReferences();",
+                            "r.form.getForm().loadRecord(selected[0]);",
+                            "r.btSave.setDisabled(false);",
+                            "r.btRefError.setDisabled(false);",
+                            "r.btDetail.setDisabled(false);",
+                            "r.btDiagram.setDisabled(false);"
+                        ],
+                        "name": "selectionchange",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onMSelectionChange",
+                    "designerId": "8c69b951-699e-497c-96c7-8fe2b4a09c2b"
+                },
+                {
+                    "type": "Ext.grid.filters.Filters",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridFiltersPlugin",
+                    "designerId": "05872ce4-2df7-48b6-9244-92f70d16da48"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "layout|region": "east",
+                "layout|split": true,
+                "reference": "form",
+                "scrollable": "both",
+                "title": "Сведения об исправлении ошибки",
+                "url": "data/EGRP/tir/tir-error.SAVE-flk2.php",
+                "width": 546
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "title": "string",
+                "width": "auto",
+                "reference": "string",
+                "scrollable": "auto",
+                "url": "string"
+            },
+            "name": "MyForm",
+            "designerId": "b5af0b56-3598-4088-965c-d45da0465bd2",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar2",
+                    "designerId": "39e0cd6f-16b8-4f94-9eaf-fef7d69218b5",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "dialog-save",
+                                "layout|flex": null,
+                                "reference": "btSave",
+                                "text": "Сохранить"
+                            },
+                            "configAlternates": {
+                                "disabled": "boolean",
+                                "iconCls": "string",
+                                "layout|flex": "number",
+                                "reference": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton",
+                            "designerId": "fd44722e-3de9-4a38-a51d-bbd6c31ea787",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSaveClick",
+                                        "implHandler": [
+                                            "var m=this,r=m.getReferences(),",
+                                            "    f=r.form.getForm(),s=m.getStore('Main'),",
+                                            "    gR=r.grid.getSelectionModel().getSelection(),",
+                                            "    rguid=r.REC_GUID.getValue();",
+                                            "if (rguid) {",
+                                            "    f.submit({",
+                                            "        success:function(fr,a){",
+                                            "            var fv=fr.getFieldValues();",
+                                            "            gR[0].set('KLADR_NY',m.b2v(fv.KLADR_NEED)+'/'+m.b2v(fv.KLADR_YES));",
+                                            "            gR[0].set('PICTURE',m.cE(fv.STATUS_ERROR));",
+                                            "            gR[0].set('STATUS_ERROR',fv.STATUS_ERROR);",
+                                            "            s.sync();",
+                                            "            r.grid.getView().refresh();",
+                                            "        },",
+                                            "        failure:function(f,a){",
+                                            "            Ext.Msg.alert('Failed',a.result?a.result.message:'No response');",
+                                            "        }",
+                                            "    });",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onSaveClick",
+                                    "designerId": "a93e37b0-808a-49c1-87cd-7c6e7cbdae64"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "icon-ahtung",
+                                "layout|flex": null,
+                                "reference": "btRefError",
+                                "text": "Детали ошибки"
+                            },
+                            "configAlternates": {
+                                "disabled": "boolean",
+                                "iconCls": "string",
+                                "layout|flex": "number",
+                                "reference": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "69126fdd-f5ce-48ee-930a-4f23e886612c",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onRefErrorClick",
+                                        "implHandler": [
+                                            "var me=this, r=this.getReferences().form.getForm().getFieldValues(),",
+                                            "w=Ext.create('Portal.view.EGRP.detail',{",
+                                            "   title:'Детали ошибки из ТИРа',",
+                                            "   modal:true",
+                                            "}).show(),g=w.down();",
+                                            "w.getViewModel().getStore('detail').loadPage(1,{",
+                                            "   params:{",
+                                            "      t:1,",
+                                            "      external_id:r.EXTERNAL_ID,",
+                                            "      doc_guid:r.DOC_GUID,",
+                                            "      path:r.PATH",
+                                            "   }",
+                                            "});"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onRefErrorClick",
+                                    "designerId": "15673c75-f1cd-4f6d-a286-0e345f46bb0a"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "icon-flag-ru",
+                                "layout|flex": null,
+                                "reference": "btDetail",
+                                "text": "Подробности"
+                            },
+                            "configAlternates": {
+                                "disabled": "boolean",
+                                "iconCls": "string",
+                                "layout|flex": "number",
+                                "reference": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton2",
+                            "designerId": "ced8390c-c541-48df-b23e-1c31100402d7",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onDetailClick",
+                                        "implHandler": [
+                                            "var me=this, r=this.getReferences().form.getForm().getFieldValues(),",
+                                            "w=Ext.create('Portal.view.EGRP.detail',{",
+                                            "   title:'Информация по \"Российской Федерации\" из ЕГРП',",
+                                            "   modal:true",
+                                            "}).show(),g=w.down();",
+                                            "w.getViewModel().getStore('detail').loadPage(1,{",
+                                            "   params:{",
+                                            "      t:2,",
+                                            "      essence_type:r.ESSENCE_TYPE,",
+                                            "      external_id:r.EXTERNAL_ID,",
+                                            "   }",
+                                            "});",
+                                            "",
+                                            "",
+                                            "/*",
+                                            "",
+                                            "var me=this,r=me.getReferences(),",
+                                            "   f=r.form.getForm().getFieldValues();",
+                                            "me.getView().mask('Загружаю данные. Подождите...');",
+                                            "Ext.Ajax.request({",
+                                            "    url:'data/EGRP/tir/tir-RF-detail.php',",
+                                            "    params:{essence_type:f.ESSENCE_TYPE,ext_id:f.EXTERNAL_ID},",
+                                            "    success:function(rp){",
+                                            "        me.getView().unmask();",
+                                            "        Ext.create('Ext.window.Window',{",
+                                            "            title:'Информация по \"Российской Федерации\" из ЕГРП',",
+                                            "            layout:'fit',height:300,width:450,modal:true,",
+                                            "            autoScroll:true,",
+                                            "            items:{html:rp.responseText,scrollable:true}",
+                                            "        }).show();",
+                                            "    },",
+                                            "    failure:function(rp){",
+                                            "        me.getView().unmask();",
+                                            "        console.log(rp);",
+                                            "    }",
+                                            "});*/"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onDetailClick",
+                                    "designerId": "388f3767-ec01-435d-adeb-1e7f82bca937"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "hidden": true,
+                                "iconCls": "icon-chart-01",
+                                "layout|flex": null,
+                                "reference": "btDiagram",
+                                "text": "КЛАДР"
+                            },
+                            "configAlternates": {
+                                "disabled": "boolean",
+                                "hidden": "boolean",
+                                "iconCls": "string",
+                                "layout|flex": "number",
+                                "reference": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton3",
+                            "designerId": "821ca080-cc0c-489c-88eb-c7588b5836d6",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onDiagramClick",
+                                        "implHandler": [
+                                            "var me=this,r=me.getReferences(),",
+                                            "    f=r.form.getForm().getFieldValues();",
+                                            "me.getView().mask('Загружаю данные. Подождите...');",
+                                            "Ext.Ajax.request({",
+                                            "   url:'data/EGRP/tir/tir-treeSubjIdNoAddr.php',",
+                                            "   params:{ext_id:f.EXTERNAL_ID},",
+                                            "   success:function(rp){",
+                                            "      me.getView().unmask();",
+                                            "      Ext.create('Ext.window.Window',{",
+                                            "         title:'Цепочка проблемных адресов КЛАДРа',",
+                                            "         layout:'fit',height:300,width:450,modal:true,",
+                                            "         autoScroll:true,",
+                                            "         items:{html:rp.responseText,scrollable:true}",
+                                            "      }).show();",
+                                            "   },",
+                                            "   failure:function(rp){",
+                                            "      me.getView().unmask();",
+                                            "      console.log(rp);",
+                                            "   }",
+                                            "});"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onDiagramClick",
+                                    "designerId": "a7a85837-88bc-4418-9406-1104af1acdad"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldContainer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "height": 30,
+                        "layout": "hbox"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "height": "auto",
+                        "layout": "string"
+                    },
+                    "name": "MyFieldContainer",
+                    "designerId": "d3c90960-d05a-403c-8dea-d9ab05dc9973",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Сущность",
+                                "labelAlign": "right",
+                                "labelWidth": 60,
+                                "name": "ESSENCE_TYPE"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "labelWidth": "number",
+                                "name": "string"
+                            },
+                            "name": "MyTextField",
+                            "designerId": "09f0a5d6-4e81-410b-9756-6e335c14e921"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "External ID*",
+                                "labelAlign": "right",
+                                "name": "EXTERNAL_ID"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "name": "string"
+                            },
+                            "name": "MyTextField1",
+                            "designerId": "82d3fe5d-c28f-4fcd-9cd2-20ea1672a50a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Терр.отдел",
+                        "layout|anchor": "100%",
+                        "name": "NAME"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "0583354e-401b-463c-adda-a8b0dd0d040e"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Кад/Усл. номер",
+                        "layout|anchor": "100%",
+                        "name": "CONCADNUM"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyTextField3",
+                    "designerId": "9809877c-d44c-4413-9d3f-33397aec604a"
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Описание",
+                        "layout|anchor": "100%",
+                        "name": "DESCRIPTION"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "beffbf64-a99e-4531-aecf-90ba1bb0b2d2"
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Путь",
+                        "layout|anchor": "100%",
+                        "name": "PATH"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyTextArea1",
+                    "designerId": "c9c020d8-e6eb-449f-b7a7-a392952fabd5"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Аттрибут",
+                        "layout|anchor": "100%",
+                        "name": "ATTRIBUTE_NAME"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "22920be0-832e-446d-ba6e-763397d7cd91"
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Значение аттрибута",
+                        "layout|anchor": "100%",
+                        "name": "ATTRIBUTE_VALUE"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyTextArea2",
+                    "designerId": "60912840-523f-4f83-9823-6194c3504e36"
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Пользователь"
+                    },
+                    "configAlternates": {
+                        "title": "string"
+                    },
+                    "name": "MyFieldSet",
+                    "designerId": "0a3f4f02-dbc3-40a8-8744-eb0d2fc0b931",
+                    "cn": [
+                        {
+                            "type": "Ext.form.FieldContainer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": null,
+                                "height": 27,
+                                "layout": "hbox"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "height": "auto",
+                                "layout": "string"
+                            },
+                            "name": "MyFieldContainer1",
+                            "designerId": "3d64c1c4-4826-45e0-81d2-ab9429e8d45d",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Имя",
+                                        "labelAlign": "right",
+                                        "labelWidth": 40,
+                                        "name": "USER_NAME"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelAlign": "string",
+                                        "labelWidth": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyTextField5",
+                                    "designerId": "11d41478-742d-4f5f-8359-434423825cf3"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Дата изменения",
+                                        "name": "USER_DATE"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "name": "string"
+                                    },
+                                    "name": "MyTextField6",
+                                    "designerId": "daf9b97d-3c9a-4f1d-91e6-f60387b04509"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "height": 77,
+                        "layout": "hbox",
+                        "title": "Ошибка"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "height": "auto",
+                        "layout": "string",
+                        "title": "string"
+                    },
+                    "name": "MyFieldSet1",
+                    "designerId": "d0393267-41e6-47f6-b564-e62afd3c684b",
+                    "cn": [
+                        {
+                            "type": "Ext.form.FieldContainer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": null,
+                                "height": 52,
+                                "layout": "vbox"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "height": "auto",
+                                "layout": "string"
+                            },
+                            "name": "MyFieldContainer2",
+                            "designerId": "68c17be9-c3a2-463c-9682-9496d5cb87b2",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Ошибка",
+                                        "fieldLabel": null,
+                                        "inputValue": "0",
+                                        "labelCls": "icon-flag-red",
+                                        "labelClsExtra": null,
+                                        "labelWidth": 20,
+                                        "name": "STATUS_ERROR"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "labelCls": "string",
+                                        "labelClsExtra": "string",
+                                        "labelWidth": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyRadio",
+                                    "designerId": "33b9ac23-30aa-42a0-abf6-e12c40eb1370"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Исправлена",
+                                        "fieldLabel": null,
+                                        "inputValue": "1",
+                                        "labelCls": "icon-flag-green",
+                                        "labelWidth": 20,
+                                        "name": "STATUS_ERROR"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "labelCls": "string",
+                                        "labelWidth": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyRadio1",
+                                    "designerId": "ebe47355-a2da-4b34-8831-aea397b018ef"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.FieldContainer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": null,
+                                "height": 26,
+                                "layout": "vbox",
+                                "padding": "0 15 0 15"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "height": "auto",
+                                "layout": "string",
+                                "padding": "auto"
+                            },
+                            "name": "MyFieldContainer3",
+                            "designerId": "8d0fec7b-14dd-4b51-9ffd-4a9cd9b552bc",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Не обнаружена",
+                                        "fieldLabel": null,
+                                        "inputValue": "3",
+                                        "labelCls": "icon-flag-yellow",
+                                        "labelWidth": 20,
+                                        "name": "STATUS_ERROR"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "labelCls": "string",
+                                        "labelWidth": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyRadio",
+                                    "designerId": "6ac0420f-d9b2-4556-8a28-4a847f43f443"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Не возможно исправить",
+                                        "fieldLabel": null,
+                                        "inputValue": "2",
+                                        "labelCls": "icon-flag-blue",
+                                        "labelWidth": 20,
+                                        "name": "STATUS_ERROR"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "labelCls": "string",
+                                        "labelWidth": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyRadio1",
+                                    "designerId": "3f838951-cf9f-428c-9994-03a3211db089"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.FieldContainer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": null,
+                                "height": 120,
+                                "layout": "vbox",
+                                "layout|flex": 1,
+                                "width": 400
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "height": "auto",
+                                "layout": "string",
+                                "layout|flex": "number",
+                                "width": "auto"
+                            },
+                            "name": "MyFieldContainer4",
+                            "designerId": "e65a5958-e468-498a-aa09-f8a316b38688",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Нужно исправить",
+                                        "fieldLabel": "КЛАДР",
+                                        "labelAlign": "right",
+                                        "labelWidth": 50,
+                                        "layout|flex": null,
+                                        "name": "KLADR_NEED"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "labelAlign": "string",
+                                        "labelWidth": "number",
+                                        "layout|flex": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyCheckbox",
+                                    "designerId": "6e50c285-efb9-44bc-bcca-6fa5d772b20d"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Исправлен",
+                                        "fieldLabel": "КЛАДР",
+                                        "labelAlign": "right",
+                                        "labelWidth": 50,
+                                        "layout|flex": null,
+                                        "name": "KLADR_YES"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "labelAlign": "string",
+                                        "labelWidth": "number",
+                                        "layout|flex": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyCheckbox",
+                                    "designerId": "2c20e2aa-ec17-4c77-bffe-c86e350b4d0a"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.HtmlEditor",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Комментарий",
+                        "height": 150,
+                        "layout|anchor": "100%",
+                        "name": "USER_COMMENT"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "height": "auto",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyHtmlEditor",
+                    "designerId": "60c8a1da-853d-435d-9030-5e784356a502"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "USERGID"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField",
+                    "designerId": "e2753dab-d0fd-4e14-b6d4-acc9b43bd57e"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "REC_GUID",
+                        "reference": "REC_GUID"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "reference": "string"
+                    },
+                    "name": "MyHiddenField1",
+                    "designerId": "c8481f9e-394c-4b9e-83d3-7be2f66041ac"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "DOC_GUID"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField2",
+                    "designerId": "55271696-1295-46b8-b1d2-8e649026e911"
+                }
+            ]
+        }
+    ]
+}

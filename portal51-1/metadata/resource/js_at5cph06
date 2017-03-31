@@ -1,0 +1,22 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_at5cph06",
+        "url": "util/SessionMonitor.js",
+        "x-compile": true
+    },
+    "configAlternates": {
+        "defer": "boolean",
+        "designer|userClassName": "string",
+        "url": "uri",
+        "x-compile": "boolean"
+    },
+    "name": "js",
+    "designerId": "f9e2eb92-fcd8-433d-be51-ba13ca029d7d"
+}

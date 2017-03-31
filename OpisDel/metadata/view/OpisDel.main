@@ -1,0 +1,551 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoShow": true,
+        "designer|initialView": true,
+        "designer|userAlias": "opisdel",
+        "designer|userClassName": "OpisDel.main",
+        "height": 464,
+        "layout": "fit",
+        "title": "My Window",
+        "width": 560
+    },
+    "designerId": "08313fbe-b3ac-46dc-88cd-e9c2ee0441f0",
+    "viewControllerInstanceId": "b2e0dfb4-61f1-4bb0-80f5-ac6927bf2095",
+    "viewModelInstanceId": "e31372aa-49f6-487c-9872-325c5e10a322",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "reference": "grid",
+                "store": "OpisDel.main",
+                "title": null
+            },
+            "name": "MyGridPanel",
+            "designerId": "81968255-60e5-4ed6-939b-13e50f7b9bb4",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Index",
+                        "text": "Индекс<br>дела",
+                        "width": 71
+                    },
+                    "name": "MyColumn4",
+                    "designerId": "7965eb23-457e-466e-8544-ce963f992b38",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.filters.filter.String",
+                            "reference": {
+                                "name": "filter",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyStringFilter",
+                            "designerId": "00a697eb-adb3-47ad-b315-9fbbc18a5289"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "TitleBook",
+                        "flex": 1,
+                        "text": "Книга учета"
+                    },
+                    "name": "MyColumn1",
+                    "designerId": "8404b529-f853-4b7a-83c0-052987763303"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "end",
+                        "dataIndex": "TitleNumber",
+                        "text": "Номер книги",
+                        "width": 74
+                    },
+                    "name": "MyColumn6",
+                    "designerId": "5f5e85c6-9082-4eac-a7fc-af01a788245b",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.filters.filter.String",
+                            "reference": {
+                                "name": "filter",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyStringFilter1",
+                            "designerId": "6dcdbd17-ba0f-4dbd-a33e-cde1db082d6d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Крайние даты"
+                    },
+                    "name": "MyColumn2",
+                    "designerId": "799300b1-3518-4eb2-b3b3-c2c741468464",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.column.Date",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "DateBegin",
+                                "format": "d-m-Y",
+                                "text": "Начало",
+                                "width": 75
+                            },
+                            "name": "MyDateColumn1",
+                            "designerId": "a8fb87c1-d6c9-4c66-9a9d-71f644860ea8",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.filters.filter.Date",
+                                    "reference": {
+                                        "name": "filter",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyDateFilter",
+                                    "designerId": "a2b8925c-ab2d-43d7-a78b-483620282bb3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Date",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "DateEnd",
+                                "format": "d-m-Y",
+                                "text": "Конец",
+                                "width": 75
+                            },
+                            "name": "MyDateColumn2",
+                            "designerId": "b0bdceda-f5a4-4818-a394-afefc50f57ca",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.filters.filter.Date",
+                                    "reference": {
+                                        "name": "filter",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyDateFilter1",
+                                    "designerId": "9689aeb4-6bf8-4d10-87e9-8b5285f02a86"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "center",
+                        "dataIndex": "Listov",
+                        "format": "0",
+                        "text": "Кол-во<br>листов",
+                        "width": 75
+                    },
+                    "name": "MyNumberColumn1",
+                    "designerId": "d1a5fdeb-df92-4f8a-8650-f2d1a14fc5c5"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Refer",
+                        "text": "Примечание"
+                    },
+                    "name": "MyColumn3",
+                    "designerId": "285bf2f1-55ee-4e09-817e-9c8be9764ca6"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "InsertOtdel",
+                        "hidden": true,
+                        "text": "Отдел"
+                    },
+                    "name": "MyColumn5",
+                    "designerId": "4a60b381-7eb3-43be-a340-d3d458f6aa38"
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable",
+                    "designerId": "d7e6071a-992d-4a34-a16c-831c97948f86",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTableItemDblClick",
+                                "implHandler": [
+                                    "var edit=Ext.create('Portal.view.OpisDel.Edit'),dd=new Date();",
+                                    "edit.getReferences().form.getForm().loadRecord(record);",
+                                    "edit.show();"
+                                ],
+                                "name": "itemdblclick",
+                                "scope": "me"
+                            },
+                            "name": "onTableItemDblClick",
+                            "designerId": "a402d28f-0c01-47ff-a946-a040834e88f0"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTableSelectionChange",
+                                "implHandler": [
+                                    "this.getReferences().btnDelete.setDisabled(selected.length === 0);"
+                                ],
+                                "name": "selectionchange",
+                                "scope": "me"
+                            },
+                            "name": "onTableSelectionChange",
+                            "designerId": "3b7a7d38-3a43-43d4-8624-1e0414aafea0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.toolbar.Paging",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayInfo": true,
+                        "dock": "bottom",
+                        "width": 360
+                    },
+                    "name": "MyPagingToolbar",
+                    "designerId": "9986767c-103a-4fd5-8650-d8cf60954fd6"
+                },
+                {
+                    "type": "Ext.grid.feature.Grouping",
+                    "reference": {
+                        "name": "features",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyGroupingFeature",
+                    "designerId": "bac20756-e518-43f8-92d9-7346e062c5cd"
+                },
+                {
+                    "type": "Ext.grid.filters.Filters",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridFiltersPlugin",
+                    "designerId": "307763d7-9963-48ed-8733-1ff882441f4c"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "name": "MyToolbar",
+            "designerId": "601e3611-c8ed-4288-9319-ad47cc8d7bed",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "iconCls": "icon-add",
+                        "layout|flex": null,
+                        "reference": "btnAdd",
+                        "text": "Добавить"
+                    },
+                    "name": "MyButton",
+                    "designerId": "5cdf5c7b-9163-4a19-900c-fe379a20d00a",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onAddClick",
+                                "implHandler": [
+                                    "var edit=Ext.create('Portal.view.OpisDel.Edit'),",
+                                    "    dd=this.getReferences().Year.getValue();",
+                                    "//,dd=new Date();",
+                                    "edit.getReferences().form.getForm().setValues({id:0,",
+                                    "                                               Year:dd});",
+                                    "edit.show();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onAddClick",
+                            "designerId": "0e4ff0b2-739b-4852-a853-c066353b3ab3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "iconCls": "icon-delete",
+                        "layout|flex": null,
+                        "reference": "btnDelete",
+                        "text": "Удалить"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "0b6b80d1-9fcb-4ca2-bdea-d02abb2992ec",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onDelClick",
+                                "implHandler": [
+                                    "Portal.util.Util.deleteRecord2(",
+                                    "    this.getReferences().grid.getSelection()[0],",
+                                    "    Ext.getStore('OpisDel.main'),",
+                                    "    'data/OpisDel/Opis-delete.php');"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onDelClick",
+                            "designerId": "2a7b1df0-0f85-4916-be42-4261fb57e0f2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "iconCls": "icon-mime-excel",
+                        "layout|flex": null,
+                        "reference": "btnExport",
+                        "text": "Экспорт"
+                    },
+                    "name": "MyButton2",
+                    "designerId": "75b3a092-ebdd-4c07-8f98-4136f8072082",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onExportClick",
+                                "implHandler": [
+                                    "var ed=Ext.create('Portal.view.OpisDel.Export'),",
+                                    "    dd=this.getReferences().Year.getValue();",
+                                    "ed.getReferences().form.getForm().setValues({Year:dd});",
+                                    "ed.show();",
+                                    "",
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onExportClick",
+                            "designerId": "111b16cf-dc81-450f-a88a-5be80677969f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "Year",
+                        "editable": false,
+                        "fieldLabel": "За год",
+                        "labelWidth": 50,
+                        "layout|flex": null,
+                        "reference": "Year",
+                        "store": "OpisDel.getYear",
+                        "valueField": "Year"
+                    },
+                    "name": "MyComboBox",
+                    "designerId": "8526c223-52ae-4b48-8bb4-e0a0c78c8486",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGetYearChange",
+                                "implHandler": [
+                                    "Ext.getStore(\"OpisDel.main\").load({params:{Year:newValue}});",
+                                    "this.getReferences().btnRefresh.setDisabled(false);",
+                                    "this.getReferences().btnAdd.setDisabled(false);",
+                                    "this.getReferences().btnExport.setDisabled(false);"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onGetYearChange",
+                            "designerId": "37d97077-4dd1-4e60-9bcb-076dd00e785b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "iconCls": "icon-refresh",
+                        "layout|flex": null,
+                        "reference": "btnRefresh",
+                        "text": "Обновить"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "48989bc3-5e93-42b1-8930-f0326caf4509",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRefreshClick",
+                                "implHandler": [
+                                    "Ext.getStore(\"OpisDel.main\").reload();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onRefreshClick",
+                            "designerId": "32cf1626-bc8f-4d8e-b863-aef3ba7efd2e"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowAfterRender",
+                "implHandler": [
+                    "//var AccessEdit = Portal.util.Util.appAccessEdit(this.getView().xtype);",
+                    "//Ext.getStore(\"OpisDel.main\").load();",
+                    "//this.getViewModel().getStore('getYear').load();"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onWindowAfterRender",
+            "designerId": "0490f6dd-f30c-4f86-8223-75dd80ed645f"
+        }
+    ]
+}

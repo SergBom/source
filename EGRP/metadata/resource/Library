@@ -1,0 +1,24 @@
+{
+    "type": "libraryresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "basePath": "/ext62/build/",
+        "designer|userClassName": "Library",
+        "libraryRequires": [
+            "exporter"
+        ],
+        "theme": "classic"
+    },
+    "configAlternates": {
+        "basePath": "uri",
+        "designer|userClassName": "string",
+        "theme": "string",
+        "libraryRequires": "typedarray"
+    },
+    "name": "Library",
+    "designerId": "0eee3a58-55dc-48b2-8da4-3a8f9ef64ad3"
+}

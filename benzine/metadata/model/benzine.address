@@ -1,0 +1,101 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "benzine.address"
+    },
+    "name": "MyModel",
+    "designerId": "7a5fdacb-ab8f-44dc-b27d-a437653b1eaa",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField17",
+            "designerId": "cda8b5bc-9c16-47ec-a1d6-ef69b7f16f75"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "city_id"
+            },
+            "name": "MyField18",
+            "designerId": "5a0c7cb0-34f4-474b-b19b-b53d38ed4943"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "address"
+            },
+            "name": "MyField19",
+            "designerId": "08e33d76-ec46-4d9a-89e2-e11e4ed2971f"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "city_name"
+            },
+            "name": "MyField20",
+            "designerId": "0b17ecd0-ba2b-4150-9691-75bbc8aa6875"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "address_full"
+            },
+            "name": "MyField21",
+            "designerId": "7cf16b07-4fc5-4478-8f77-0922b1187dbb",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "data"
+                        ],
+                        "fn": "calculate",
+                        "implHandler": [
+                            "return data.city_name + ', ' + data.address;"
+                        ]
+                    },
+                    "name": "calculate",
+                    "designerId": "96106ec9-c6ce-4e6b-a704-bd159bfc1c58"
+                }
+            ]
+        }
+    ]
+}

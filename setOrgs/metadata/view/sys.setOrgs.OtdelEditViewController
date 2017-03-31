@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "syssetorgsotdeledit",
+        "designer|userClassName": "sys.setOrgs.OtdelEditViewController"
+    },
+    "designerId": "0bc4a703-e901-48dd-9cba-93623a926e93"
+}

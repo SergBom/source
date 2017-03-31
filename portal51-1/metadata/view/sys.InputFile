@@ -1,0 +1,264 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "sysinputfile",
+        "designer|userClassName": "sys.InputFile",
+        "height": 123,
+        "layout": "fit",
+        "modal": true,
+        "title": "Загрузка файла на сервер",
+        "width": 535
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "f88edb07-58a5-47d7-8307-290c95b86a8e",
+    "viewControllerInstanceId": "5218f895-59c2-4ef1-91ed-e60a01075a3a",
+    "viewModelInstanceId": "7927a6d9-d63f-4a39-8b65-ca36db6cc4f2",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "header": null,
+                "reference": "form",
+                "title": null
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "header": "boolean",
+                "reference": "string",
+                "title": "string"
+            },
+            "name": "MyForm7",
+            "designerId": "1fa70c53-a9cc-49af-b929-494de506f0a6",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "bottom",
+                        "padding": 10
+                    },
+                    "configAlternates": {
+                        "dock": "string",
+                        "padding": "auto"
+                    },
+                    "name": "MyToolbar8",
+                    "designerId": "4524b78a-36a4-4eed-8261-b3a60a3e5584",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyContainer13",
+                            "designerId": "ff8d0ed5-42f0-443d-8ee4-a0f9abc8fe6d",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "dialog-ok",
+                                        "id": "btnSysInputFileSave",
+                                        "text": "Загрузить"
+                                    },
+                                    "configAlternates": {
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton25",
+                                    "designerId": "381f0829-edc6-426b-adf7-551cb793a5be",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnSysInputFileSaveClick",
+                                                "implHandler": [
+                                                    "var me=this,",
+                                                    "    form = me.getReferences('form'),",
+                                                    "    values = form.getValues();",
+                                                    "    //store = Ext.getStore(values.store);",
+                                                    "if (form.isValid()) {",
+                                                    "    me.getView().mask('Подождите...');",
+                                                    "    form.submit({",
+                                                    "        success: function(form, action) {",
+                                                    "            Ext.Msg.alert('Success', action.result.msg);",
+                                                    "        },",
+                                                    "        failure: function(form, action) {",
+                                                    "            Ext.Msg.alert('Failed', action.result.msg);",
+                                                    "        }",
+                                                    "    });",
+                                                    "    me.getView().unmask();",
+                                                    "    me.getView().close();",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnSysInputFileSaveClick",
+                                            "designerId": "603adb02-e997-473e-abaf-f7badc26f420"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "dialog-cancel",
+                                        "id": "btnSysInputFileCancel",
+                                        "text": "Отмена"
+                                    },
+                                    "configAlternates": {
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton26",
+                                    "designerId": "3b73dfe3-7544-450a-a5d4-55309144c98d",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnSysInputFileCancelClick",
+                                                "implHandler": [
+                                                    "this.getView().close();"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnSysInputFileCancelClick",
+                                            "designerId": "296e2faa-836b-4248-a447-7a891aee0bd6"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.File",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": null,
+                        "layout|anchor": "100%",
+                        "name": "file"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyFileUpload",
+                    "designerId": "ba9567ad-baf8-43f9-a116-cf0c8613d8e0"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "res"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField4",
+                    "designerId": "42850f96-dd1c-4a22-998c-c97318b5f13b"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "var"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField5",
+                    "designerId": "42e4d645-c67a-4dce-ae49-5e1a2b50c7d8"
+                }
+            ]
+        }
+    ]
+}

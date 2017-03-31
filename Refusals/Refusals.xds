@@ -1,0 +1,54 @@
+{
+    "name": "Refusals",
+    "settings": {
+        "cmd": {},
+        "lockUrlPrefix": true,
+        "exportPath": "E:/wamp/www/apps/refusals",
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "urlPrefix": "",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        }
+    },
+    "xdsVersion": "3.5.0",
+    "xdsBuild": 268,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext51",
+    "viewOrderMap": {
+        "view": [
+            "13203f99-9c88-4b89-888c-be67af99a0aa",
+            "7a218326-5e2d-49e1-bd92-388d6afd79f0",
+            "3fdbac88-8db0-4e30-bb14-e05265a88490",
+            "7a65e6c3-69a7-4564-9f09-4233a6a1f450",
+            "786df77a-19ab-457e-8e7e-512105142f2d",
+            "eef3db0a-1f30-44c1-a25e-0977ef030320"
+        ],
+        "store": [
+            "a34fc5da-6ba0-4bf6-8252-abc355bd02da"
+        ],
+        "controller": [
+            "f77c9eda-10b4-4588-b9bf-8e4b5fa8efbc"
+        ],
+        "model": [
+            "21f38ff6-5f0a-4a05-ab86-04f9050f2bce"
+        ],
+        "resource": [
+            "15d0188d-a043-4b10-9879-75c5e3e2786b"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

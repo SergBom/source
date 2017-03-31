@@ -1,0 +1,80 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "benzine.tour"
+    },
+    "name": "MyModel",
+    "designerId": "dc46a0a2-a646-431c-b13c-8d9b94b1fb1e",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField11",
+            "designerId": "24ce8675-c4bc-4d90-8aad-cb0f59db5a86"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tour_id"
+            },
+            "name": "MyField12",
+            "designerId": "423678b6-e0fd-4da8-94cb-506826f74058"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tour_from"
+            },
+            "name": "MyField13",
+            "designerId": "fb16dae4-b34f-4271-a7a4-d6d65c9bb1a1"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tour_to"
+            },
+            "name": "MyField14",
+            "designerId": "ebf9dedc-2cc8-4678-b539-0e81170f592b"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "distance"
+            },
+            "name": "MyField22",
+            "designerId": "97762b36-4532-4a43-90f8-6b1da6ccea71"
+        }
+    ]
+}

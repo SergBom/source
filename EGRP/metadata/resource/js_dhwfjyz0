@@ -1,0 +1,22 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_dhwfjyz0",
+        "url": "/ext-addons-6.2.0/packages/exporter/build/classic/exporter-debug.js",
+        "x-compile": true
+    },
+    "configAlternates": {
+        "defer": "boolean",
+        "designer|userClassName": "string",
+        "url": "uri",
+        "x-compile": "boolean"
+    },
+    "name": "js",
+    "designerId": "625c3e4b-ba97-4708-9861-a6c0ec618043"
+}

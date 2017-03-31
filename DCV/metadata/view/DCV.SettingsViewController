@@ -1,0 +1,53 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "dcv.settings",
+        "designer|userClassName": "DCV.SettingsViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "5c518385-9527-41e8-85c0-897e7cbbb028",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "editor",
+                    "content",
+                    "_e"
+                ],
+                "fn": "ReferEdit",
+                "implHandler": [
+                    "var st=this.getViewModel().getStore('refer'),",
+                    "    stR=this.getReferences().tRefs.getSelection()[0].data.name;",
+                    "context.newValues._t=stR;",
+                    "context.newValues._e=_e;",
+                    "Ext.Ajax.request({",
+                    "    url:'data/DCV/refer-upd.php',",
+                    "    params:context.newValues,",
+                    "    success:function(r){st.reload();}",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "ReferEdit",
+            "designerId": "fbe51341-5028-488a-8477-8024f7115d3f"
+        }
+    ]
+}

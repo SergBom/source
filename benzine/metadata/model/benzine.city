@@ -1,0 +1,41 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "benzine.city"
+    },
+    "name": "MyModel",
+    "designerId": "06ebb817-25d1-48d3-93b9-8fccc0f1beef",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField15",
+            "designerId": "7f2d5f44-3fff-4cc4-a335-dc3c3a893797"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyField16",
+            "designerId": "3340f4b2-1957-4984-9343-3c6fd87d0d3d"
+        }
+    ]
+}

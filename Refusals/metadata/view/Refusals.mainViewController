@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "refusalsmain",
+        "designer|userClassName": "Refusals.mainViewController"
+    },
+    "designerId": "3fdbac88-8db0-4e30-bb14-e05265a88490"
+}

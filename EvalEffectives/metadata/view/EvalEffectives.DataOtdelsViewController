@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivesdataotdels",
+        "designer|userClassName": "EvalEffectives.DataOtdelsViewController"
+    },
+    "designerId": "7cf732e4-d7f5-4dce-a49f-62838270a1bf"
+}

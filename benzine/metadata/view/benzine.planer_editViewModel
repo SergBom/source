@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "benzineplaner_edit",
+        "designer|userClassName": "benzine.planer_editViewModel"
+    },
+    "designerId": "df0cf2e2-d591-4736-89c0-1ba2411f743a"
+}

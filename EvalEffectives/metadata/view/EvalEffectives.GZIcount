@@ -1,0 +1,255 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivesgzicount",
+        "designer|userClassName": "EvalEffectives.GZIcount",
+        "height": 185,
+        "layout": "fit",
+        "modal": true,
+        "title": "Численность зем.инспекторов в отделе",
+        "width": 464
+    },
+    "name": "MyWindow",
+    "designerId": "4829b2d6-27a1-4a57-990c-e318ee6ccff0",
+    "viewControllerInstanceId": "9d2e6bb9-0b21-4004-a28a-2bd609b98184",
+    "viewModelInstanceId": "a4a27819-5b06-4d2c-b7e7-02584393a2ea",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "bottom",
+                "padding": 5
+            },
+            "name": "MyToolbar7",
+            "designerId": "8b422a07-0b76-485d-826b-e9e10cf6c04f",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "padding": 5
+                    },
+                    "name": "MyContainer3",
+                    "designerId": "86aeaa13-a8cc-4513-991f-2a427aacd78c",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "dialog-save",
+                                "text": "Сохранить"
+                            },
+                            "name": "MyButton16",
+                            "designerId": "34ca44b8-4f76-4689-9bea-68eeb995e68f",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick1",
+                                        "implHandler": [
+                                            "var me = this,",
+                                            "    form = me.down('form'),",
+                                            "    values = form.getValues(),",
+                                            "    store = Ext.getStore('EvalEffectives.GZIcount');",
+                                            "",
+                                            "if (form.isValid()) {",
+                                            "    me.mask('Подождите...');",
+                                            "",
+                                            "    Ext.Ajax.request({",
+                                            "        url: 'data/EvalEffectives/CountGZI-edit.php',",
+                                            "        params: values,",
+                                            "        success: function(r) {",
+                                            "            store.reload();",
+                                            "        }",
+                                            "    });",
+                                            "    me.unmask();",
+                                            "    me.close();",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick1",
+                                    "designerId": "281f13bb-1dc4-442a-978f-cca084c501e6"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "dialog-cancel",
+                                "text": "Отмена"
+                            },
+                            "name": "MyButton17",
+                            "designerId": "4bb2ac1f-45a6-4acd-99a6-275bc1c8fb33",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "this.close();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick",
+                                    "designerId": "5501ce9f-9f63-474b-8889-3ce462ade471"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "reference": "form",
+                "title": null
+            },
+            "name": "MyForm3",
+            "designerId": "32b253b0-b046-4a3b-a4df-69f9a2984a04",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "autoLoadOnValue": true,
+                        "displayField": "name2",
+                        "fieldLabel": "Отдел",
+                        "layout|anchor": "100%",
+                        "name": "otdel_id",
+                        "store": [
+                            "{otdels}"
+                        ],
+                        "valueField": "id"
+                    },
+                    "name": "MyComboBox3",
+                    "configAlternates": {
+                        "store": "binding"
+                    },
+                    "designerId": "870a733d-0661-495c-9084-ae87e51f3a12"
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Количество человек",
+                        "labelWidth": 250,
+                        "layout|anchor": "100%",
+                        "name": "n_gzi"
+                    },
+                    "name": "MyNumberField",
+                    "designerId": "8b7e0e42-3a9c-40ca-8349-bcc2fc3d4261"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "name": "id"
+                    },
+                    "name": "MyHiddenField6",
+                    "designerId": "995537dd-79cf-4754-bc90-43a09fa99ff7",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onHiddenfieldChange",
+                                "implHandler": [
+                                    "console.log(newValue);",
+                                    "if(newValue===0){",
+                                    "    this.getView().getReferences().dateCount.setValue( new date() );",
+                                    "}"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onHiddenfieldChange",
+                            "designerId": "d02355f4-228f-40b5-9fba-25b8408839aa"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "С какой даты действует",
+                        "format": "Y-m-d",
+                        "labelWidth": 250,
+                        "layout|anchor": "100%",
+                        "name": "dateCount",
+                        "reference": "dateCount"
+                    },
+                    "name": "MyDateField1",
+                    "designerId": "e1298ee8-647a-4567-bee4-1ba8b7d47411"
+                }
+            ]
+        }
+    ]
+}

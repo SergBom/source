@@ -1,0 +1,71 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivesparamseffectives",
+        "designer|userClassName": "EvalEffectives.ParamsEffectivesViewModel"
+    },
+    "designerId": "2b2c7b29-7bbb-4887-898d-5bf1176ff2e6",
+    "cn": [
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "storePunkt"
+            },
+            "name": "MyJsonStore4",
+            "designerId": "88f9046c-4b92-40a5-8d63-1ca834768fee",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "url": "data/EvalEffectives/ParamsPunkt-list.php"
+                    },
+                    "name": "MyAjaxProxy15",
+                    "designerId": "f84216f7-c9ea-4a37-aac8-886c9da440db",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "name": "MyJsonReader15",
+                            "designerId": "75fa21ae-c3dc-4ae7-9cdc-9417b4370f79"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "Punkt"
+                    },
+                    "name": "MyField80",
+                    "designerId": "f4aea15d-3881-4911-bb4b-9ed1327478d2"
+                }
+            ]
+        }
+    ]
+}

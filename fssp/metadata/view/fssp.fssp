@@ -1,0 +1,1105 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoShow": true,
+        "designer|initialView": true,
+        "designer|userAlias": "fssp",
+        "designer|userClassName": "fssp.fssp",
+        "height": 474,
+        "itemId": "fssp",
+        "layout": "fit",
+        "title": "Взаимодействие ФССП России и Росреестра",
+        "width": 611
+    },
+    "designerId": "d953c82c-1892-475f-92de-828958dc25e9",
+    "viewControllerInstanceId": "28e9c881-2904-4db7-b8c7-c38bceda1ab7",
+    "viewModelInstanceId": "1e39c979-ebd2-4538-b19b-c5869caf6d73",
+    "cn": [
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 1,
+                "reference": "fsspTabPanel"
+            },
+            "name": "MyTabPanel",
+            "designerId": "e5dfd130-2a90-4bdc-bf85-d8db4a42d0e7",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "fit",
+                        "reference": null,
+                        "title": "Ввод данных"
+                    },
+                    "name": "MyPanel",
+                    "designerId": "10929201-cee7-4ea7-a54e-795fb122eb6c",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "reference": "tabDataInput"
+                            },
+                            "name": "TabConfig",
+                            "designerId": "a5f01f5f-0588-4437-a66d-d087484effcd"
+                        },
+                        {
+                            "type": "Ext.form.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "bodyPadding": 10,
+                                "header": false,
+                                "height": 200,
+                                "id": "formInput",
+                                "itemId": "formInput",
+                                "reference": "formInput",
+                                "title": "My Form",
+                                "url": "data/fssp/save.php"
+                            },
+                            "name": "MyForm",
+                            "designerId": "53b9457e-6bf4-45d9-84ac-09e735c82960",
+                            "cn": [
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top",
+                                        "formBind": true
+                                    },
+                                    "name": "MyToolbar",
+                                    "designerId": "6171ccbd-214a-4ffc-9974-68559e5490fd",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": "x-button-style1",
+                                                "glyph": null,
+                                                "icon": null,
+                                                "iconCls": "icon-disk",
+                                                "id": "btnSave",
+                                                "itemId": "btnSave",
+                                                "layout|flex": null,
+                                                "text": "Сохранить"
+                                            },
+                                            "name": "MyButton",
+                                            "designerId": "c18aac2e-d55d-47d3-8825-2f83b7be2090",
+                                            "cn": [
+                                                {
+                                                    "type": "viewcontrollereventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onBtnSaveClick",
+                                                        "implHandler": [
+                                                            "var refs = this.getReferences(),",
+                                                            "formInput = refs.formInput;",
+                                                            "",
+                                                            "this.getView().mask('Регистрация... Подождите...');",
+                                                            "            formInput.submit({",
+                                                            "                clientValidation: true,",
+                                                            "                url: 'data/fssp/save.php',",
+                                                            "                scope: this,",
+                                                            "                success: function(form, action) {",
+                                                            "                    this.getView().unmask();",
+                                                            "                    var result = Portal.util.Util.decodeJSON(action.response.responseText);",
+                                                            "                    Ext.Msg.show({",
+                                                            "                        title:'Запись!',",
+                                                            "                        msg: result.msg,",
+                                                            "                        icon: Ext.Msg.INFO,",
+                                                            "                        buttons: Ext.Msg.OK",
+                                                            "                    });",
+                                                            "                },",
+                                                            "                failure: function(form, action) {",
+                                                            "                    this.getView().unmask();",
+                                                            "                    Portal.util.Util.handleFormFailure(action);",
+                                                            "                }",
+                                                            "            });",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onBtnSaveClick",
+                                                    "designerId": "f62df1e3-241a-4a3c-89fc-cbdae5eb3853"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.FieldSet",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "middle",
+                                        "container|pack": "center",
+                                        "height": 48,
+                                        "layout": "hbox",
+                                        "title": "Отчетная дата"
+                                    },
+                                    "name": "MyFieldSet3",
+                                    "designerId": "4181ba15-d12d-4e75-819e-9278a99a96a0",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Date",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "allowBlank": false,
+                                                "blankText": "Данное поле обязательно к заполению",
+                                                "editable": false,
+                                                "fieldLabel": null,
+                                                "format": "d-m-Y",
+                                                "id": "DateInput",
+                                                "itemId": "DateInput",
+                                                "name": "DateInput",
+                                                "submitFormat": "Y-m-d"
+                                            },
+                                            "name": "MyDateField",
+                                            "designerId": "0c7e5114-25ad-480f-8ba5-743a40ab705c"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.FieldSet",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "stretch",
+                                        "height": 54,
+                                        "layout": "vbox",
+                                        "title": "Территориальный отдел"
+                                    },
+                                    "name": "MyFieldSet4",
+                                    "designerId": "7a7017af-5537-44ae-a54a-73480e671b41",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.ComboBox",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "allowBlank": false,
+                                                "blankText": "Данное поле обязательно к заполению",
+                                                "displayField": "name",
+                                                "editable": false,
+                                                "fieldLabel": null,
+                                                "id": "OtdelInput",
+                                                "itemId": "OtdelInput",
+                                                "labelWidth": 200,
+                                                "name": "OtdelInput",
+                                                "store": "fssp.otdels",
+                                                "valueField": "id"
+                                            },
+                                            "name": "MyComboBox",
+                                            "designerId": "4d976ded-aa97-4a19-93ac-b1a309babb85"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "fieldLabel": "Количество поступивших постановлений",
+                                        "id": "DocsInput",
+                                        "itemId": "DocsInput",
+                                        "labelWidth": 300,
+                                        "layout|anchor": "100%",
+                                        "name": "DocsInput"
+                                    },
+                                    "name": "MyNumberField",
+                                    "designerId": "4eb6372e-044b-4a1e-9938-4fb92d14a438"
+                                },
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "fieldLabel": "Количестве зарегистрированных арестов (запретов) на основании таких постановлений",
+                                        "id": "RegsInput",
+                                        "itemId": "RegsInput",
+                                        "labelWidth": 300,
+                                        "layout|anchor": "100%",
+                                        "name": "RegsInput"
+                                    },
+                                    "name": "MyNumberField1",
+                                    "designerId": "ed25a133-92d9-43f1-8a6e-c50427892b17"
+                                },
+                                {
+                                    "type": "Ext.form.FieldSet",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "stretch",
+                                        "container|pack": "center",
+                                        "height": 85,
+                                        "layout": "hbox",
+                                        "title": "По каким причинам не зарегистрированы"
+                                    },
+                                    "name": "MyFieldSet5",
+                                    "designerId": "feabbe96-e356-4deb-b54d-c60434e3a244",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.FieldContainer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fieldLabel": null,
+                                                "height": 120,
+                                                "padding": "0 5 0 0"
+                                            },
+                                            "name": "MyFieldContainer",
+                                            "designerId": "8ceaf478-a3f3-4066-b280-432f4ca893ca",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.form.field.Number",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "allowBlank": false,
+                                                        "fieldLabel": "Дубли",
+                                                        "labelWidth": null,
+                                                        "name": "DoubleInput",
+                                                        "width": 200
+                                                    },
+                                                    "name": "MyNumberField2",
+                                                    "designerId": "9d4030f9-4cfa-4cea-9050-53a111f2dc0d"
+                                                },
+                                                {
+                                                    "type": "Ext.form.field.Number",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "allowBlank": false,
+                                                        "fieldLabel": "Технические причины",
+                                                        "labelWidth": null,
+                                                        "name": "TechInput",
+                                                        "width": 200
+                                                    },
+                                                    "name": "MyNumberField3",
+                                                    "designerId": "80e443f4-092c-4fc0-aa52-e11f65eee90b"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.form.FieldContainer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fieldLabel": null,
+                                                "height": 120,
+                                                "padding": "0 0 0 5"
+                                            },
+                                            "name": "MyFieldContainer1",
+                                            "designerId": "808a869d-75e9-45cf-bf0a-d9118737b3ff",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.form.field.Number",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "allowBlank": false,
+                                                        "fieldLabel": "Отказы",
+                                                        "name": "OtkazInput",
+                                                        "width": 200
+                                                    },
+                                                    "name": "MyNumberField4",
+                                                    "designerId": "6e893cea-ce52-4452-a258-a0f90f64b432"
+                                                },
+                                                {
+                                                    "type": "Ext.form.field.Number",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "allowBlank": false,
+                                                        "fieldLabel": "Приостановления",
+                                                        "name": "StopInput",
+                                                        "width": 200
+                                                    },
+                                                    "name": "MyNumberField5",
+                                                    "designerId": "ed30bd1e-8069-4761-a5e0-439517f17d35"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.panel.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "bodyCls": [
+                                            "x-panel-style1"
+                                        ],
+                                        "bodyStyle": null,
+                                        "designer|uiInterfaceName": "default",
+                                        "header": false,
+                                        "html": [
+                                            "",
+                                            "Данные по \"взаимодействию ФССП России и Росреестра\" необходимо вносить ежедневно.",
+                                            "Если в какой-то день не внесли, то можно внести за предыдущие дни, выбрав необходимую дату в форме ввода.",
+                                            "Таким образом данные накапливаются по тем дням, которые вы указываете при вводе!!!<br />",
+                                            "<b>Данные за один и тот же день ПЕРЕЗАПИСЫВАЮТСЯ!</b>"
+                                        ],
+                                        "title": null
+                                    },
+                                    "name": "MyPanel2",
+                                    "designerId": "fd76016e-1be0-41c9-b16f-2847ce3f3892"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "fit",
+                        "title": "Результат"
+                    },
+                    "name": "MyPanel1",
+                    "designerId": "cde94730-ae7e-4a4e-9cf9-61766f3332b7",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig1",
+                            "designerId": "67bac71f-feda-416a-9075-b62cb4c5c62c"
+                        },
+                        {
+                            "type": "Ext.form.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "bodyPadding": 10,
+                                "header": false,
+                                "id": "formResult",
+                                "itemId": "formResult",
+                                "reference": "formResult",
+                                "title": null,
+                                "url": "data/fssp/calc.php"
+                            },
+                            "name": "MyForm1",
+                            "designerId": "bc9aa17f-c885-4b63-bf8e-b3bba09e8937",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.FieldSet",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "stretchmax",
+                                        "container|pack": "center",
+                                        "height": 48,
+                                        "layout": "hbox",
+                                        "title": "Период"
+                                    },
+                                    "name": "MyFieldSet",
+                                    "designerId": "f9507a48-83b5-412f-9085-8b5b0d7ba743",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Date",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "allowBlank": false,
+                                                "blankText": "Данное поле обязательно к заполению",
+                                                "editable": false,
+                                                "fieldLabel": "С",
+                                                "formBind": false,
+                                                "format": "d-m-Y",
+                                                "id": "dateBegin",
+                                                "itemId": "dateBegin",
+                                                "labelWidth": 30,
+                                                "maxValue": [
+                                                    "new Date();"
+                                                ],
+                                                "maxWidth": 150,
+                                                "name": "dateBegin",
+                                                "padding": "0 15 0 0",
+                                                "submitFormat": "Y-m-d"
+                                            },
+                                            "name": "MyDateField1",
+                                            "configAlternates": {
+                                                "maxValue": "object"
+                                            },
+                                            "designerId": "3e043459-6e1a-4d63-af5e-5bbf90bbca1d",
+                                            "cn": [
+                                                {
+                                                    "type": "viewcontrollereventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onDateBeginExpand",
+                                                        "implHandler": [
+                                                            "    //var dt = new Date();",
+                                                            "//field.maxValue = Ext.Date.format(dt, 'd-m-Y');",
+                                                            "    //console.log(Ext.Date.format(dt, 'd-m-Y'));",
+                                                            "//console.log(field);",
+                                                            "//field.maxValue = Ext.Date.format(dt, 'd-m-Y');",
+                                                            ""
+                                                        ],
+                                                        "name": "expand",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onDateBeginExpand",
+                                                    "designerId": "9aee4d1f-5f8d-4f01-a550-141e06aefd2a"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Date",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "allowBlank": false,
+                                                "allowOnlyWhitespace": false,
+                                                "editable": false,
+                                                "fieldLabel": "По",
+                                                "format": "d-m-Y",
+                                                "id": "dateEnd",
+                                                "itemId": "dateEnd",
+                                                "labelWidth": 30,
+                                                "maxWidth": 150,
+                                                "name": "dateEnd",
+                                                "submitFormat": "Y-m-d"
+                                            },
+                                            "name": "MyDateField2",
+                                            "designerId": "1f0a0505-be77-4fc3-9d3e-77d5630af238"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.FieldSet",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "title": "Территориальный отдел"
+                                    },
+                                    "name": "MyFieldSet1",
+                                    "designerId": "85305d9b-354b-4830-a5f7-92f61735532a",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.ComboBox",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "allowBlank": false,
+                                                "displayField": "name",
+                                                "editable": false,
+                                                "fieldLabel": null,
+                                                "layout|anchor": "100%",
+                                                "name": "Otdel",
+                                                "store": "fssp.otdels1",
+                                                "validateBlank": true,
+                                                "valueField": "id"
+                                            },
+                                            "name": "MyComboBox1",
+                                            "designerId": "95f7d038-0aa7-4d76-86d8-65e9583cd0f2"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top",
+                                        "formBind": null
+                                    },
+                                    "name": "MyToolbar1",
+                                    "designerId": "7014da90-02ec-43b9-a10c-16bce510c3ed",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": "x-button-style1",
+                                                "designer|createAlias": null,
+                                                "formBind": true,
+                                                "iconCls": "icon-calculator",
+                                                "id": "btnCalc",
+                                                "itemId": "btnCalc",
+                                                "layout|flex": null,
+                                                "text": "Посчитать"
+                                            },
+                                            "name": "MyButton1",
+                                            "designerId": "925d9735-23b3-4950-8bcc-0c33a0179b7f",
+                                            "cn": [
+                                                {
+                                                    "type": "viewcontrollereventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onBtnCalcClick",
+                                                        "implHandler": [
+                                                            "        var refs = this.getReferences(),",
+                                                            "            formResult = refs.formResult,",
+                                                            "            tableResult = refs.tableResult;",
+                                                            "",
+                                                            "formResult.getForm().load({",
+                                                            "    params:{",
+                                                            "        dateBegin: formResult.getForm().findField('dateBegin').getValue(),",
+                                                            "        dateEnd: formResult.getForm().findField('dateEnd').getValue(),",
+                                                            "        Otdel:  formResult.getForm().findField('Otdel').getValue()",
+                                                            "    }",
+                                                            "});",
+                                                            "",
+                                                            "var mainD = Ext.getStore('fssp.table');",
+                                                            "mainD.load({",
+                                                            "    params:{",
+                                                            "        dateBegin: formResult.getForm().findField('dateBegin').getValue(),",
+                                                            "        dateEnd: formResult.getForm().findField('dateEnd').getValue(),",
+                                                            "        Otdel:  formResult.getForm().findField('Otdel').getValue()",
+                                                            "    }",
+                                                            "});",
+                                                            "tableResult.setDisabled(false);"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onBtnCalcClick",
+                                                    "designerId": "424f27d9-458b-4555-a02e-f388a6c98771"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.form.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "<a href=\"http://sp.rosreestr.ru:8082/uit/Lists/List40/EditForm.aspx?ID=195&Source=http%3A%2F%2Fsp%2Erosreestr%2Eru%3A8082%2Fuit%2Flists%2Flist40%2Fallitems%2Easpx%3F%26View%3D%7BA2C8CCE3%2D8635%2D4DC9%2D91B6%2D8CF0CBFFE6E8%7D%26FilterField1%3DLinkTitle%26FilterValue1%3D51\" target=\"blank\">Ссылка на форму Росреестра</a>",
+                                                "layout|flex": null,
+                                                "text": null
+                                            },
+                                            "name": "MyLabel",
+                                            "designerId": "3fa63490-873d-490a-bbd6-e181e4f3555f"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.FieldSet",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "title": "Результат"
+                                    },
+                                    "name": "MyFieldSet2",
+                                    "designerId": "00bfe1ea-c3ad-4f2a-8de0-2571b0412945",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Display",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "alignTarget": "right",
+                                                "fieldCls": "f-bold-red",
+                                                "fieldLabel": "Количество поступивших постановлений",
+                                                "fieldStyle": "{font: bold}",
+                                                "labelWidth": 300,
+                                                "layout|anchor": "100%",
+                                                "name": "DocsInput",
+                                                "value": null
+                                            },
+                                            "name": "MyDisplayField",
+                                            "designerId": "bd166bba-1618-4322-b95f-e1dbeb4f2274"
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Display",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fieldCls": "f-bold-red",
+                                                "fieldLabel": "Количестве зарегистрированных арестов (запретов) на основании таких постановлений",
+                                                "labelWidth": 300,
+                                                "layout|anchor": "100%",
+                                                "name": "RegsInput",
+                                                "value": null
+                                            },
+                                            "name": "MyDisplayField1",
+                                            "designerId": "045b480c-d78f-41d0-821e-bf59aad91ac2"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.FieldSet",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "middle",
+                                        "container|pack": "center",
+                                        "layout": "hbox",
+                                        "title": "Дополнительно"
+                                    },
+                                    "name": "MyFieldSet7",
+                                    "designerId": "fa836c2a-8dfb-4310-ab86-4053528521db",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.FieldContainer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fieldLabel": null,
+                                                "height": 120,
+                                                "padding": "0 5 0 0"
+                                            },
+                                            "name": "MyFieldContainer2",
+                                            "designerId": "c342b2b6-b26c-4939-a3d4-caa06d422a24",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.form.field.Display",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fieldCls": "f-bold",
+                                                        "fieldLabel": "Дубли",
+                                                        "labelWidth": 150,
+                                                        "name": "DoubleInput",
+                                                        "width": 200
+                                                    },
+                                                    "name": "MyDisplayField2",
+                                                    "designerId": "7e782bd6-4bfa-4ae0-8dea-294556b931c5"
+                                                },
+                                                {
+                                                    "type": "Ext.form.field.Display",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fieldCls": "f-bold",
+                                                        "fieldLabel": "Технические причины",
+                                                        "labelWidth": 150,
+                                                        "name": "TechInput",
+                                                        "width": 200
+                                                    },
+                                                    "name": "MyDisplayField3",
+                                                    "designerId": "3978040c-1020-4a9e-bcf4-6895e0a838fc"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.form.FieldContainer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fieldLabel": null,
+                                                "height": 120,
+                                                "padding": "0 0 0 5"
+                                            },
+                                            "name": "MyFieldContainer3",
+                                            "designerId": "2340ca6c-2c84-4002-a86a-e684094f4a16",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.form.field.Display",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fieldCls": "f-bold",
+                                                        "fieldLabel": "Отказы",
+                                                        "labelClsExtra": null,
+                                                        "labelWidth": 110,
+                                                        "name": "OtkazInput",
+                                                        "width": 200
+                                                    },
+                                                    "name": "MyDisplayField4",
+                                                    "designerId": "458b8b7f-4d11-477a-85e4-01ba0596895a"
+                                                },
+                                                {
+                                                    "type": "Ext.form.field.Display",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fieldCls": "f-bold",
+                                                        "fieldLabel": "Приостановления",
+                                                        "labelWidth": 110,
+                                                        "name": "StopInput",
+                                                        "width": 200
+                                                    },
+                                                    "name": "MyDisplayField5",
+                                                    "designerId": "29d66823-0cc4-404a-aa9c-0ed8e81917c0"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "id": "tableResult",
+                        "itemId": "tableResult",
+                        "layout": "fit",
+                        "reference": "tableResult",
+                        "title": "Таблица с результатом"
+                    },
+                    "name": "MyPanel3",
+                    "designerId": "bde3f029-327b-44bd-aecc-efba6839edce",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig2",
+                            "designerId": "eda7fd9a-7c13-4f70-8378-983a8613dd84"
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "header": false,
+                                "store": "fssp.table",
+                                "title": null
+                            },
+                            "name": "MyGridPanel",
+                            "designerId": "1f99d5ae-868d-4f55-a0b9-add462ea7841",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.RowNumberer",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": null,
+                                        "text": null
+                                    },
+                                    "name": "MyRowNumberer",
+                                    "designerId": "1cf72c18-c6fa-4fcb-9b90-ba038ad62c8b"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Date",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "date",
+                                        "format": "Y-m-d",
+                                        "text": "Дата",
+                                        "width": 76
+                                    },
+                                    "name": "MyDateColumn1",
+                                    "designerId": "7f6f8e0a-f264-4417-8c64-d76de2618d78"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Number",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "doc_in",
+                                        "format": "0,000",
+                                        "text": "Принятых",
+                                        "width": 60
+                                    },
+                                    "name": "MyNumberColumn",
+                                    "designerId": "66e5c5e7-b921-4846-9579-e86e06e752c7"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Number",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "doc_reg",
+                                        "format": "0,000",
+                                        "text": "Зарегистрированных",
+                                        "width": 60
+                                    },
+                                    "name": "MyNumberColumn1",
+                                    "designerId": "322241c4-4f40-4476-8541-75b3ec030af5"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Number",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "doc_double",
+                                        "format": "0,000",
+                                        "text": "Дубли",
+                                        "width": 60
+                                    },
+                                    "name": "MyNumberColumn2",
+                                    "designerId": "82cb367e-0053-487a-81c8-988b6a40d109"
+                                },
+                                {
+                                    "type": "Ext.view.Table",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTable",
+                                    "designerId": "d54ca4a4-679e-4bc6-8da5-912a43918571"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Number",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "doc_tech",
+                                        "format": "0,000",
+                                        "text": "Техн.",
+                                        "width": 60
+                                    },
+                                    "name": "MyNumberColumn3",
+                                    "designerId": "f18f0869-b827-4597-bae9-da460c9e2e7f"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Number",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "doc_otkaz",
+                                        "format": "0,000",
+                                        "text": "Отказ",
+                                        "width": 60
+                                    },
+                                    "name": "MyNumberColumn4",
+                                    "designerId": "ae406abe-2eb2-451a-af48-df8d5d85afa9"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Number",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "doc_stop",
+                                        "format": "0,000",
+                                        "text": "Приост.",
+                                        "width": 60
+                                    },
+                                    "name": "MyNumberColumn5",
+                                    "designerId": "4ca85ad0-1402-4c53-b891-ba018dc977b0"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "otdel_name",
+                                        "flex": 1,
+                                        "text": "Отдел",
+                                        "width": 60
+                                    },
+                                    "name": "MyColumn",
+                                    "designerId": "daad404b-0835-4bf4-92f9-4fbebbc36ab9"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFsspAfterRender",
+                "implHandler": [
+                    "var AccessEdit = Portal.util.Util.appAccessEdit(this.getView().xtype);",
+                    "",
+                    "var refs = this.getReferences(),",
+                    "    tabDataInput = refs.tabDataInput,",
+                    "    fsspTabPanel = refs.fsspTabPanel;",
+                    "",
+                    "fsspTabPanel.setActiveTab(1);",
+                    "tabDataInput.setHidden( !AccessEdit );"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onFsspAfterRender",
+            "designerId": "e2b3d251-e156-4d96-a305-ed82b2be9347"
+        }
+    ]
+}

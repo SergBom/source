@@ -1,0 +1,117 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PortalMenuItem"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "designerId": "74eb3117-9dcf-4735-9530-40712802aa3f",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField",
+            "designerId": "891cffa7-ee95-4905-a2bf-d1bcaebcbfe1"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "iconCls"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField1",
+            "designerId": "8f40eef8-46e5-40be-a70d-3b8705ecd8f6"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "className"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField2",
+            "designerId": "3095aa7e-a8b1-4bb3-92d5-dd03024d161c"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField3",
+            "designerId": "c6f7edbe-8eec-44b4-aa50-4caba033d43b"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "menu_id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField4",
+            "designerId": "d4d4cfce-10de-4274-b6f4-a5bd6c0df32f"
+        },
+        {
+            "type": "Ext.data.legacy.BelongsToAssociation",
+            "reference": {
+                "name": "belongsTo",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "belongsToPortalMenuRoot",
+                "foreignKey": "menu_id",
+                "model": "PortalMenuRoot"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "foreignKey": "string",
+                "model": "model"
+            },
+            "name": "MyBelongsToAssociation",
+            "designerId": "bfd043d5-a055-4c5d-9f38-c11068f4cb0a"
+        }
+    ]
+}

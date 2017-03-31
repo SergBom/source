@@ -1,0 +1,242 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "egrpmain",
+        "designer|userClassName": "EGRP.main",
+        "height": 479,
+        "layout": "border",
+        "title": "My Panel",
+        "width": 598
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "designerId": "46ce2e02-019a-4c09-b42b-5113dfefc26a",
+    "viewControllerInstanceId": "1d2ae8e0-dd6e-4c3e-9d84-e7a1e9d47b0a",
+    "viewModelInstanceId": "b7d501cb-2902-4fa4-80e0-e24505f03987",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": true,
+                "layout|region": "west",
+                "layout|split": true,
+                "store": [
+                    "{menu}"
+                ],
+                "title": "Меню",
+                "width": 150
+            },
+            "configAlternates": {
+                "store": "binding",
+                "collapsible": "boolean",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "title": "string",
+                "width": "auto"
+            },
+            "name": "MyGridPanel",
+            "designerId": "ff6c3304-5dde-4340-a073-edc77b53574c",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "name",
+                        "flex": 1,
+                        "text": ""
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyColumn",
+                    "designerId": "86b236bb-63c9-432e-934e-916469757540"
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable",
+                    "designerId": "1a3edc28-56d1-472b-adfc-09b5b0d1fdee"
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onItemClick",
+                        "implHandler": [
+                            "console.log(\"ClassName=\"+record.data.className+\" ** index=\"+index+\" ** id=\"+record.data.id+\" ** text=\"+record.get('name'));",
+                            "var P=this.getReferences().MainPanel,",
+                            "T=P.items.findBy(",
+                            "    function (t){",
+                            "        return t.title===record.get('name');",
+                            "    }",
+                            ");",
+                            "if(!T){",
+                            "    T=P.add({",
+                            "        xtype:record.data.className,",
+                            "        closable:true,",
+                            "        scrollable:'both',",
+                            "",
+                            "        //iconCls: record.get('iconCls'),",
+                            "        title:record.get('name'),",
+                            "        //id: record.data.className+'_'+record.data.id",
+                            "    });",
+                            "}",
+                            "//P.setTitle(record.get('name'));",
+                            "P.setActiveTab(T);"
+                        ],
+                        "name": "itemclick",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onItemClick",
+                    "designerId": "e793ace1-93da-4290-8fa2-a8653987b162"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0,
+                "layout|region": "center",
+                "reference": "MainPanel",
+                "scrollable": "both",
+                "title": "Открыть в отдельном окне. Нажмите на значок -->",
+                "titleAlign": "right"
+            },
+            "configAlternates": {
+                "layout|region": "string",
+                "title": "string",
+                "reference": "string",
+                "activeTab": "auto",
+                "scrollable": "auto",
+                "titleAlign": "string"
+            },
+            "name": "MyTabPanel1",
+            "designerId": "710714be-e8a8-4698-ba87-44b0726fb156",
+            "cn": [
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "tooltip": "Развернуть в отдельном окне",
+                        "tooltipType": "title",
+                        "type": "maximize"
+                    },
+                    "configAlternates": {
+                        "type": "string",
+                        "tooltip": "string",
+                        "tooltipType": "string"
+                    },
+                    "name": "MyTool",
+                    "designerId": "5ff1f22a-45d3-4571-a3c9-df6f288ac452",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onToolClick",
+                                "implHandler": [
+                                    "var o=this.getReferences().MainPanel.getActiveTab(),",
+                                    "w=Ext.create('Ext.window.Window', {",
+                                    "   layout:'fit',",
+                                    "   border:0,",
+                                    "   modal:true,",
+                                    "   maximizable:true,",
+                                    "   items:{xtype:o.getXType()},",
+                                    "   title:o.getTitle()",
+                                    "});",
+                                    "w.down().setTitle('');",
+                                    "w.show();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onToolClick",
+                            "designerId": "bb1e33cb-4163-4a16-a292-194f6393da05"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMainAfterRender",
+                "implHandler": [
+                    "this.getStore('menu').load();"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onMainAfterRender",
+            "designerId": "254317b6-487a-4e8e-ab4e-a7bbc54828e6"
+        }
+    ]
+}

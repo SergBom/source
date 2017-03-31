@@ -1,0 +1,98 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EGRP.stat05"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "5affbe66-e434-421b-a4e3-5df4a8ffafd5",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField36",
+            "designerId": "f4e82805-9562-482c-8412-6c6ba63b7f7e"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "otdel"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField37",
+            "designerId": "72513026-6193-416a-871a-634ad426f55a"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "error"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField38",
+            "designerId": "c53a98ad-8798-4e48-b1dc-38feceada9ff"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "metka"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField42",
+            "designerId": "ac42147d-1ddb-42c4-82b0-3ba78a8efa62"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "calc"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField43",
+            "designerId": "49336746-2b43-4f04-b8cc-b20a8c3b85d0"
+        }
+    ]
+}

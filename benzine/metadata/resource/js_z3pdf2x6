@@ -1,0 +1,16 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_z3pdf2x6",
+        "url": "util/moment-with-locales.min.js",
+        "x-compile": true
+    },
+    "name": "js",
+    "designerId": "b6e01cd0-8074-4571-817c-946a65789e42"
+}

@@ -1,0 +1,51 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "phonesbookuseredit",
+        "designer|userClassName": "PhonesBook.UserEditViewController"
+    },
+    "designerId": "425e32cd-61b5-4cd1-b6a1-749396d0bb15",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "newValue"
+                ],
+                "fn": "CmbCh",
+                "implHandler": [
+                    "var r=this.getReferences();",
+                    "r.form.getForm().setValues({org_id_h:newValue});",
+                    "var vm=this.getViewModel(),",
+                    "    so=vm.getStore('otdels'),",
+                    "    sd=vm.getStore('dolzhnost');",
+                    "so.proxy.extraParams={org_id:newValue};so.load();",
+                    "sd.proxy.extraParams={org_id:newValue};sd.load();",
+                    "",
+                    "if(newValue === 0){",
+                    "    field.setDisabled(false);",
+                    "    r.otdel_id.setDisabled(true);",
+                    "    r.dolzhnost_id.setDisabled(true);",
+                    "}else{",
+                    "    //field.setDisabled(true);",
+                    "    r.otdel_id.setDisabled(false);",
+                    "    r.dolzhnost_id.setDisabled(false);",
+                    "",
+                    "}"
+                ]
+            },
+            "name": "CmbCh",
+            "designerId": "b26c749d-da69-4849-b6de-c93a22406c72"
+        }
+    ]
+}

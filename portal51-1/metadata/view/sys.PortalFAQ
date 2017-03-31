@@ -1,0 +1,482 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "collapsed": true,
+        "collapsible": true,
+        "designer|userAlias": "sysportalfaq",
+        "designer|userClassName": "sys.PortalFAQ",
+        "glyph": null,
+        "iconCls": "app-help",
+        "title": "ЧаВо",
+        "width": 300
+    },
+    "configAlternates": {
+        "collapsed": "boolean",
+        "collapsible": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "glyph": "auto",
+        "iconCls": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyPanel1",
+    "designerId": "8636c6e5-3bdd-4579-b9c9-8cd12ef347bc",
+    "viewControllerInstanceId": "8fe654cb-075f-4d65-a691-3e935dfe33a5",
+    "viewModelInstanceId": "fa640aed-d7b6-423d-8121-b80dfb76c86c",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "frameHeader": null,
+                "header": false,
+                "reference": "gridFAQ",
+                "store": "sys.PortalFAQ",
+                "title": null
+            },
+            "configAlternates": {
+                "frameHeader": "boolean",
+                "header": "boolean",
+                "reference": "string",
+                "store": "store",
+                "title": "string"
+            },
+            "name": "MyGridPanel",
+            "designerId": "8e21fe81-4e31-402a-9118-8de996f9c3f6",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "id",
+                        "format": "0000",
+                        "text": "ID"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string"
+                    },
+                    "name": "MyNumberColumn1",
+                    "designerId": "5d245c0a-24a7-4d2f-a441-754148bf4b7e"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "quest",
+                        "flex": 1,
+                        "text": "Вопрос"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyColumn",
+                    "designerId": "53ac0a22-0269-485d-99b1-04801116cfa8"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "category",
+                        "hidden": true,
+                        "text": "Категория"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "hidden": "boolean",
+                        "text": "string"
+                    },
+                    "name": "MyColumn5",
+                    "designerId": "68d66282-9205-40c8-95de-2cde1b9c9305"
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "reference": "gridFAQtable"
+                    },
+                    "configAlternates": {
+                        "reference": "string"
+                    },
+                    "name": "MyTable1",
+                    "designerId": "9b040ecc-cf6a-40f6-8833-7e7a158f581f",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTableItemDblClick",
+                                "implHandler": [
+                                    "var edit = Ext.create('Portal.view.sys.PortalFAQEdit').show();",
+                                    "edit.getReferences().form.getForm().loadRecord(record);"
+                                ],
+                                "name": "itemdblclick",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onTableItemDblClick",
+                            "designerId": "4ee21955-a16c-4d8a-a296-1970373353cd"
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTableSelectionChange",
+                                "implHandler": [
+                                    "var r=this.getReferences();",
+                                    "r.btnSysPortalFAQDel.setDisabled(selected.length === 0);",
+                                    "r.btnSysPortalFAQEdit.setDisabled(selected.length === 0);",
+                                    "console.log(r.gridFAQ.getSelection()[0].id);"
+                                ],
+                                "name": "selectionchange",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onTableSelectionChange",
+                            "designerId": "5c0470c4-c636-4988-b06b-a98183e7baf0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar4",
+                    "designerId": "7a894b92-a841-4465-94fd-f019c98863c2",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "icon-add",
+                                "id": "btnSysPortalFAQAdd",
+                                "layout|flex": null,
+                                "text": null
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton18",
+                            "designerId": "9b15a6ca-b6c2-461b-bbf3-3bc56ff4613e",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnSysPortalFAQAddClick",
+                                        "implHandler": [
+                                            "var edit = Ext.create('Portal.view.sys.PortalFAQEdit').show();",
+                                            "edit.getReferences().form.getForm().setValues({id:0});"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnSysPortalFAQAddClick",
+                                    "designerId": "0a5a981a-0723-469e-82c7-05f7f9d9c3bd"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "icon-edit",
+                                "id": "btnSysPortalFAQEdit",
+                                "layout|flex": null,
+                                "reference": "btnSysPortalFAQEdit",
+                                "text": null
+                            },
+                            "configAlternates": {
+                                "disabled": "boolean",
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "reference": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton24",
+                            "designerId": "f68b95b8-1a90-49ae-ad92-e1bae39e1fa0",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnSysPortalFAQEditClick",
+                                        "implHandler": [
+                                            "var edit = Ext.create('Portal.view.sys.PortalFAQEdit').show();",
+                                            "edit.getReferences().form.getForm().loadRecord(this.getReferences().gridFAQ.getSelection()[0]);"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnSysPortalFAQEditClick",
+                                    "designerId": "ced8e648-6239-4575-8cc5-7719df27f4a2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "icon-delete",
+                                "id": "btnSysPortalFAQDel",
+                                "layout|flex": null,
+                                "reference": "btnSysPortalFAQDel",
+                                "text": null
+                            },
+                            "configAlternates": {
+                                "disabled": "boolean",
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "reference": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton19",
+                            "designerId": "fbc4ec4f-221b-4686-86b7-9a4e75886679",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnSysPortalFAQDelClick",
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnSysPortalFAQDelClick",
+                                    "designerId": "da056022-333b-4787-8d15-392210bf4730"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Separator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MySeparator1",
+                            "designerId": "0506ab9f-3628-458d-b6a6-9fc3756dfd2f"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "emptyText": "Поиск...",
+                                "fieldLabel": null,
+                                "layout|flex": 1,
+                                "reference": "fldSysPortalFAQSearch"
+                            },
+                            "configAlternates": {
+                                "emptyText": "string",
+                                "fieldLabel": "string",
+                                "layout|flex": "number",
+                                "reference": "string"
+                            },
+                            "name": "MyTextField10",
+                            "designerId": "06e509e7-4253-4e7a-baf7-f199c6d3fbe6"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.feature.Grouping",
+                    "reference": {
+                        "name": "features",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "groupByText": null
+                    },
+                    "configAlternates": {
+                        "groupByText": "string"
+                    },
+                    "name": "MyGroupingFeature",
+                    "designerId": "c60f2749-a177-4ec8-8ac8-add994dfac76",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "groupHeaderTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "groupHeaderTpl",
+                                "implHandler": [
+                                    "Категория: <span class=\"portal-text2\">{name}</span>"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "groupHeaderTpl",
+                            "designerId": "958eac69-af91-4a19-a55b-94ac43a0b7af"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelExpand",
+                "implHandler": [
+                    "Ext.getStore('sys.PortalFAQ').reload();"
+                ],
+                "name": "expand",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onPanelExpand",
+            "designerId": "d5adb5e0-f9c4-4b7a-afbc-6f103a87053f"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelFloat",
+                "implHandler": [
+                    "Ext.getStore('sys.PortalFAQ').reload();"
+                ],
+                "name": "float",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onPanelFloat",
+            "designerId": "0f62012c-7676-4dc8-963c-f86eab42a396"
+        }
+    ]
+}

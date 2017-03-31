@@ -1,0 +1,85 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sys.PortalNews",
+        "model": "sys.PortalNews",
+        "storeId": "sys.PortalNews"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "6f63e3b6-c2bd-49df-b40b-24c18146f3e6",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "create: 'data/sys/tabMainNews-edit.php',",
+                    "read: 'data/sys/tabMainNews-read.php',",
+                    "update: 'data/sys/tabMainNews-edit.php',",
+                    "destroy: 'data/sys/tabMainNews-delete.php'",
+                    "}"
+                ],
+                "url": null
+            },
+            "configAlternates": {
+                "api": "object",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy2",
+            "designerId": "1fdd8479-802d-4c3f-9b6c-46f116e36689",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "8650c825-c7a4-41b9-a4fd-64b13715dbcb"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "rootProperty": "data",
+                        "writeAllFields": true
+                    },
+                    "configAlternates": {
+                        "encode": "boolean",
+                        "rootProperty": "string",
+                        "writeAllFields": "boolean"
+                    },
+                    "name": "MyJsonWriter",
+                    "designerId": "6ca39bec-2561-41c2-847c-6edc0e804ed4"
+                }
+            ]
+        }
+    ]
+}

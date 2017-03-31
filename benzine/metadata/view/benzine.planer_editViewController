@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "benzineplaner_edit",
+        "designer|userClassName": "benzine.planer_editViewController"
+    },
+    "designerId": "8508cb49-5ab4-4ebd-b804-6e7d9de83a1b"
+}

@@ -1,0 +1,40 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "PhonesBook",
+        "designer|userClassName": "PhonesBook.PhonesBookViewController"
+    },
+    "designerId": "b415da81-e8cc-4da8-adf6-cb2af9798fe1",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "filter"
+                ],
+                "fn": "ShowUsers",
+                "implHandler": [
+                    "var r=this.getReferences();",
+                    "Ext.getStore('PhonesBook.UsersStore').load({params:{",
+                    "    org_id:r.OrgsList.getView().getSelectionModel().getSelection()[0].get('id'),",
+                    "    missing:r.MissingUsers.checked,",
+                    "    sayAll:r.showAllUsers.checked,",
+                    "    filter:filter",
+                    "}});"
+                ]
+            },
+            "name": "ShowUsers",
+            "designerId": "b9357aab-6b78-4aeb-b074-2062bebbbaeb"
+        }
+    ]
+}

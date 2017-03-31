@@ -1,0 +1,38 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": null,
+        "designer|userClassName": "benzine.benzine",
+        "models": [
+            "benzine.type_tour",
+            "benzine.planer",
+            "benzine.tour",
+            "benzine.city",
+            "benzine.address",
+            "benzine.otdel"
+        ],
+        "stores": [
+            "benzine.type_tour",
+            "benzine.planer",
+            "benzine.tour",
+            "benzine.city",
+            "benzine.address",
+            "benzine.otdel"
+        ],
+        "views": [
+            "benzine.benzine",
+            "benzine.Type_Tour_Edit",
+            "benzine.planer_edit",
+            "benzine.Tour_Edit",
+            "benzine.City_Edit",
+            "benzine.Address_Edit"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "769b53d0-8b10-47c7-b362-3e03bf7f84ce"
+}

@@ -1,0 +1,110 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "designer|userClassName": "PhonesBook.Orgs",
+        "model": "PhonesBook.OrgData",
+        "storeId": "PhonesBook.Orgs"
+    },
+    "designerId": "fdddb4bd-95bc-4ba5-9653-ad4de1e943eb",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/PhonesBook/orgs.json.php"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "23b8a8ad-2fa9-4eb8-b3ea-6e76033bbf4f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "e558a676-ebdf-4a63-b288-46ff257e5631"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField16",
+            "designerId": "40c299d8-e406-4572-a121-3fba9193fb18"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyField17",
+            "designerId": "320e7b48-3afe-448e-ba92-343db65a3706"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name_full"
+            },
+            "name": "MyField18",
+            "designerId": "e741bf34-4642-4dc3-8dd1-bf4c441a1e9f"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "control"
+            },
+            "name": "MyField19",
+            "designerId": "b7ea74e8-fb61-434a-a6fb-c0ee5c90d51f"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "prt_org_id"
+            },
+            "name": "MyField20",
+            "designerId": "5d132623-dbf4-459e-87f3-6bf837b14342"
+        }
+    ]
+}

@@ -1,0 +1,277 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "scandocsfiles",
+        "designer|userClassName": "ScanDocs.Files",
+        "height": 373,
+        "layout": "fit",
+        "maximizable": true,
+        "modal": true,
+        "title": "Список файлов",
+        "width": 558
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "maximizable": "boolean",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "7e54a99d-aac8-4620-ad6b-67557f09c64d",
+    "viewControllerInstanceId": "b03eb71b-ecc7-4197-a4a7-f28635e8bd0f",
+    "viewModelInstanceId": "cf466136-df31-4cf4-a73b-290df76cedd5",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "store": [
+                    "{storeFiles}"
+                ],
+                "title": null
+            },
+            "configAlternates": {
+                "store": "binding",
+                "title": "string"
+            },
+            "name": "MyGridPanel2",
+            "designerId": "6d7231f7-5cfb-4b65-b845-15e40b992359",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.RowNumberer",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyRowNumberer",
+                    "designerId": "5746728a-b27d-4c1b-82fc-0778e9db485f"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "files",
+                        "flex": 1,
+                        "text": "Имя файла"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyColumn1",
+                    "designerId": "e0e0d721-bd6e-448d-be9c-00add9266fbc"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "dataIndex": "cnt_size",
+                        "text": "Размер файла,<br> кБайт",
+                        "width": 100
+                    },
+                    "configAlternates": {
+                        "align": "string",
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyNumberColumn",
+                    "designerId": "b537c185-2f5e-4f0b-a5d2-04e02c66978e"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "center",
+                        "dataIndex": "cdate",
+                        "format": "Y-m-d",
+                        "text": "Дата<br>создания",
+                        "width": 90
+                    },
+                    "configAlternates": {
+                        "align": "string",
+                        "dataIndex": "datafield",
+                        "format": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyDateColumn",
+                    "designerId": "4bcd3957-2125-4f71-8030-c5eba56cdad9"
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable2",
+                    "designerId": "b7003312-d4a0-48e4-ae3f-40a686b44f9f"
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "center",
+                        "dataIndex": "ext",
+                        "text": "Открыть",
+                        "width": 53
+                    },
+                    "configAlternates": {
+                        "align": "string",
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyActionColumn",
+                    "designerId": "ffbcefeb-1415-45c2-8041-939df8db16a2",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyActionColumnItem",
+                            "designerId": "c415684b-3676-47e9-9bfa-186776995751",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "view",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "item",
+                                            "e",
+                                            "record",
+                                            "row"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "if(record.data.ext == 'pdf'){",
+                                            "    window.open(document.location.href+'data/ScanDocs/'+record.data.fname);",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "14fd0777-e316-4cff-ab05-c5a43f84d750"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value",
+                                    "metaData",
+                                    "record",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store",
+                                    "view"
+                                ],
+                                "fn": "renderer",
+                                "implHandler": [
+                                    "//console.log(this.items[0]);",
+                                    "//console.log(value);",
+                                    "this.items[0].iconCls='icon-mime-pdf';//+value;",
+                                    "this.items[0].tooltip='Открыть документ';"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "renderer",
+                            "designerId": "e9193bc9-5565-4728-9557-12c945f5d8c0"
+                        },
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "v",
+                                    "metadata",
+                                    "r",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store"
+                                ],
+                                "fn": "getClass",
+                                "implHandler": [
+                                    "",
+                                    "//if(r.data.ext == 'pdf'){",
+                                    "    return 'icon-mime-pdf';",
+                                    "//} else {",
+                                    "  //  return 'icon-document';",
+                                    "//}"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "getClass",
+                            "designerId": "eb11dbff-0589-45b3-8d06-196587f2f84a"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

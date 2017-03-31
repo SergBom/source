@@ -1,0 +1,65 @@
+{
+    "name": "EGRP",
+    "settings": {
+        "cmd": {},
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "urlPrefix": "http://localhost/",
+        "exportPath": "E:/wamp/www/apps/EGRP",
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 3,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        }
+    },
+    "xdsVersion": "4.1.1",
+    "xdsBuild": 123,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext62",
+    "viewOrderMap": {
+        "view": [
+            "46ce2e02-019a-4c09-b42b-5113dfefc26a",
+            "b7d501cb-2902-4fa4-80e0-e24505f03987",
+            "1d2ae8e0-dd6e-4c3e-9d84-e7a1e9d47b0a",
+            "e9799c30-db13-48c3-b923-3fc3db108f14",
+            "87fd7cc2-e2cf-4f4f-a9a0-3dda812ef36a",
+            "a9dd2d6a-bd43-4ea8-a64a-01a3cbe223f7",
+            "06186481-695c-4e7b-b3a8-6060b92864cf",
+            "c5ac8e4b-be22-495d-add6-7d7d0c21b1f1",
+            "cd42f8e0-af84-4039-bd2f-9a24957089ea",
+            "c7bda388-6739-4140-8200-bbe79e13b513",
+            "4499421a-26ea-4616-b5ad-3b6cdf576ad6",
+            "ea0301a6-16af-44f5-b6f8-c2341b90ca0c",
+            "c60f6e6c-a3f6-48ae-9382-9fe32080cd61",
+            "c117e1e7-6bec-4225-af1f-19bf7c90387d",
+            "9190fe0e-9e20-4c55-a534-498fae08cadb"
+        ],
+        "store": [],
+        "controller": [
+            "7d5b18f9-4b7d-4a2b-a458-2e99e2a30b0b"
+        ],
+        "model": [
+            "5f8d7ded-33b3-440e-b422-10cfa74c572a",
+            "5affbe66-e434-421b-a4e3-5df4a8ffafd5",
+            "5e8ee3b6-920e-475d-b8ef-066492d6d216"
+        ],
+        "resource": [
+            "0eee3a58-55dc-48b2-8da4-3a8f9ef64ad3",
+            "60e34a78-24a7-40e6-967d-6f2dda42ebcb",
+            "625c3e4b-ba97-4708-9861-a6c0ec618043"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

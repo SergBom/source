@@ -1,0 +1,36 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "PhonesBook.PhonesBook"
+        ],
+        "id": "appPhonesBook",
+        "name": "Portal"
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "Ext.Loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "paths": [
+                    "{\"Ext\":\"/ext5/build\",",
+                    "\"Ext.ux\" : \"/ext5/build/ux\"",
+                    "}"
+                ]
+            },
+            "name": "Loader",
+            "designerId": "f0fc43cc-08c4-4043-87a2-2be5bd94e3b2"
+        }
+    ]
+}

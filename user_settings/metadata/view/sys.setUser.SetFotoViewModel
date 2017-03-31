@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "syssetusersetfoto",
+        "designer|userClassName": "sys.setUser.SetFotoViewModel"
+    },
+    "designerId": "4f671169-a5b4-45d6-9571-ee10b971a499"
+}

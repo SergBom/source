@@ -1,0 +1,158 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "benzine.planer"
+    },
+    "name": "MyModel",
+    "designerId": "e6848b01-9176-440c-bda8-975336728622",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField2",
+            "designerId": "d44cbea3-e16a-4777-bc70-cf4bf836e9db"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "begin_date"
+            },
+            "name": "MyField3",
+            "designerId": "898a89e6-5dc7-48a4-ab10-7fbbd0c86bdd"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "begin_time"
+            },
+            "name": "MyField4",
+            "designerId": "18706081-b822-43a1-9339-a1d31969b3aa"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "duration"
+            },
+            "name": "MyField5",
+            "designerId": "dedf5ed7-2ccd-4a32-b97c-3e3780de1aa6"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "otdel"
+            },
+            "name": "MyField6",
+            "designerId": "6026ac27-2254-4696-9465-2260e1f70761"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "type_tour"
+            },
+            "name": "MyField7",
+            "designerId": "4f71de4c-10b5-4acb-acc2-7d9e7b0ccb44"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "reference"
+            },
+            "name": "MyField8",
+            "designerId": "07456426-e4ff-4e55-9c37-773a852fc649"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "user"
+            },
+            "name": "MyField9",
+            "designerId": "6264eba6-1760-4afc-a026-055008e2e317"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tour_success"
+            },
+            "name": "MyField10",
+            "designerId": "dfff5127-251b-422a-8be0-25c8c1983768"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tour"
+            },
+            "name": "MyField23",
+            "designerId": "c7e3e3c2-ed2c-4a1c-8598-44a380535a9d"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "week_day"
+            },
+            "name": "MyField24",
+            "designerId": "773b286b-e5df-4e39-a6c0-0e5115a2c90e"
+        }
+    ]
+}

@@ -1,0 +1,254 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "defaultFocus": null,
+        "designer|userAlias": "benzinetype_tour_edit",
+        "designer|userClassName": "benzine.Type_Tour_Edit",
+        "height": 140,
+        "layout": "vbox",
+        "modal": true,
+        "title": "Тип поездки",
+        "width": 400
+    },
+    "configAlternates": {
+        "container|align": "string",
+        "defaultFocus": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "63ef6402-46cc-4f72-8e08-8196e3a4dede",
+    "viewControllerInstanceId": "439b19d0-096a-4e69-814e-b00732cd3ca8",
+    "viewModelInstanceId": "8ccfc193-9245-491b-8760-eed0afbbfea6",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "defaultFocus": "name",
+                "header": false,
+                "itemId": "formTypeTour",
+                "layout|flex": 1,
+                "reference": "formTypeTour",
+                "title": "My Form",
+                "url": null
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "defaultFocus": "string",
+                "header": "boolean",
+                "itemId": "string",
+                "layout|flex": "number",
+                "reference": "string",
+                "title": "string",
+                "url": "string"
+            },
+            "name": "MyForm",
+            "designerId": "e3cafa99-e85e-47ce-8bbb-68abc88ce1eb",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "blankText": "Обязательное поле",
+                        "fieldLabel": null,
+                        "formBind": null,
+                        "layout|anchor": "100%",
+                        "name": "name"
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "blankText": "string",
+                        "fieldLabel": "string",
+                        "formBind": "boolean",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyTextField",
+                    "designerId": "acfa7baf-7d53-49c0-a3bc-83d856914338"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "id"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField1",
+                    "designerId": "96f809a9-96dd-418f-bf5c-a16fbd203488"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "middle",
+                "container|pack": "end",
+                "height": 45,
+                "layout": "hbox",
+                "padding": 10
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "height": "auto",
+                "layout": "string",
+                "padding": "auto"
+            },
+            "name": "MyContainer",
+            "designerId": "f3c4a2d1-56a9-4ec6-9471-7aac3eab071a",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "dialog-save",
+                        "itemId": "btnTypeTourSave",
+                        "params": [
+                            "rffrrr"
+                        ],
+                        "text": "Сохранить"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "itemId": "string",
+                        "params": "object",
+                        "text": "string"
+                    },
+                    "name": "MyButton3",
+                    "designerId": "ba7dfbb4-3eec-4aaf-8cde-d2d0a1489751",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnTypeTourSaveClick",
+                                "implHandler": [
+                                    "var me = this,",
+                                    "    form = me.lookupReference('formTypeTour'),",
+                                    "    values = form.getValues(),",
+                                    "    store = Ext.getStore('benzine.type_tour');",
+                                    "",
+                                    "if (form.isValid()) {",
+                                    "    me.getView().mask('Подождите...');",
+                                    "",
+                                    "    Ext.Ajax.request({",
+                                    "        url: 'data/benzine/type_tour-edit.php',",
+                                    "        params: values,",
+                                    "        success: function(r) {",
+                                    "            store.load();",
+                                    "        }",
+                                    "    });",
+                                    "",
+                                    "    me.getView().unmask();",
+                                    "    me.getView().close();",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBtnTypeTourSaveClick",
+                            "designerId": "1a546428-e045-48df-8dd2-cd8431d5dffe"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "dialog-cancel",
+                        "itemId": "btnTypeTourCancel",
+                        "text": "Отмена"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "itemId": "string",
+                        "text": "string"
+                    },
+                    "name": "MyButton4",
+                    "designerId": "3c3abebb-10dc-4273-9711-3276c4c281c2",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBtnTypeTourCancelClick",
+                                "implHandler": [
+                                    "this.getView().close();"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBtnTypeTourCancelClick",
+                            "designerId": "7dfdeefd-9bdc-4d15-98fe-b0c44ab6181c"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

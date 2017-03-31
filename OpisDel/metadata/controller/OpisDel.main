@@ -1,0 +1,25 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "OpisDel.main",
+        "models": [
+            "OpisDel.main"
+        ],
+        "stores": [
+            "OpisDel.main",
+            "OpisDel.getYear"
+        ],
+        "views": [
+            "OpisDel.main",
+            "OpisDel.Edit",
+            "OpisDel.Export"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "d34c2e98-9a93-4fc3-8474-465ad3c9ab69"
+}

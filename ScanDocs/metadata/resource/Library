@@ -1,0 +1,25 @@
+{
+    "type": "libraryresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "basePath": "/ext62/build/",
+        "designer|userClassName": "Library",
+        "libraryRequires": [
+            "d3",
+            "calendar"
+        ],
+        "theme": "classic"
+    },
+    "configAlternates": {
+        "basePath": "uri",
+        "designer|userClassName": "string",
+        "theme": "string",
+        "libraryRequires": "typedarray"
+    },
+    "name": "Library",
+    "designerId": "cf503e0f-9f01-4f16-8b84-961713d326fe"
+}

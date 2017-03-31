@@ -1,0 +1,1138 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "collapsible": false,
+        "container|padding": null,
+        "designer|uiInterfaceName": "2",
+        "designer|userAlias": "sys.tabmainview",
+        "designer|userClassName": "sys.tabMainView",
+        "iconCls": "icon-home",
+        "id": "tabMainView_2",
+        "layout": "border",
+        "reference": "dashboard",
+        "title": "Главная",
+        "ui": "2"
+    },
+    "configAlternates": {
+        "collapsible": "boolean",
+        "container|padding": "auto",
+        "designer|uiInterfaceName": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "iconCls": "string",
+        "id": "string",
+        "layout": "string",
+        "reference": "string",
+        "title": "string",
+        "ui": "string"
+    },
+    "name": "MyPanel",
+    "designerId": "79bf6a52-e7aa-428b-94bb-95dd43b09397",
+    "viewControllerInstanceId": "ba8a5bab-6f09-46e6-b1b6-17049a342bd7",
+    "viewModelInstanceId": "bdfe0ae2-29b4-4f22-a573-5851499ab0b4",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "panelNews",
+                "itemId": "panelNews",
+                "layout|region": "center",
+                "layout|split": true,
+                "padding": 5,
+                "reference": "panelNews",
+                "stateId": "panelNews",
+                "stateful": true,
+                "store": "sys.PortalNews",
+                "title": "Новости"
+            },
+            "configAlternates": {
+                "id": "string",
+                "itemId": "string",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "padding": "auto",
+                "reference": "string",
+                "stateId": "string",
+                "stateful": "boolean",
+                "store": "store",
+                "title": "string"
+            },
+            "name": "MyGridPanel1",
+            "designerId": "0439c46f-643a-4cfb-a15d-b6dc6e7a018e",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "id": "panelNewsToolbar",
+                        "itemId": "panelNewsToolbar",
+                        "reference": "panelNewsToolbar"
+                    },
+                    "configAlternates": {
+                        "dock": "string",
+                        "id": "string",
+                        "itemId": "string",
+                        "reference": "string"
+                    },
+                    "name": "MyToolbar1",
+                    "designerId": "c16a908e-6ca8-4de5-94d1-b2682dcfe871",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "icon-add",
+                                "id": "btnPortalTabMainViewNewsAdd",
+                                "layout|flex": null,
+                                "text": null
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton11",
+                            "designerId": "866c48ca-938f-4b07-9ee6-1c5fc33dc4fe",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnPortalTabMainViewNewsAddClick",
+                                        "implHandler": [
+                                            "var edit=Ext.create('Portal.view.sys.PortalNewsEdit').show();",
+                                            "edit.getReferences().formNews.getForm().setValues({id:0});"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnPortalTabMainViewNewsAddClick",
+                                    "designerId": "b305bffd-6661-4b17-9af6-96a1d16adcfa"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "icon-refresh",
+                                "id": "btnPortalTabMainViewNewsRefresh",
+                                "layout|flex": null,
+                                "text": null
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton17",
+                            "designerId": "57b9e769-07b9-4ed8-b9c0-f7fa46a180d0",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnPortalTabMainViewNewsRefreshClick",
+                                        "implHandler": [
+                                            "Ext.getStore('sys.PortalNews').reload();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnPortalTabMainViewNewsRefreshClick",
+                                    "designerId": "90d6a146-9927-4780-8c25-0b2235df5f18"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "icon-delete",
+                                "id": "btnPortalTabMainViewNewsDel",
+                                "layout|flex": null,
+                                "reference": "btnPortalTabMainViewNewsDel",
+                                "text": null
+                            },
+                            "configAlternates": {
+                                "disabled": "boolean",
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "reference": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton16",
+                            "designerId": "0b662f14-f10a-4143-94ad-a840e8f904bb",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnPortalTabMainViewNewsDelClick",
+                                        "implHandler": [
+                                            "Portal.util.Util.deleteRecord2(",
+                                            "    this.getReferences().panelNews.getSelection()[0],",
+                                            "    Ext.getStore('sys.PortalNews'),",
+                                            "    'data/sys/tabMainNews-delete.php');"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnPortalTabMainViewNewsDelClick",
+                                    "designerId": "317a0799-d4e6-4981-9c0e-54a0c3793ef5"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.RowNumberer",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyRowNumberer1",
+                    "designerId": "20a48de2-11bc-4765-87fa-2ef16d2fb5e2"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "subject",
+                        "flex": 1,
+                        "text": "Событие"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyColumn1",
+                    "designerId": "2719ed2f-660f-4002-9ad5-05c6cbe8a10b"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "updateDate",
+                        "formatter": null,
+                        "text": "Дата",
+                        "width": 140
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "formatter": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn4",
+                    "designerId": "7e0decba-9ca2-4b17-a020-04f4ae373726"
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable",
+                    "designerId": "9b649b25-5621-4b9a-be9b-ab440bc90f6b",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTableSelectionChange",
+                                "implHandler": [
+                                    "this.getReferences().btnPortalTabMainViewNewsDel.setDisabled(selected.length === 0);"
+                                ],
+                                "name": "selectionchange",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onTableSelectionChange",
+                            "designerId": "25c21ced-9d1c-46a6-9283-2b88fcf383ab"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.plugin.RowExpander",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyRowExpanderPlugin",
+                    "designerId": "5c37c8bc-024d-4013-9367-3d5eddf8c1a9",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "rowBodyTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "rowBodyTpl",
+                                "implHandler": [
+                                    "{news}",
+                                    "<hr><span class=\"ref-NewEdit\">Разместил: {userInsert} [{insertDate} {insertTime}]<br>",
+                                    "Редактировал: {userUpdate} [{updateDate} {updateTime}]</span>"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "rowBodyTpl",
+                            "designerId": "e0183079-7948-47cc-a0f4-09b029e0de04"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "menuDisabled": true,
+                        "width": 25
+                    },
+                    "configAlternates": {
+                        "menuDisabled": "boolean",
+                        "width": "auto"
+                    },
+                    "name": "MyActionColumn",
+                    "designerId": "d5c9ef1b-18e8-47cb-a9ab-e02f0b3bdda0",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "icon-edit"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string"
+                            },
+                            "name": "MyActionColumnItem",
+                            "designerId": "cfc58243-99ca-4a29-a538-aec9cb2fb2d3",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "view",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "item",
+                                            "e",
+                                            "record",
+                                            "row"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var edit = Ext.create('Portal.view.sys.PortalNewsEdit').show();",
+                                            "edit.getReferences().formNews.getForm().setValues(record.data);"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "3aeb1546-e283-4bfc-959a-c1b3bb1842fc"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "panelLinks",
+                "layout": "fit",
+                "layout|region": "west",
+                "layout|split": true,
+                "padding": "5 5 5 5",
+                "stateId": "panelLinks",
+                "stateful": true,
+                "width": 349
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "layout": "string",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "padding": "auto",
+                "stateId": "string",
+                "stateful": "boolean",
+                "width": "auto"
+            },
+            "name": "MyPanel",
+            "designerId": "c870470e-f091-4028-a111-80047bbc81f6",
+            "cn": [
+                {
+                    "type": "Ext.tree.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "reference": "Links",
+                        "rootVisible": false,
+                        "store": "PortalLinks",
+                        "title": "Ссылки"
+                    },
+                    "configAlternates": {
+                        "reference": "string",
+                        "rootVisible": "boolean",
+                        "store": "store",
+                        "title": "string"
+                    },
+                    "name": "MyTreePanel",
+                    "designerId": "e5417a5c-9b2e-4365-977f-5480565759aa",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top",
+                                "id": "panelLinksToolbar",
+                                "itemId": "panelLinksToolbar",
+                                "reference": "panelLinksToolbar"
+                            },
+                            "configAlternates": {
+                                "dock": "string",
+                                "id": "string",
+                                "itemId": "string",
+                                "reference": "string"
+                            },
+                            "name": "MyToolbar",
+                            "designerId": "934fdfb3-3f22-45d9-aaf5-43049843c53e",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "icon-list-on",
+                                        "id": "btnPortalTabMainViewLinksOn",
+                                        "layout|flex": null,
+                                        "text": null
+                                    },
+                                    "configAlternates": {
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "layout|flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton8",
+                                    "designerId": "f65c8686-4599-4af8-929f-db04e58af0b4",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnPortalTabMainViewLinksOnClick",
+                                                "implHandler": [
+                                                    "this.getReferences().Links.expandAll();"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnPortalTabMainViewLinksOnClick",
+                                            "designerId": "44bd41b6-69c0-4237-a4fa-65032a0ad61c"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "iconCls": "icon-list-off",
+                                        "id": "btnPortalTabMainViewLinksOff",
+                                        "layout|flex": null,
+                                        "text": null
+                                    },
+                                    "configAlternates": {
+                                        "hidden": "boolean",
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "layout|flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton9",
+                                    "designerId": "1c34da79-2e68-4b4e-a3e6-5ad604c7b598",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnPortalTabMainViewLinksOffClick",
+                                                "implHandler": [
+                                                    "this.getReferences().Links.collapseAll();"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnPortalTabMainViewLinksOffClick",
+                                            "designerId": "cb48e94b-15bd-470b-bb93-c517c7ea4de7"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.toolbar.Separator",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null
+                                    },
+                                    "configAlternates": {
+                                        "layout|flex": "number"
+                                    },
+                                    "name": "MySeparator",
+                                    "designerId": "5bbc7d1f-8236-4e69-b76e-1d3e57e3d8a4"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "icon-refresh",
+                                        "id": "btnPortalTabMainLinksRefresh",
+                                        "layout|flex": null,
+                                        "text": null
+                                    },
+                                    "configAlternates": {
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "layout|flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton10",
+                                    "designerId": "f2f86f4a-a6c8-4ec9-90a7-7554d885144e",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnPortalTabMainLinksRefreshClick",
+                                                "implHandler": [
+                                                    "Ext.getStore('PortalLinks').reload();"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnPortalTabMainLinksRefreshClick",
+                                            "designerId": "79e9d14a-bd53-460c-9654-7c2b4ba4457f"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "hidden": true,
+                                        "iconCls": "icon-admins",
+                                        "id": "btnPortalTabMainViewLinksAdm",
+                                        "layout|flex": null,
+                                        "reference": "btnPortalTabMainViewLinksAdm",
+                                        "text": null
+                                    },
+                                    "configAlternates": {
+                                        "hidden": "boolean",
+                                        "iconCls": "string",
+                                        "id": "string",
+                                        "layout|flex": "number",
+                                        "reference": "string",
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton13",
+                                    "designerId": "cbec75e3-94bf-4cbc-b8ad-ff4d2e2227bc",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnPortalTabMainViewLinksAdmClick",
+                                                "implHandler": [
+                                                    "Ext.getStore('PortalLinks').load({",
+                                                    "    params:{admin:1}",
+                                                    "});"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onBtnPortalTabMainViewLinksAdmClick",
+                                            "designerId": "a78d44d1-f412-4348-a6ac-7e60d56fe439"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.tree.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTreeView",
+                            "designerId": "6db74172-026f-4140-afaa-52d8b7ed2789"
+                        },
+                        {
+                            "type": "Ext.tree.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "name",
+                                "flex": 1,
+                                "text": "Адрес ссылки"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyTreeColumn",
+                            "designerId": "b0920271-8705-47c5-9470-9df59bf88e27",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "if(value){",
+                                            "    if(record.get('url')){",
+                                            "   //  console.log('url='+record.get('url'));",
+                                            "        return '<a href=\"' + record.get('url') + '\" target=\"_blank\">' + value + '</a>';",
+                                            "    }",
+                                            "    return  value ;",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "18ec1a24-7ec3-4233-b3a9-aaee01d3c234"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "coment",
+                                "text": "Логин/Пароль"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn2",
+                            "designerId": "79c8f302-c059-4785-bcaf-7be55d473a4d"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPortalTabMainViewAfterRender",
+                "implHandler": [
+                    "/*********************/",
+                    "//this.getReferences().panelCommonInfoToolbar.setHidden(true);",
+                    "//this.getReferences().panelCommonInfoHTMLeditor.getToolbar().setHidden(true);",
+                    "/*********************/",
+                    "var refs = this.getReferences(),",
+                    "    panelCommonInfo = refs.panelCommonInfo;",
+                    "",
+                    "panelCommonInfo.load();",
+                    "",
+                    "",
+                    "/***** Устанавливаем права на приложение *****/",
+                    "var AccessEdit = Portal.util.Util.appAccessEdit(this.getView().xtype);",
+                    "console.log('AccessEdit='+AccessEdit);",
+                    "",
+                    "var panelNewsToolbar = this.lookupReference('panelNewsToolbar'),",
+                    "    panelLinksToolbar = this.lookupReference('panelLinksToolbar'),",
+                    "    panelCommonInfoTools = this.lookupReference('panelCommonInfoTools');",
+                    "",
+                    "panelNewsToolbar.setHidden( !AccessEdit );",
+                    "//panelLinksToolbar.setHidden( !AccessEdit );",
+                    "panelCommonInfoTools.setHidden( !AccessEdit );",
+                    "",
+                    "//this.getReferences().btnPortalTabMainViewLinksAdm.setHidden(!AccessEdit);",
+                    "Ext.getStore('sys.PortalNews').load();"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onPortalTabMainViewAfterRender",
+            "designerId": "8a1dbaea-0c1c-4abe-8e57-279d884ad407"
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": null,
+                "height": 192,
+                "html": "TEST",
+                "id": "panelCommonInfo",
+                "itemId": "panelCommonInfo",
+                "layout": "fit",
+                "layout|region": "north",
+                "layout|split": true,
+                "padding": 5,
+                "reference": "panelCommonInfo",
+                "stateId": "panelCommonInfo",
+                "stateful": true,
+                "title": "Информация",
+                "url": "data/tabMainCommonInfo.php"
+            },
+            "configAlternates": {
+                "html": "string",
+                "bodyPadding": "auto",
+                "height": "auto",
+                "id": "string",
+                "itemId": "string",
+                "layout": "string",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "padding": "auto",
+                "reference": "string",
+                "stateId": "string",
+                "stateful": "boolean",
+                "title": "string",
+                "url": "string"
+            },
+            "name": "MyForm4",
+            "designerId": "02ab61c8-62b2-4cdd-ae1d-b6a4d5b179f7",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "id": "panelCommonInfoData",
+                        "itemId": "panelCommonInfoData",
+                        "name": "html",
+                        "reference": "panelCommonInfoData",
+                        "value": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "itemId": "string",
+                        "name": "string",
+                        "reference": "string",
+                        "value": "string"
+                    },
+                    "name": "MyDisplayField4",
+                    "designerId": "ea231702-54e7-4f95-a9b7-0476c82d97db"
+                },
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "panelCommonInfoTools",
+                        "itemId": "panelCommonInfoTools",
+                        "reference": "panelCommonInfoTools",
+                        "type": "gear"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "itemId": "string",
+                        "reference": "string",
+                        "type": "string"
+                    },
+                    "name": "MyTool",
+                    "designerId": "277c2564-2d2a-46ee-a994-38e9c29b7ba6",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onPanelCommonInfoToolsClick",
+                                "implHandler": [
+                                    "var refs = this.getReferences(),",
+                                    "    panelCommonInfoHTMLeditor = refs.panelCommonInfoHTMLeditor,",
+                                    "    tb = refs.panelCommonInfoToolbar,",
+                                    "    panelCommonInfoData = refs.panelCommonInfoData;",
+                                    "",
+                                    "if(panelCommonInfoData.isHidden()){//надо закрыть редактор",
+                                    "    //panelCommonInfoHTMLeditor.setValue(owner.body.dom.innerHTML);",
+                                    "    panelCommonInfoHTMLeditor.setHidden(true);",
+                                    "    tb.setHidden(true);",
+                                    "    panelCommonInfoData.setHidden(false);",
+                                    "}else{ //Включаем редактор",
+                                    "    panelCommonInfoHTMLeditor.setValue(panelCommonInfoData.getValue());",
+                                    "    panelCommonInfoHTMLeditor.setHidden(false);",
+                                    "    tb.setHidden(false);",
+                                    "    panelCommonInfoData.setHidden(true);",
+                                    "}"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onPanelCommonInfoToolsClick",
+                            "designerId": "3b355808-98dc-4877-aaf9-51ddfb68e18d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.HtmlEditor",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "height": 150,
+                        "hidden": true,
+                        "id": "panelCommonInfoHTMLeditor",
+                        "itemId": "panelCommonInfoHTMLeditor",
+                        "reference": "panelCommonInfoHTMLeditor",
+                        "value": [
+                            "'<b>Test</b>'"
+                        ]
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "height": "auto",
+                        "hidden": "boolean",
+                        "id": "string",
+                        "itemId": "string",
+                        "reference": "string",
+                        "value": "object"
+                    },
+                    "name": "MyHtmlEditor1",
+                    "designerId": "e715cfcf-665b-41a5-b7bb-8531e9baed2f"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "hidden": true,
+                        "id": "panelCommonInfoToolbar",
+                        "itemId": "panelCommonInfoToolbar",
+                        "reference": "panelCommonInfoToolbar"
+                    },
+                    "configAlternates": {
+                        "dock": "string",
+                        "hidden": "boolean",
+                        "id": "string",
+                        "itemId": "string",
+                        "reference": "string"
+                    },
+                    "name": "MyToolbar2",
+                    "designerId": "807ff125-e1cd-41f8-b808-981dac65a6c4",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "dialog-save",
+                                "id": "panelCommonInfoBtnSave",
+                                "itemId": "panelCommonInfoBtnSave",
+                                "layout|flex": null,
+                                "text": "Сохранить"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "itemId": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton12",
+                            "designerId": "c63b5b60-9c0e-4a91-b6cc-9d8c0d9531da",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onPanelCommonInfoBtnSaveClick",
+                                        "implHandler": [
+                                            "var refs = this.getReferences(),",
+                                            "    form = refs.panelCommonInfo,",
+                                            "    panelCommonInfoHTMLeditor = refs.panelCommonInfoHTMLeditor,",
+                                            "    tb = refs.panelCommonInfoToolbar,",
+                                            "    panelCommonInfoData = refs.panelCommonInfoData;",
+                                            "",
+                                            "panelCommonInfoHTMLeditor.setHidden(true);",
+                                            "tb.setHidden(true);",
+                                            "",
+                                            "panelCommonInfoData.setValue(panelCommonInfoHTMLeditor.getValue());",
+                                            "Ext.Ajax.request({",
+                                            "    url: 'data/tabMainCommonInfo.php',",
+                                            "    params: {",
+                                            "        html: panelCommonInfoHTMLeditor.getValue()",
+                                            "    },",
+                                            "    scope: this,",
+                                            "    success: function(conn, response, options, eOpts){",
+                                            "        var result = Portal.util.Util.decodeJSON(conn.responseText);",
+                                            "        if (result.success) {",
+                                            "        } else {",
+                                            "            Portal.util.Util.showErrorMsg(result.msg);",
+                                            "        }",
+                                            "    },",
+                                            "    failure: function(conn, response, options, eOpts){",
+                                            "        Portal.util.Util.showErrorMsg(conn.responseText);",
+                                            "    }",
+                                            "});",
+                                            "panelCommonInfoData.setHidden(false);"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onPanelCommonInfoBtnSaveClick",
+                                    "designerId": "561fdc69-ec26-40ca-82fb-214261784080"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

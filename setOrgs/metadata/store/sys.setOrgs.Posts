@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sys.setOrgs.Posts",
+        "model": "sys.setOrgs.Posts",
+        "storeId": "sys.setOrgs.Posts"
+    },
+    "name": "MyJsonStore",
+    "designerId": "bdf872d9-9f16-424b-b14b-fa2c56b4392d",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/sys/setOrgs/posts-read.php"
+            },
+            "name": "MyAjaxProxy2",
+            "designerId": "9396f124-6d6d-40ac-9ed3-e987e4bbca80",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "4cb3c34d-4680-43f1-b70e-966b015b55fa"
+                }
+            ]
+        }
+    ]
+}

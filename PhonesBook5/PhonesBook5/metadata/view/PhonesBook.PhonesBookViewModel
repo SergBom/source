@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "PhonesBook",
+        "designer|userClassName": "PhonesBook.PhonesBookViewModel"
+    },
+    "designerId": "45e57e53-8275-4012-aca6-8d90de38c361"
+}

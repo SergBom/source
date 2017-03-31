@@ -1,0 +1,140 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "opisdel.edit",
+        "designer|userClassName": "OpisDel.EditViewModel"
+    },
+    "designerId": "7209418a-ae9c-402a-8437-801c5c04faa3",
+    "cn": [
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "otdels"
+            },
+            "name": "MyJsonStore1",
+            "designerId": "8ddea7e5-67c5-4d8a-aa95-3eab9a9c336b",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "url": "data/OpisDel/otdels-list.php"
+                    },
+                    "name": "MyAjaxProxy2",
+                    "designerId": "1e3de079-2012-4226-ad5e-45f9dd054eb6",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "name": "MyJsonReader2",
+                            "designerId": "cda745d1-ced8-4810-85cf-334abb6a6ca2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "id"
+                    },
+                    "name": "MyField6",
+                    "designerId": "3beb5c94-07e3-460b-a171-c34f7bb5ce55"
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "name"
+                    },
+                    "name": "MyField8",
+                    "designerId": "3dc5c030-cc19-44a7-9213-491ed4794c3f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "books"
+            },
+            "name": "MyStore",
+            "designerId": "cc03a62b-13ca-426e-a413-6b2b897298ce",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "url": "data/OpisDel/books-list.php"
+                    },
+                    "name": "MyAjaxProxy3",
+                    "designerId": "d8ebe8e3-cfaa-4362-be48-7235de4d7564",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "name": "MyJsonReader1",
+                            "designerId": "8632f68e-e250-45e4-941c-3a965ec78b5e"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "name"
+                    },
+                    "name": "MyField10",
+                    "designerId": "73264543-53c7-4d0e-a41a-0ff9fd87019c"
+                }
+            ]
+        }
+    ]
+}

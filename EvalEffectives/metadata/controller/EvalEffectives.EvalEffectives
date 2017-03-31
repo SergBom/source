@@ -1,0 +1,50 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EvalEffectives.EvalEffectives",
+        "models": [
+            "EvalEffectives.EvalEffectives",
+            "EvalEffectives.Record",
+            "EvalEffectives.JobersGroup",
+            "EvalEffectives.Jobers",
+            "EvalEffectives.ParamsGroup",
+            "EvalEffectives.Stat1",
+            "EvalEffectives.ParamsFromOtdels"
+        ],
+        "stores": [
+            "EvalEffectives.EvalEffectives",
+            "EvalEffectives.Record",
+            "EvalEffectives.JobersGroup",
+            "EvalEffectives.Jobers",
+            "EvalEffectives.ParamsGroup",
+            "EvalEffectives.GZIcount",
+            "EvalEffectives.ParamsIn",
+            "EvalEffectives.ParamsOut",
+            "EvalEffectives.ParamsEffectives",
+            "EvalEffectives.Stat1",
+            "EvalEffectives.OtdelsList",
+            "EvalEffectives.ParamsFromOtdels"
+        ],
+        "views": [
+            "EvalEffectives.EvalEffectives",
+            "EvalEffectives.Settings",
+            "EvalEffectives.JobersGroupEdit",
+            "EvalEffectives.JobersEdit",
+            "EvalEffectives.ParamsGroupEdit",
+            "EvalEffectives.ParamsEditor",
+            "EvalEffectives.GZIcount",
+            "EvalEffectives.Stat1",
+            "EvalEffectives.ParamsInEdit",
+            "EvalEffectives.ParamsEffectives",
+            "EvalEffectives.ParamsOutEdit",
+            "EvalEffectives.DataOtdels"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "b68a23cf-2465-44ab-a12f-5c139608adfd"
+}

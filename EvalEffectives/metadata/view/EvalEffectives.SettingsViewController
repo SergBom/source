@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivessettings",
+        "designer|userClassName": "EvalEffectives.SettingsViewController"
+    },
+    "designerId": "373d520b-fb9d-49ee-b031-868458085102"
+}

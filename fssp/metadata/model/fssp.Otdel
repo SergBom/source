@@ -1,0 +1,42 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "otdel",
+        "designer|userClassName": "fssp.Otdel"
+    },
+    "name": "MyModel",
+    "designerId": "bc30bb9d-9259-4fab-96d0-60c3aad85f6e",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField",
+            "designerId": "3caedc89-2dae-4504-a935-73bc97f2834e"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyField1",
+            "designerId": "0490682d-853d-449a-bfd3-4e19c8a76bc3"
+        }
+    ]
+}

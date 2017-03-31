@@ -1,0 +1,601 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "container|pack": "end",
+        "designer|userAlias": "benzinetour_edit",
+        "designer|userClassName": "benzine.Tour_Edit",
+        "height": null,
+        "layout": "vbox",
+        "maxHeight": null,
+        "maxWidth": 400,
+        "minHeight": 175,
+        "minWidth": 400,
+        "modal": true,
+        "title": "Поездка",
+        "width": 400
+    },
+    "configAlternates": {
+        "container|align": "string",
+        "container|pack": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "maxHeight": "number",
+        "maxWidth": "number",
+        "minHeight": "number",
+        "minWidth": "number",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "c7ebb7db-f604-4745-8dc8-44710158e90a",
+    "viewControllerInstanceId": "c4eee061-e4ea-4468-9e5a-2af0a863a812",
+    "viewModelInstanceId": "49325bc2-2db3-42c2-8ab4-34fa2cb904ea",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "layout|flex": 1,
+                "reference": "formTourEdit",
+                "title": null
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "layout|flex": "number",
+                "reference": "string",
+                "title": "string"
+            },
+            "name": "MyForm2",
+            "designerId": "78253cab-9381-4413-bbc6-dc0c047cff2c",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldContainer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "fieldLabel": null,
+                        "height": 24,
+                        "layout": "hbox"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "fieldLabel": "string",
+                        "height": "auto",
+                        "layout": "string"
+                    },
+                    "name": "MyFieldContainer1",
+                    "designerId": "5122531d-3951-4caf-9815-7134682bbd31",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "displayField": "address_full",
+                                "editable": false,
+                                "fieldLabel": "Откуда",
+                                "id": "fldBenzineTourTourFrom",
+                                "labelWidth": 50,
+                                "layout|flex": 1,
+                                "name": "tour_from",
+                                "store": "benzine.address",
+                                "valueField": "address_full",
+                                "width": null
+                            },
+                            "configAlternates": {
+                                "allowBlank": "boolean",
+                                "displayField": "datafield",
+                                "editable": "boolean",
+                                "fieldLabel": "string",
+                                "id": "string",
+                                "labelWidth": "number",
+                                "layout|flex": "number",
+                                "name": "string",
+                                "store": "store",
+                                "valueField": "datafield",
+                                "width": "auto"
+                            },
+                            "name": "MyComboBox3",
+                            "designerId": "5ac5e11d-ca6d-4af9-8b3d-9a1c82ea57a0",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onFldBenzineTourTourFromChange",
+                                        "implHandler": [
+                                            "var form=this.lookupReference('formTourEdit'),",
+                                            "values=form.getValues();",
+                                            "Ext.Ajax.request({",
+                                            "    url: 'data/benzine/tour-read-distance.php',",
+                                            "    params: values,",
+                                            "    success: function(response){",
+                                            "        var d = Portal.util.Util.decodeJSON(response.responseText);",
+                                            "        form.getForm().setValues({",
+                                            "            distance:d.data.distance",
+                                            "        });",
+                                            "     }",
+                                            "});"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onFldBenzineTourTourFromChange",
+                                    "designerId": "ca30374e-a864-4284-a510-016f61ce73ef"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldContainer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "fieldLabel": null,
+                        "height": 29,
+                        "layout": "hbox"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "fieldLabel": "string",
+                        "height": "auto",
+                        "layout": "string"
+                    },
+                    "name": "MyFieldContainer2",
+                    "designerId": "a5a95f25-5afc-4ae2-b59f-0378fc7febe9",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "displayField": "address_full",
+                                "editable": false,
+                                "fieldLabel": "Куда",
+                                "id": "fldBenzineTourTourTo",
+                                "labelWidth": 50,
+                                "layout|flex": 1,
+                                "name": "tour_to",
+                                "store": "benzine.address",
+                                "valueField": "address_full"
+                            },
+                            "configAlternates": {
+                                "allowBlank": "boolean",
+                                "displayField": "datafield",
+                                "editable": "boolean",
+                                "fieldLabel": "string",
+                                "id": "string",
+                                "labelWidth": "number",
+                                "layout|flex": "number",
+                                "name": "string",
+                                "store": "store",
+                                "valueField": "datafield"
+                            },
+                            "name": "MyComboBox4",
+                            "designerId": "e34bce37-0884-4440-87ed-233258c29f6a",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onFldBenzineTourTourToChange",
+                                        "implHandler": [
+                                            "var form=this.lookupReference('formTourEdit'),",
+                                            "values=form.getValues();",
+                                            "Ext.Ajax.request({",
+                                            "    url: 'data/benzine/tour-read-distance.php',",
+                                            "    params: values,",
+                                            "    success: function(response){",
+                                            "        var d = Portal.util.Util.decodeJSON(response.responseText);",
+                                            "        form.getForm().setValues({",
+                                            "            distance:d.data.distance",
+                                            "        });",
+                                            "     }",
+                                            "});"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onFldBenzineTourTourToChange",
+                                    "designerId": "7c189270-8aec-4784-9819-bbd35558f0c5"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Расстояние, км",
+                        "layout|anchor": "100%",
+                        "name": "distance",
+                        "vtype": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string",
+                        "vtype": "string"
+                    },
+                    "name": "MyNumberField",
+                    "designerId": "49f42107-2e9f-4b09-a73c-46c2543bc8cf"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "id"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField6",
+                    "designerId": "bca9c0f0-7c5f-42cb-82a4-4b3d3ca6967e"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "tour_id"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string",
+                        "name": "string"
+                    },
+                    "name": "MyHiddenField10",
+                    "designerId": "f4c710de-041a-4a7c-bdf5-7e32d5947a09"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "middle",
+                "container|pack": null,
+                "container|padding": 5,
+                "dock": "bottom",
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "container|padding": "auto",
+                "dock": "string",
+                "layout|flex": "number"
+            },
+            "name": "MyToolbar6",
+            "designerId": "1e18677f-cca4-40af-bb3f-9c7a9ce6e406",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "container|pack": "end",
+                        "container|padding": 5,
+                        "layout": "hbox",
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "container|padding": "auto",
+                        "layout": "string",
+                        "layout|flex": "number"
+                    },
+                    "name": "MyContainer2",
+                    "designerId": "2fcb1421-0c55-482f-a669-50f0472dbfd0",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "dialog-save",
+                                "id": "btnBenzineTourEditSave",
+                                "layout|flex": null,
+                                "text": "Сохранить"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyButton11",
+                            "designerId": "3d9deb61-a085-4e0b-821a-2a8ba8b329ce",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnBenzineTourEditSaveClick",
+                                        "implHandler": [
+                                            "var me = this,",
+                                            "    form = me.lookupReference('formTourEdit'),",
+                                            "    record = form.getRecord(),",
+                                            "    values = form.getValues(),",
+                                            "    store = Ext.getStore('benzine.tour');",
+                                            "",
+                                            "if (form.isValid()) {",
+                                            "    me.getView().mask('Подождите...');",
+                                            "",
+                                            "    Ext.Ajax.request({",
+                                            "        url: 'data/benzine/tour-edit.php',",
+                                            "        params: values,",
+                                            "        success: function(r) {",
+                                            "            store.load({",
+                                            "                params:{",
+                                            "                    tour_id:values.tour_id",
+                                            "                }",
+                                            "            });",
+                                            "        },",
+                                            "        failure: function(r) {",
+                                            "            Ext.Msg.alert('Failed', r.result.msg);",
+                                            "        }",
+                                            "    });",
+                                            "",
+                                            "    me.getView().unmask();",
+                                            "    me.getView().close();",
+                                            "}"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnBenzineTourEditSaveClick",
+                                    "designerId": "d3e859f2-d7a6-4809-be50-ea37beab2c88"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "dialog-cancel",
+                                "id": "btnBenzineTourEditCancel",
+                                "text": "Отмена"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton12",
+                            "designerId": "cc874583-a1b1-4ff6-9a4a-55a7b5bb931b",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnBenzineTourEditCancelClick",
+                                        "implHandler": [
+                                            "this.getView().close();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnBenzineTourEditCancelClick",
+                                    "designerId": "e9a80963-29e5-4194-979b-37b7b96b0a25"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MySeparator1",
+                    "designerId": "e0800990-f633-48e9-b1f5-aa2d83096e73"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MyContainer1",
+                    "designerId": "9bf2b585-5c48-4992-97c7-f5081279a3d0",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "icon-add",
+                                "id": "btnBenzineTourEditAddressAdd",
+                                "text": "Добавить адрес"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "id": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton31",
+                            "designerId": "c1fe7ec5-25b4-416a-982a-1825774f6de6",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnBenzineTourEditAddressAddClick",
+                                        "implHandler": [
+                                            "var edit = Ext.create('Portal.view.benzine.Address_Edit').show();",
+                                            "edit.getReferences().formAddressEdit.getForm().setValues({",
+                                            "    new: 1",
+                                            "});"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnBenzineTourEditAddressAddClick",
+                                    "designerId": "165fcb72-867e-427f-a439-0c54fdc70238"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "html": "<i>Если нет нужного адреса, зайдите в <u>Настройки</u> и добавьте</i>",
+                        "layout": "column",
+                        "layout|flex": null,
+                        "padding": null
+                    },
+                    "configAlternates": {
+                        "html": "string",
+                        "hidden": "boolean",
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "padding": "auto"
+                    },
+                    "name": "MyContainer8",
+                    "designerId": "8e671051-e794-4fba-a43d-f87b87672da4"
+                }
+            ]
+        }
+    ]
+}

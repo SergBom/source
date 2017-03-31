@@ -1,0 +1,1142 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoShow": true,
+        "collapsible": true,
+        "designer|initialView": true,
+        "designer|userAlias": "PhonesBook",
+        "designer|userClassName": "PhonesBook.PhonesBook",
+        "height": 549,
+        "itemId": null,
+        "layout": "border",
+        "stateId": "PhonesBook",
+        "title": "Телефонная книга",
+        "width": 717
+    },
+    "name": "MyPanel2",
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "ea102e7e-9682-4c0f-a060-11373615dd69",
+    "viewControllerInstanceId": "b415da81-e8cc-4da8-adf6-cb2af9798fe1",
+    "viewModelInstanceId": "45e57e53-8275-4012-aca6-8d90de38c361",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": true,
+                "id": null,
+                "itemId": null,
+                "layout|region": "west",
+                "layout|split": true,
+                "reference": "OrgsList",
+                "store": "PhonesBook.Orgs",
+                "title": "Организации",
+                "width": 236
+            },
+            "name": "MyGridPanel",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "35af8e7a-365b-434f-933f-6bb7861e1416",
+            "cn": [
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "76b13e8a-3bf9-4c3c-bcbc-acb09de2b978",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTableSelectionChange",
+                                "implHandler": [
+                                    "var ref=this.getReferences();",
+                                    "//ref.btnOrgDel.setDisabled(selected.length === 0);",
+                                    "ref.btnUserAdd.setDisabled(selected.length === 0);",
+                                    "ref.btnUserEdit.setDisabled(true);",
+                                    "ref.seek.setDisabled(false);",
+                                    "ref.showAllUsers.setDisabled(false);",
+                                    "ref.showAllUsers.setValue(false);",
+                                    "ref.pnTools.setDisabled(false);",
+                                    "ref.seek.setValue(\"\");",
+                                    "this.getController().ShowUsers(\"\");"
+                                ],
+                                "name": "selectionchange",
+                                "scope": "me"
+                            },
+                            "name": "onTableSelectionChange",
+                            "designerId": "b3254396-30bd-44c8-9c9b-7ab95aa733db"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyBorder": false,
+                        "collapsed": false,
+                        "collapsible": false,
+                        "container|columns": 1,
+                        "disabled": true,
+                        "dock": "bottom",
+                        "height": 107,
+                        "id": null,
+                        "itemId": null,
+                        "layout": "table",
+                        "padding": "10 10 10 10",
+                        "reference": "pnTools",
+                        "title": "",
+                        "titleCollapse": false,
+                        "width": 100
+                    },
+                    "name": "MyForm",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "6efe5f31-d3a6-4d58-ac9e-c6d7dadfad30",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Показывать отсутсвтующих",
+                                "fieldLabel": null,
+                                "id": null,
+                                "itemId": null,
+                                "padding": "5 5 5 5",
+                                "reference": "MissingUsers"
+                            },
+                            "name": "MyCheckbox",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "4a7d48f4-e79d-4f4c-889e-47479a5fc4a4",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onMissingUsersChange",
+                                        "implHandler": [
+                                            "this.getController().ShowUsers(\"\");",
+                                            "this.getReferences().seek.setValue(\"\");"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onMissingUsersChange",
+                                    "designerId": "5a573899-689c-45ec-a483-3a0a843cc8ad"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top"
+                            },
+                            "name": "MyToolbar",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "41a5813e-e986-4105-8045-9b7a301d35f2",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": null,
+                                        "iconCls": "icon-mime-excel-16",
+                                        "layout|flex": null,
+                                        "text": "Excel"
+                                    },
+                                    "name": "MyButton",
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "designerId": "41092a58-5156-4f28-b3be-b0523ba22a69",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onButtonClick4",
+                                                "implHandler": [
+                                                    "//Ext.exporter.excel.Xlsx.setConfig({});",
+                                                    "/*var ug=this.getReferences().UserList;",
+                                                    "ug.saveDocumentAs({",
+                                                    "     type: 'excel',",
+                                                    "     title: 'My export',",
+                                                    "     fileName: 'myExport.xlsx'",
+                                                    " });",
+                                                    "*/",
+                                                    "",
+                                                    "",
+                                                    "var exporter = Ext.Factory.exporter({",
+                                                    "    type: 'excel',",
+                                                    "    data: {",
+                                                    "        columns: [{",
+                                                    "            text: 'Vacation',",
+                                                    "            columns: [",
+                                                    "                { text: 'Month', width: 200, style: { alignment: { horizontal: 'Right' } } },",
+                                                    "                { text: 'Days', style: { format: 'General Number' } }",
+                                                    "            ]",
+                                                    "        }],",
+                                                    "        groups: [{",
+                                                    "            text: 'Employees',",
+                                                    "            groups: [{",
+                                                    "                text: 'Adrian',",
+                                                    "                rows: [{",
+                                                    "                    cells: [",
+                                                    "                        { value: 'January' },",
+                                                    "                        { value: 2 }",
+                                                    "                    ]",
+                                                    "                },{",
+                                                    "                    cells: [",
+                                                    "                        { value: 'July' },",
+                                                    "                        { value: 10 }",
+                                                    "                    ]",
+                                                    "                }],",
+                                                    "                summaries: [{",
+                                                    "                    cells: [",
+                                                    "                        { value: 'Total' },",
+                                                    "                        { value: 12 }",
+                                                    "                    ]",
+                                                    "                }]",
+                                                    "            },{",
+                                                    "                text: 'John',",
+                                                    "                rows: [{",
+                                                    "                    cells: [",
+                                                    "                        { value: 'March' },",
+                                                    "                        { value: 4 }",
+                                                    "                    ]",
+                                                    "                },{",
+                                                    "                    cells: [",
+                                                    "                        { value: 'May' },",
+                                                    "                        { value: 4 }",
+                                                    "                    ]",
+                                                    "                },{",
+                                                    "                    cells: [",
+                                                    "                        { value: 'July' },",
+                                                    "                        { value: 2 }",
+                                                    "                    ]",
+                                                    "                }],",
+                                                    "                summaries: [{",
+                                                    "                    cells: [",
+                                                    "                        { value: 'Total' },",
+                                                    "                        { value: 10 }",
+                                                    "                    ]",
+                                                    "                }]",
+                                                    "            }],",
+                                                    "            summaries: [{",
+                                                    "                cells: [",
+                                                    "                    { value: 'Grand total' },",
+                                                    "                    { value: 22 }",
+                                                    "                ]",
+                                                    "            }]",
+                                                    "        }]",
+                                                    "    }",
+                                                    "});",
+                                                    "",
+                                                    "// save the file",
+                                                    "exporter.saveAs().then( function() { exporter.destroy(); } );",
+                                                    ""
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onButtonClick4",
+                                            "designerId": "d7829fcd-c566-4853-b0a8-e61dae7fde7e"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "icon-printer",
+                                        "layout|flex": null,
+                                        "text": "Печать"
+                                    },
+                                    "name": "MyButton1",
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "designerId": "950cb2e7-0bd7-40d9-a138-ad75a022f0c3",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onButtonClick",
+                                                "implHandler": [
+                                                    "var r=this.getReferences(),",
+                                                    "    grid=r.UserList,",
+                                                    "Org=r.OrgsList.getView().getSelectionModel().getSelection()[0];",
+                                                    "Ext.ux.grid.Printer.printAutomatically = false;",
+                                                    "Ext.ux.grid.Printer.mainTitle = 'Телефонный справочник организации \"'+Org.get('name')+'\"';",
+                                                    "r.PictColumn.hide();",
+                                                    "Ext.ux.grid.Printer.print(grid);",
+                                                    "r.PictColumn.show();"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onButtonClick",
+                                            "designerId": "c86c3dca-a321-4d2e-a59c-368d550c84a6"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "name",
+                        "flex": 1,
+                        "text": "Наименование"
+                    },
+                    "name": "MyColumn",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "5aa8c3c8-fed1-4eea-bc70-d04d47c9dd28"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "reference": "tbOrgEdit"
+                    },
+                    "name": "MyToolbar2",
+                    "designerId": "b92f28cc-d805-447f-93d8-b4b3b643f559",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "icon-add",
+                                "layout|flex": null,
+                                "text": "Добавить"
+                            },
+                            "name": "MyButton2",
+                            "designerId": "b6e51063-5a01-4b3b-842d-24f23d792b21"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "icon-delete",
+                                "layout|flex": null,
+                                "reference": "btnOrgDel",
+                                "text": "Удалить"
+                            },
+                            "name": "MyButton3",
+                            "designerId": "e82bea25-f686-43f2-898b-4ab0eebb4623"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "header": false,
+                "layout": "border",
+                "layout|region": "center",
+                "layout|split": false,
+                "title": "My Panel"
+            },
+            "name": "MyPanel",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "a5f9d4fb-69e6-4902-bba6-cc9d03c1f950",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "reference": "tbUserEdit"
+                    },
+                    "name": "MyToolbar3",
+                    "designerId": "d5289b0c-6faa-4ef3-b227-f820f4e90784",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Показать всех",
+                                "disabled": true,
+                                "fieldLabel": null,
+                                "layout|flex": null,
+                                "reference": "showAllUsers"
+                            },
+                            "name": "MyCheckbox1",
+                            "designerId": "c18aa29c-2406-47b8-8721-5ad73a04d949",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onCheckboxfieldChange",
+                                        "implHandler": [
+                                            "var r=this.getReferences();",
+                                            "this.getController().ShowUsers(r.seek.getValue());",
+                                            "if(newValue){r.MissingUsers.setValue(true);}"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onCheckboxfieldChange",
+                                    "designerId": "75f96c05-78fc-4dd4-b876-99f20d30c839"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "icon-add",
+                                "layout|flex": null,
+                                "reference": "btnUserAdd",
+                                "text": "Добавить"
+                            },
+                            "name": "MyButton4",
+                            "designerId": "71f1431e-984d-4166-a13c-d65bcbf7e12e",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick1",
+                                        "implHandler": [
+                                            "var ed = Ext.create('Portal.view.PhonesBook.UserEdit');",
+                                            "ed.down('form').getForm().setValues({",
+                                            "    id:'p-0',",
+                                            "    org_id:this.getReferences().OrgsList.getSelection()[0].data.id",
+                                            "});",
+                                            "ed.show();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick1",
+                                    "designerId": "aa34b8ab-99da-4e97-8266-20ccca89d99f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "icon-delete",
+                                "layout|flex": null,
+                                "reference": "btnUserDel",
+                                "text": "Удалить"
+                            },
+                            "name": "MyButton5",
+                            "designerId": "0a675b9e-dbda-4849-a082-3ebdf9e92a86",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick2",
+                                        "implHandler": [
+                                            "Portal.util.Util.deleteRecord2(",
+                                            "    {id:this.getReferences().UserList.getSelection()[0].data.id.substr(2)},",
+                                            "Ext.getStore('PhonesBook.UsersStore'),",
+                                            "'data/PhonesBook/user-delete.php');"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick2",
+                                    "designerId": "ff47b43c-1074-4396-b1a4-0cc56bffe6c5"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "icon-edit",
+                                "layout|flex": null,
+                                "reference": "btnUserEdit",
+                                "text": "Редактировать"
+                            },
+                            "name": "MyButton8",
+                            "designerId": "6e774b60-3be1-4328-9a8f-32b54f0ba348",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick3",
+                                        "implHandler": [
+                                            "var ed = Ext.create('Portal.view.PhonesBook.UserEdit');",
+                                            "ed.down('form').getForm().setValues(",
+                                            "    this.getReferences().UserList.getSelection()[0].data",
+                                            ");",
+                                            "ed.show();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick3",
+                                    "designerId": "85acb774-7a6f-4c5b-a785-191bf5e95391"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "layout|flex": 1
+                    },
+                    "name": "MyToolbar1",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "8fe75935-5c39-478a-b70a-7527c637ebf7",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "blankText": null,
+                                "disabled": true,
+                                "emptyText": "Поиск...",
+                                "enableKeyEvents": true,
+                                "fieldLabel": null,
+                                "id": null,
+                                "itemId": null,
+                                "layout|flex": 1,
+                                "name": "SearchField",
+                                "reference": "seek",
+                                "width": 359
+                            },
+                            "name": "MyTextField",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "41474871-c1ce-4760-ab33-e76067672bcb",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSeekChange",
+                                        "implHandler": [
+                                            "this.getController().ShowUsers(newValue);"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onSeekChange",
+                                    "designerId": "c8a2afa8-17be-4171-83ab-5052a428091b"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoShow": true,
+                        "columnLines": null,
+                        "header": false,
+                        "id": null,
+                        "itemId": null,
+                        "layout|region": "center",
+                        "reference": "UserList",
+                        "stateId": "UsersList",
+                        "store": "PhonesBook.UsersStore",
+                        "title": null
+                    },
+                    "name": "MyGridPanel1",
+                    "configAlternates": {
+                        "rowexpanderer": "object",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "0edbe490-8bf6-4d7f-9765-9e29b89a27e9",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyGridView1",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "3990be76-5448-4670-9989-73609bad5586",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "plug",
+                                    "type": "string"
+                                }
+                            ],
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "record",
+                                            "rowIndex",
+                                            "rowParams",
+                                            "store"
+                                        ],
+                                        "fn": "getRowClass",
+                                        "implHandler": [
+                                            "var $r='user-on';",
+                                            "if(record.get('say')==='0'){",
+                                            "    $r='user-nosay';",
+                                            "}",
+                                            "else if(record.get('off')!=='0'){",
+                                            "    $r='user-off';",
+                                            "}",
+                                            "return $r;"
+                                        ]
+                                    },
+                                    "name": "getRowClass",
+                                    "designerId": "b3c29afa-461e-4dfc-b4b3-d9c3f5c886a0"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onTableSelectionChange1",
+                                        "implHandler": [
+                                            "var r=this.getReferences(),",
+                                            "    rus=r.UserList.getSelection()[0];",
+                                            "if(rus){",
+                                            "    if(rus.data.id.substr(0,1)!='u'){",
+                                            "        r.btnUserDel.setDisabled(selected.length === 0);",
+                                            "    }else{r.btnUserDel.setDisabled(true);}",
+                                            "}",
+                                            "r.btnUserEdit.setDisabled(selected.length === 0);",
+                                            "if(selected.length){r.detailInfo.update(selected[0].data);}"
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "name": "onTableSelectionChange1",
+                                    "designerId": "48623967-be2f-43d1-bc3a-8ceb89202ece"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.RowNumberer",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "",
+                                "text": ""
+                            },
+                            "name": "MyRowNumberer",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "4dda6dbb-b263-457d-9df6-ea9bb7bed063"
+                        },
+                        {
+                            "type": "Ext.grid.column.Action",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "center",
+                                "dataIndex": "userImageSrc",
+                                "draggable": false,
+                                "hidden": null,
+                                "menuDisabled": null,
+                                "reference": "PictColumn",
+                                "resizable": false,
+                                "text": "Pict",
+                                "width": 43
+                            },
+                            "name": "MyActionColumn",
+                            "designerId": "246ff8cb-0f63-4c6d-bfa2-d05fb0ec84cb",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value",
+                                            "metaData",
+                                            "record",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "store",
+                                            "view"
+                                        ],
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "this.items[0].icon=value;"
+                                        ]
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "f9eca688-adb9-4cb6-b6e0-e87988db57f1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "FIO",
+                                "flex": 2,
+                                "text": "Ф.И.О.",
+                                "width": 207
+                            },
+                            "name": "MyColumn1",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "895e39e6-87ad-454a-a23b-0f30336ba540"
+                        },
+                        {
+                            "type": "Ext.grid.column.Number",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "telIP",
+                                "format": "0000",
+                                "text": "Тел IP",
+                                "width": 47
+                            },
+                            "name": "MyNumberColumn",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "03d3be21-eb05-45e6-86d2-43eb24bce873"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "tel1",
+                                "sortable": true,
+                                "text": "Тел 1",
+                                "width": 100
+                            },
+                            "name": "MyColumn2",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "b5a94c91-869b-4dc9-9fc9-0ae22854272b"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "otdel_name",
+                                "flex": 1,
+                                "groupable": true,
+                                "hidden": true,
+                                "sortable": true,
+                                "text": "Отдел"
+                            },
+                            "name": "MyColumn3",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "a5d8dcd3-d599-4f68-81c3-fec35851f7cd"
+                        },
+                        {
+                            "type": "Ext.grid.feature.Grouping",
+                            "reference": {
+                                "name": "features",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "showSummaryRow": true
+                            },
+                            "name": "MyGroupingFeature",
+                            "designerId": "59e5e66a-b895-47f8-861f-1b567bb485d4"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "dolzhnost_name",
+                                "hidden": null,
+                                "text": "Должность",
+                                "width": 125
+                            },
+                            "name": "MyColumn4",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "d23d042d-56de-454f-95ce-2c1b490aa5b2"
+                        },
+                        {
+                            "type": "Ext.grid.column.Number",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "dolzhnost_code",
+                                "format": "0",
+                                "hidden": true,
+                                "text": "Должность(код)"
+                            },
+                            "name": "MyNumberColumn1",
+                            "designerId": "304d200a-e605-4ea1-bf17-2a4aeafef662"
+                        },
+                        {
+                            "type": "Ext.toolbar.Toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top",
+                                "hidden": true
+                            },
+                            "name": "MyToolbar5",
+                            "designerId": "46c7ef0c-5f9f-4edd-adad-1dc4757355cf",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "группировка по отделам",
+                                        "fieldLabel": null,
+                                        "layout|flex": null
+                                    },
+                                    "name": "MyCheckbox3",
+                                    "designerId": "62575092-5fbd-469c-98ba-b9f0175db3f1",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onCheckboxfieldChange1",
+                                                "implHandler": [
+                                                    "console.log(newValue);"
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onCheckboxfieldChange1",
+                                            "designerId": "b9fc5213-9cf5-42ab-b224-9d99727e2ef0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyPadding": 10,
+                        "collapsible": true,
+                        "height": 220,
+                        "id": null,
+                        "itemId": null,
+                        "layout|region": "south",
+                        "layout|split": true,
+                        "reference": "detailInfo",
+                        "scrollable": true,
+                        "title": "Детальная информация"
+                    },
+                    "name": "MyPanel1",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "2401c5a0-6c54-4146-a1eb-a00481af4c61",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "tpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "tpl",
+                                "implHandler": [
+                                    "<img src=\"{userImageSrc}\" style=\"float: right\" height=\"64\" width=\"64\"/>",
+                                    "",
+                                    "<b>{FIO}</b>",
+                                    "<tpl if=\"say == 0\">",
+                                    "     <span class=\"user-nosay\"> *** Не отображается в справочнике ***</span>",
+                                    "</tpl>",
+                                    "",
+                                    "<br>",
+                                    "<tpl if=\"off == 2\">",
+                                    "    - <span class=\"user-off\">Отсутствует с <span style=\"color:red\">{dateOff}</span> по <span style=\"color:red\">{dateOn}</span></span>",
+                                    "</tpl>",
+                                    "<hr>",
+                                    "{dolzhnost_name}<br>",
+                                    "{otdel_name}<br>",
+                                    "<hr>",
+                                    "{address_name}",
+                                    "<hr>",
+                                    "Тел IP: {telIP}<br>",
+                                    "Тел 1: {tel1}<br>",
+                                    "Тел 2: {tel2}<br>",
+                                    "email: {email}<br>",
+                                    "",
+                                    "<!--a href=\"{wiki}\" target=\"_blank\"></a><br>",
+                                    "{price:usMoney}<br-->",
+                                    "<!--img src=\"data/{img}\" style=\"float: right\" /-->",
+                                    ""
+                                ]
+                            },
+                            "name": "tpl",
+                            "designerId": "1d63411a-faa6-4444-88e8-cdd4a553f9d2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelShow",
+                "implHandler": [
+                    "Ext.getStore('PhonesBook.Orgs').load();"
+                ],
+                "name": "show",
+                "scope": "me"
+            },
+            "name": "onPanelShow",
+            "designerId": "a878a5a0-beb6-4912-81bd-1cb70dc57b8e"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelAfterRender",
+                "implHandler": [
+                    "/***** Устанавливаем права на приложение *****/",
+                    "var AccessEdit = Portal.util.Util.appAccessEdit(this.getView().xtype),",
+                    "    ref=this.getReferences();",
+                    "//console.log('AccessEdit='+AccessEdit);",
+                    "ref.tbOrgEdit.setHidden( !AccessEdit );",
+                    "ref.tbUserEdit.setHidden( !AccessEdit );",
+                    "Ext.getStore('PhonesBook.Orgs').load();",
+                    "Ext.getStore('PhonesBook.UsersStore').load();"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onPanelAfterRender",
+            "designerId": "098c583d-6f46-47bb-b104-3e5c66bcdd86"
+        }
+    ]
+}

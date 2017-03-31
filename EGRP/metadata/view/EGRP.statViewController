@@ -1,0 +1,46 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "egrp.stat",
+        "designer|userClassName": "EGRP.statViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "ea0301a6-16af-44f5-b6f8-c2341b90ca0c",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "s"
+                ],
+                "fn": "htmlentities",
+                "implHandler": [
+                    "var d=document.createElement('div'),",
+                    "    t=document.createTextNode(s);",
+                    "d.appendChild(t);",
+                    "return d.innerHTML;"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "htmlentities",
+            "designerId": "06c163b0-18b3-4ad2-ad4e-943d1313ca4a"
+        }
+    ]
+}

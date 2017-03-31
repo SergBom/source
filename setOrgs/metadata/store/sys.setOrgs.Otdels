@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sys.setOrgs.Otdels",
+        "model": "sys.setOrgs.Otdels",
+        "storeId": "sys.setOrgs.Otdels"
+    },
+    "name": "MyJsonStore",
+    "designerId": "823f5af9-5307-4cdc-aba1-375bf9b9df6e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/sys/setOrgs/otdels-read.php"
+            },
+            "name": "MyAjaxProxy1",
+            "designerId": "51fffcf0-30a7-412b-a22e-d03cc2e2ee9d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "6088a692-46e0-4edf-bc10-e5b23c24ea6f"
+                }
+            ]
+        }
+    ]
+}

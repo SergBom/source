@@ -1,0 +1,132 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "egrp.flk",
+        "designer|userClassName": "EGRP.flkViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "a9dd2d6a-bd43-4ea8-a64a-01a3cbe223f7",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "LoadData",
+                "implHandler": [
+                    "var r=this.getReferences(),",
+                    "    s=r.cbProtocol.getValue(),",
+                    "    o=r.cbOtdel.getValue(),",
+                    "    t=r.cbTypeSys.getValue(),",
+                    "    f=r.form.getForm();",
+                    "if(s&&o&&t){",
+                    "this.getStore('Main').loadPage(1,{params:{session:s,otdel:o,stype:t}});",
+                    "f.reset();}"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "LoadData",
+            "designerId": "38d21084-75f4-476e-9633-9e6e2eb64f8a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "v"
+                ],
+                "fn": "cE",
+                "implHandler": [
+                    "switch(v){",
+                    "case \"0\":return '<img src=\"/resources/images/diagona/02/10/21.png\" alt=\"Bad\">';",
+                    "case \"1\":return '<img src=\"/resources/images/diagona/02/10/22.png\" alt=\"Ok\">';",
+                    "case \"2\":return '<img src=\"/resources/images/diagona/02/10/24.png\" alt=\"Not\">';",
+                    "case \"3\":return '<img src=\"/resources/images/diagona/02/10/23.png\" alt=\"No Err\">';",
+                    "case \"4\":return '<img src=\"/resources/images/flag/png/ru.png\">';",
+                    "}",
+                    "return v;"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "cE",
+            "designerId": "3049e126-4fdc-4f10-95dc-1e76f1e778fe"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "v"
+                ],
+                "fn": "cRF",
+                "implHandler": [
+                    "switch(v){",
+                    "case 0:return '';",
+                    "case 1:return '<img src=\"/resources/images/flag/png/ru.png\">';",
+                    "case 2:return '<img src=\"/resources/images/flag/png/ru_2.png\">Мур';",
+                    "case 3:return '<img src=\"/resources/images/flag/png/ru_2.png\">МО';",
+                    "}",
+                    "return '<img src=\"/resources/images/flag/png/ru_2.png\">'+v;"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "cRF",
+            "designerId": "4af9795a-e138-4660-a250-d3e85e004f41"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "v"
+                ],
+                "fn": "b2v",
+                "implHandler": [
+                    "if(v=='on'){return 1;}",
+                    "else{return 0;}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "b2v",
+            "designerId": "89f61902-7059-44f6-af7e-29de8413dce2"
+        }
+    ]
+}

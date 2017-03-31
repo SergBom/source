@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "refusalsmain",
+        "designer|userClassName": "Refusals.mainViewModel"
+    },
+    "designerId": "7a218326-5e2d-49e1-bd92-388d6afd79f0"
+}

@@ -1,0 +1,1908 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivessettings",
+        "designer|userClassName": "EvalEffectives.Settings",
+        "height": 496,
+        "iconCls": "icon-setting2",
+        "id": "EvalEffectivesWinSettings",
+        "layout": "fit",
+        "maximizable": true,
+        "modal": true,
+        "title": "Настройки",
+        "width": 740
+    },
+    "name": "MyWindow",
+    "designerId": "577b6399-9f59-46b4-b010-149c4688d4bc",
+    "viewControllerInstanceId": "373d520b-fb9d-49ee-b031-868458085102",
+    "viewModelInstanceId": "7ab73131-8757-4eb8-9794-771e03528e55",
+    "cn": [
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0
+            },
+            "name": "MyTabPanel",
+            "designerId": "f8a41c1f-840a-4c7f-bb50-135ad2c1b528",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "border",
+                        "title": "Права доступа"
+                    },
+                    "name": "MyPanel",
+                    "designerId": "34a894c0-be15-4154-bfb1-0ee93ed9e5eb",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig",
+                            "designerId": "16ee3a00-77c4-43a3-8dda-492506c07010"
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|region": "west",
+                                "layout|split": true,
+                                "reference": "tblGrAccess",
+                                "store": "EvalEffectives.JobersGroup",
+                                "title": "Группы доступа",
+                                "width": 316
+                            },
+                            "name": "MyGridPanel2",
+                            "designerId": "def00263-4910-4f1f-9a70-02e3127cd9ea",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "groupname",
+                                        "text": "Группа",
+                                        "width": 136
+                                    },
+                                    "name": "MyColumn4",
+                                    "designerId": "82cedaa5-ccb7-47cb-bc06-04a46e43e7e1",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "editor",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MyTextField",
+                                            "designerId": "095be0ec-d3d9-427d-bc02-cbbfd61449cd"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "info",
+                                        "flex": 1,
+                                        "text": "Описание"
+                                    },
+                                    "name": "MyColumn5",
+                                    "designerId": "11092468-1e57-4dbc-953d-f780d145382b",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "editor",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MyTextField1",
+                                            "designerId": "8c30bafe-89aa-4ae9-81b3-8fd27090e6f5"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.view.Table",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTable2",
+                                    "designerId": "8d1918f6-6be1-4853-8eee-0938215c472b"
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top"
+                                    },
+                                    "name": "MyToolbar1",
+                                    "designerId": "481eaf22-0911-4ccd-9d3c-b5ef74e6c2c2",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "icon-add",
+                                                "layout|flex": null,
+                                                "text": "Добавить"
+                                            },
+                                            "name": "MyButton4",
+                                            "designerId": "a2424077-106f-46ea-ad3e-76fd9854a952",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick",
+                                                        "implHandler": [
+                                                            "var ed = Ext.create('Portal.view.EvalEffectives.JobersGroupEdit').show();",
+                                                            "ed.down('form').getForm().setValues({id:0});"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick",
+                                                    "designerId": "d5797992-44f1-4de8-a6f0-a613358b7d35"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "iconCls": "icon-delete",
+                                                "layout|flex": null,
+                                                "reference": "btnGrAccessDelete",
+                                                "text": "Удалить"
+                                            },
+                                            "name": "MyButton5",
+                                            "designerId": "97749505-544b-447d-b6ae-bbbf97fbdc6e",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick1",
+                                                        "implHandler": [
+                                                            "Portal.util.Util.deleteRecord2(",
+                                                            "this.getReferences().tblGrAccess.getSelection()[0],",
+                                                            "Ext.getStore('EvalEffectives.JobersGroup'),",
+                                                            "'data/EvalEffectives/JobersGroup-delete.php');",
+                                                            ""
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick1",
+                                                    "designerId": "304aabe1-56f3-4221-af85-2a65cc956236"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelItemDblClick",
+                                        "implHandler": [
+                                            "var ed = Ext.create('Portal.view.EvalEffectives.JobersGroupEdit').show();",
+                                            "ed.down('form').getForm().setValues(record.data);"
+                                        ],
+                                        "name": "itemdblclick",
+                                        "scope": "me"
+                                    },
+                                    "name": "onGridpanelItemDblClick",
+                                    "designerId": "5337a47a-6966-4f70-aee1-1dc05af051ad"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelSelectionChange1",
+                                        "implHandler": [
+                                            "//this.getReferences().btnGrAccessDelete.setDisabled(selected.length === 0);",
+                                            "this.getReferences().btnGrParamsAdd.setDisabled(selected.length === 0);",
+                                            "Ext.getStore('EvalEffectives.ParamsGroup').load({params:{",
+                                            "    g_id:selected[0].data.id",
+                                            "}});"
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "name": "onGridpanelSelectionChange1",
+                                    "designerId": "dba1eaac-c99f-4504-b88d-5eeb44e94dcc"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|region": "center",
+                                "reference": "EvalEffecives_tableSetGrParams",
+                                "store": "EvalEffectives.ParamsGroup",
+                                "title": "Параметры для группы"
+                            },
+                            "name": "MyGridPanel3",
+                            "designerId": "6df1fe34-f91e-402a-a9d1-34acd72f3f81",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "R1",
+                                        "text": "Показатель"
+                                    },
+                                    "name": "MyColumn7",
+                                    "designerId": "478239bc-9f73-412d-a7bd-b456aa67bc53"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "R2",
+                                        "flex": 1,
+                                        "text": "Расшифровка"
+                                    },
+                                    "name": "MyColumn8",
+                                    "designerId": "31f80780-7ff7-4cca-8e2b-6a4ee3cc10e7"
+                                },
+                                {
+                                    "type": "Ext.view.Table",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTable3",
+                                    "designerId": "0a324071-9000-40e5-9a76-59cee846f33a"
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top"
+                                    },
+                                    "name": "MyToolbar5",
+                                    "designerId": "7bd69938-e09c-4ddc-a8f5-86a23edead3f",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "iconCls": "icon-add",
+                                                "layout|flex": null,
+                                                "reference": "btnGrParamsAdd",
+                                                "text": "Добавить"
+                                            },
+                                            "name": "MyButton12",
+                                            "designerId": "7f1d2eea-975b-4109-b4a6-c14b3d8e20be",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick4",
+                                                        "implHandler": [
+                                                            "var gt=this.getReferences().tblGrAccess.getSelection()[0].data;",
+                                                            "var ed = Ext.create('Portal.view.EvalEffectives.ParamsGroupEdit').show();",
+                                                            "ed.setTitle('Параметр для группы \"'+gt.groupname+'\"');",
+                                                            "ed.getViewModel().getStore('storeParamsGroup').load({params:{g_id:gt.id}});",
+                                                            "ed.down('form').getForm().setValues({",
+                                                            "    id:0,",
+                                                            "    g_id:gt.id",
+                                                            "});"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick4",
+                                                    "designerId": "560857ca-381e-408e-9e34-e83ff3caebb0"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "iconCls": "icon-delete",
+                                                "layout|flex": null,
+                                                "reference": "btnGrParamsDelete",
+                                                "text": "Удалить"
+                                            },
+                                            "name": "MyButton13",
+                                            "designerId": "8d2f0c42-be44-4945-84f8-d843d781e641",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick5",
+                                                        "implHandler": [
+                                                            "Portal.util.Util.deleteRecord2(",
+                                                            "this.getReferences().EvalEffecives_tableSetGrParams.getSelection()[0],",
+                                                            "Ext.getStore('EvalEffectives.ParamsGroup'),",
+                                                            "'data/EvalEffectives/ParamsGroup-delete.php');"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick5",
+                                                    "designerId": "81d30612-2d1d-4093-9812-54c629f3f29b"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelSelectionChange2",
+                                        "implHandler": [
+                                            "this.getReferences().btnGrParamsDelete.setDisabled(selected.length === 0);"
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "name": "onGridpanelSelectionChange2",
+                                    "designerId": "c65f8024-3474-41eb-983d-da651a0c6272"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "fit",
+                        "title": "Пользователи"
+                    },
+                    "name": "MyPanel1",
+                    "designerId": "005f6ea6-536b-48c2-82d0-27d6c40feda0",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig1",
+                            "designerId": "8c63d7e2-549c-46f0-b3b4-60b2245cd63c"
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": null,
+                                "reference": "EvalEffecives_tableSetUsersList",
+                                "store": "EvalEffectives.Jobers",
+                                "title": "Пользователи"
+                            },
+                            "name": "MyGridPanel1",
+                            "designerId": "01c0c44e-789e-42e5-b287-311dc99ad5ac",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "user",
+                                        "flex": 2,
+                                        "text": "Пользователь"
+                                    },
+                                    "name": "MyColumn3",
+                                    "designerId": "50ae42c2-e483-4b40-9bab-85c2c85ac0ca"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "groupname",
+                                        "flex": 1,
+                                        "text": "Группа"
+                                    },
+                                    "name": "MyColumn6",
+                                    "designerId": "824fc199-e945-4a6a-b72e-b79c7f24af99"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "otdel",
+                                        "groupable": true,
+                                        "text": "Отдел",
+                                        "width": 172
+                                    },
+                                    "name": "MyColumn27",
+                                    "designerId": "72617877-5955-4f6f-a36c-115639f583a4"
+                                },
+                                {
+                                    "type": "Ext.view.Table",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTable1",
+                                    "designerId": "50462cc6-486d-43ef-8ecf-631f4bd3ba17"
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top"
+                                    },
+                                    "name": "MyToolbar2",
+                                    "designerId": "a99b2075-e8ea-4492-acc4-88fec1416afc",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "icon-add",
+                                                "layout|flex": null,
+                                                "text": "Добавить"
+                                            },
+                                            "name": "MyButton6",
+                                            "designerId": "672b20c6-dc1a-4a46-a0a3-7309a19f1680",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick2",
+                                                        "implHandler": [
+                                                            "var ed = Ext.create('Portal.view.EvalEffectives.JobersEdit').show();",
+                                                            "ed.down('form').getForm().setValues({id:0});"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick2",
+                                                    "designerId": "2e7f7540-fc92-49c1-a035-350eec6a08b2"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "iconCls": "icon-delete",
+                                                "layout|flex": null,
+                                                "reference": "btnSetUsersDelete",
+                                                "text": "Удалить"
+                                            },
+                                            "name": "MyButton7",
+                                            "designerId": "70ee4c84-ec7d-4adf-8c40-949df1c62edd",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick3",
+                                                        "implHandler": [
+                                                            "Portal.util.Util.deleteRecord2(",
+                                                            "    this.getReferences().EvalEffecives_tableSetUsersList.getSelection()[0],",
+                                                            "    Ext.getStore('EvalEffectives.Jobers'),",
+                                                            "    'data/EvalEffectives/Jobers-delete.php');"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick3",
+                                                    "designerId": "1e20025a-ff09-43f2-9a92-612375a2ff5a"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelSelectionChange",
+                                        "implHandler": [
+                                            "this.getReferences().btnSetUsersDelete.setDisabled(selected.length === 0);",
+                                            ""
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "name": "onGridpanelSelectionChange",
+                                    "designerId": "85f765e2-21c8-4a72-9eb3-e5dce99e27df"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onEvalEffecives_tableSetUsersListItemDblClick",
+                                        "implHandler": [
+                                            "var ed = Ext.create('Portal.view.EvalEffectives.JobersEdit').show();",
+                                            "ed.down('form').getForm().setValues(record.data);"
+                                        ],
+                                        "name": "itemdblclick",
+                                        "scope": "me"
+                                    },
+                                    "name": "onEvalEffecives_tableSetUsersListItemDblClick",
+                                    "designerId": "5a0d706e-8571-43f8-b9f7-ddc9337a820d"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": null,
+                        "layout": "border",
+                        "title": "Справочники"
+                    },
+                    "name": "MyPanel2",
+                    "designerId": "c22cc7d7-773f-4358-b578-ccfc88547568",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig2",
+                            "designerId": "e1c77327-3abb-4e9e-8ce9-79d412b72370"
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "layout|region": "west",
+                                "layout|split": true,
+                                "title": "Константы",
+                                "width": 308
+                            },
+                            "name": "MyGridPanel5",
+                            "designerId": "19d6a826-89ff-4c89-b6fb-ad1048c2fc66",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.RowNumberer",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyRowNumberer1",
+                                    "designerId": "dac7595f-f415-49ad-b2f5-06bb66d9eaf5"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "Константа"
+                                    },
+                                    "name": "MyColumn12",
+                                    "designerId": "7d1aa46e-4651-4699-a15a-190e06df0872",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "Наименование",
+                                                "width": 80
+                                            },
+                                            "name": "MyColumn15",
+                                            "designerId": "fa1f2402-6c17-4852-b5bd-556a708df45f"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "number",
+                                                "flex": 1,
+                                                "text": "Расшифровка"
+                                            },
+                                            "name": "MyColumn14",
+                                            "designerId": "2c3c9d27-5ee5-41df-bd51-d958a4b39a4b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.column.Number",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "Значение"
+                                    },
+                                    "name": "MyNumberColumn2",
+                                    "designerId": "e568a032-b5fd-4152-8e22-5056fed1382d"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Date",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "date",
+                                        "text": "С какой даты<br>действует"
+                                    },
+                                    "name": "MyDateColumn",
+                                    "designerId": "63d62ef5-99f3-492d-a57f-ad24120525c0"
+                                },
+                                {
+                                    "type": "Ext.view.Table",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTable5",
+                                    "designerId": "dcfe9b58-2dff-415f-b722-f212986881a2"
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top"
+                                    },
+                                    "name": "MyToolbar8",
+                                    "designerId": "0023533f-8fa0-42b9-8b7e-fb7eda7db213",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "icon-add",
+                                                "layout|flex": null,
+                                                "text": "Добавить"
+                                            },
+                                            "name": "MyButton20",
+                                            "designerId": "f4e46e5d-1c79-40c9-996a-c6f43d3544fd"
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "icon-delete",
+                                                "layout|flex": null,
+                                                "text": "Удалить"
+                                            },
+                                            "name": "MyButton21",
+                                            "designerId": "b616c9f2-7178-4a6f-8c89-541a4ba779c4"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|region": "center",
+                                "layout|split": true,
+                                "reference": "tblCountGZI",
+                                "store": "EvalEffectives.GZIcount",
+                                "title": "Численность инспекторов в отделах"
+                            },
+                            "name": "MyGridPanel6",
+                            "designerId": "4f3ab83f-e8b9-48dc-aec3-2f01bd9533bb",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.RowNumberer",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyRowNumberer2",
+                                    "designerId": "cb47c79a-670f-484a-a50e-2f4718a1e7de"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "otdel_name",
+                                        "flex": 1,
+                                        "text": "Отдел"
+                                    },
+                                    "name": "MyColumn13",
+                                    "designerId": "6fe55ae9-1762-4e5f-a081-e702b496c624"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Number",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "n_gzi",
+                                        "format": "0",
+                                        "text": "Кол-во",
+                                        "width": 72
+                                    },
+                                    "name": "MyNumberColumn3",
+                                    "designerId": "1a5adf64-8cde-4f60-a741-bb29c7ee6018"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Date",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "dateCount",
+                                        "format": "Y-m-d",
+                                        "text": "С какой даты<br>действует"
+                                    },
+                                    "name": "MyDateColumn1",
+                                    "designerId": "1b58b034-c6b3-4365-a015-1a82931c204e"
+                                },
+                                {
+                                    "type": "Ext.view.Table",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTable6",
+                                    "designerId": "8464b30d-0942-4b95-8657-995a91b4f1ea"
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top"
+                                    },
+                                    "name": "MyToolbar9",
+                                    "designerId": "feb01d26-3b33-4cf3-aff0-bbecb466e938",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "icon-add",
+                                                "layout|flex": null,
+                                                "text": "Добавить"
+                                            },
+                                            "name": "MyButton18",
+                                            "designerId": "37c182b6-7171-4614-8927-9358a03e3a70",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick6",
+                                                        "implHandler": [
+                                                            "var ed = Ext.create('Portal.view.EvalEffectives.GZIcount').show();",
+                                                            "ed.down('form').getForm().setValues({id:0});"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick6",
+                                                    "designerId": "03278b2d-7d55-4d0e-8ab1-8efa6f9b8d51"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "iconCls": "icon-delete",
+                                                "layout|flex": null,
+                                                "reference": "btnCalcInspetorDel",
+                                                "text": "Удалить"
+                                            },
+                                            "name": "MyButton19",
+                                            "designerId": "3e2c1d33-3824-4b90-8b6a-bc32f7fd4629",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick7",
+                                                        "implHandler": [
+                                                            "Portal.util.Util.deleteRecord2(",
+                                                            "this.getReferences().tblCountGZI.getSelection()[0],",
+                                                            "Ext.getStore('EvalEffectives.GZIcount'),",
+                                                            "'data/EvalEffectives/CountGZI-delete.php');"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick7",
+                                                    "designerId": "0c16dd65-2827-460a-8f77-3bf4a263ea75"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelItemDblClick1",
+                                        "implHandler": [
+                                            "var ed = Ext.create('Portal.view.EvalEffectives.GZIcount').show();",
+                                            "ed.down('form').getForm().setValues(record.data);"
+                                        ],
+                                        "name": "itemdblclick",
+                                        "scope": "me"
+                                    },
+                                    "name": "onGridpanelItemDblClick1",
+                                    "designerId": "4c8b61cf-8058-4906-ac7b-5c733cce6afb"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelSelectionChange5",
+                                        "implHandler": [
+                                            "this.getReferences().btnCalcInspetorDel.setDisabled(selected.length === 0);"
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "name": "onGridpanelSelectionChange5",
+                                    "designerId": "26b41bf5-d743-4fce-9cba-88f195246b40"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "border",
+                        "reference": "tab4",
+                        "title": "Показатели"
+                    },
+                    "name": "MyPanel3",
+                    "designerId": "1b63052d-c494-4493-b09c-85625ce97cec",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig3",
+                            "designerId": "dcebc8ee-d47d-4e81-9c39-b31949c36b79"
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|region": "west",
+                                "layout|split": true,
+                                "reference": "tblParamsIn",
+                                "store": "EvalEffectives.ParamsIn",
+                                "title": "Входные показатели",
+                                "width": 291
+                            },
+                            "name": "MyGridPanel8",
+                            "designerId": "f619793c-6f46-4b43-8664-33165b4dcc11",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.RowNumberer",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": null,
+                                        "text": null
+                                    },
+                                    "name": "MyRowNumberer3",
+                                    "designerId": "ab42dd7b-ea13-43e4-9200-c3637f2ee6a5"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "R1",
+                                        "text": "Паказатель"
+                                    },
+                                    "name": "MyColumn11",
+                                    "designerId": "6a06a7cc-8a7a-4a1e-89a9-ef609d55e37f"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "R2",
+                                        "flex": 1,
+                                        "text": "Расшифровка"
+                                    },
+                                    "name": "MyColumn19",
+                                    "designerId": "d81fce75-c22b-4c49-9cde-780d5160955d"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Check",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "on",
+                                        "text": "Вкл/Выкл",
+                                        "width": 54
+                                    },
+                                    "name": "MyCheck",
+                                    "designerId": "cf8e205a-7057-4c39-84b2-4bd13b084125"
+                                },
+                                {
+                                    "type": "Ext.view.Table",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 224
+                                    },
+                                    "name": "MyTable8",
+                                    "designerId": "a3e52298-f427-48d1-9606-a98b6f5c89a5"
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top"
+                                    },
+                                    "name": "MyToolbar11",
+                                    "designerId": "a52b5fb0-d6ec-4bb9-9a4c-71bf9107dbe1",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "icon-add",
+                                                "layout|flex": null,
+                                                "text": "Добавить"
+                                            },
+                                            "name": "MyButton23",
+                                            "designerId": "838a9731-60be-4e88-8239-d6e851fec0a1",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick8",
+                                                        "implHandler": [
+                                                            "var ed = Ext.create('Portal.view.EvalEffectives.ParamsInEdit').show();",
+                                                            "ed.down('form').getForm().setValues({id:0});"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick8",
+                                                    "designerId": "1a9d37f0-94d9-45cc-ad76-3428e242b549"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "iconCls": "icon-delete",
+                                                "layout|flex": null,
+                                                "reference": "btnTblParamsIn",
+                                                "text": "Удалить"
+                                            },
+                                            "name": "MyButton26",
+                                            "designerId": "4aae00f1-0277-464a-b4eb-77a9043b44c5",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onButtonClick9",
+                                                        "implHandler": [
+                                                            "Portal.util.Util.deleteRecord2(",
+                                                            "this.getReferences().tblParamsIn.getSelection()[0],",
+                                                            "Ext.getStore('EvalEffectives.ParamsIn'),",
+                                                            "'data/EvalEffectives/ParamsIn-delete.php');"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "name": "onButtonClick9",
+                                                    "designerId": "d4120678-0bd8-48ea-9eeb-9c11b32600c9"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelItemDblClick2",
+                                        "implHandler": [
+                                            "var ed = Ext.create('Portal.view.EvalEffectives.ParamsInEdit').show();",
+                                            "ed.down('form').getForm().setValues(record.data);"
+                                        ],
+                                        "name": "itemdblclick",
+                                        "scope": "me"
+                                    },
+                                    "name": "onGridpanelItemDblClick2",
+                                    "designerId": "a012ee50-0ece-4db9-a7cd-a985c7813d17"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelSelectionChange3",
+                                        "implHandler": [
+                                            "this.getReferences().btnTblParamsIn.setDisabled(selected.length === 0);"
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "name": "onGridpanelSelectionChange3",
+                                    "designerId": "e003eb64-175f-484a-841f-ef2feefb597c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "border",
+                                "layout|region": "center",
+                                "title": null
+                            },
+                            "name": "MyPanel4",
+                            "designerId": "8c3eaa9e-6c5a-4cfa-94c2-126027a85038",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 150,
+                                        "layout|region": "north",
+                                        "layout|split": true,
+                                        "reference": "tblParamsOut",
+                                        "store": "EvalEffectives.ParamsOut",
+                                        "title": "Выходные (вычисляемые) показатели"
+                                    },
+                                    "name": "MyGridPanel9",
+                                    "designerId": "f4965a5a-23e4-4c98-840a-ed2f0969ef46",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.grid.column.RowNumberer",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": null,
+                                                "text": null
+                                            },
+                                            "name": "MyRowNumberer4",
+                                            "designerId": "1a9f0434-ac22-4228-b087-5dbebb6e86d4"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Number",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "Punkt",
+                                                "format": "0",
+                                                "text": "Пункт<br>документа",
+                                                "width": 68
+                                            },
+                                            "name": "MyNumberColumn4",
+                                            "designerId": "48fb3ee0-8a31-473c-92d6-acb40ac83bfc"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "C1",
+                                                "text": "Параметр"
+                                            },
+                                            "name": "MyColumn20",
+                                            "designerId": "1e12cbcc-fb02-4e4c-8237-7c9522490e4a"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "C2",
+                                                "text": "Расшифровка"
+                                            },
+                                            "name": "MyColumn21",
+                                            "designerId": "28eb2237-87f9-43df-9184-b34cf58099d9"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "formula",
+                                                "flex": 1,
+                                                "text": "Формула"
+                                            },
+                                            "name": "MyColumn22",
+                                            "designerId": "1009f8b8-a2b6-4cec-83ac-ff446613f105"
+                                        },
+                                        {
+                                            "type": "Ext.view.Table",
+                                            "reference": {
+                                                "name": "viewConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MyTable9",
+                                            "designerId": "c7826393-6f13-400a-b125-9587e077dfee"
+                                        },
+                                        {
+                                            "type": "Ext.toolbar.Toolbar",
+                                            "reference": {
+                                                "name": "dockedItems",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dock": "top"
+                                            },
+                                            "name": "MyToolbar13",
+                                            "designerId": "62d3c8bc-f86f-441c-a612-8ab4f6c111cd",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.button.Button",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "iconCls": "icon-add",
+                                                        "layout|flex": null,
+                                                        "text": "Добавить"
+                                                    },
+                                                    "name": "MyButton27",
+                                                    "designerId": "2e1d7c0d-9847-473a-b109-d3b7e68cf44d",
+                                                    "cn": [
+                                                        {
+                                                            "type": "basiceventbinding",
+                                                            "reference": {
+                                                                "name": "listeners",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "fn": "onButtonClick10",
+                                                                "implHandler": [
+                                                                    "var ed = Ext.create('Portal.view.EvalEffectives.ParamsOutEdit').show();",
+                                                                    "ed.down('form').getForm().setValues({id:0});"
+                                                                ],
+                                                                "name": "click",
+                                                                "scope": "me"
+                                                            },
+                                                            "name": "onButtonClick10",
+                                                            "designerId": "653bace7-8e5f-42d4-808c-c8462e9eefb1"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.button.Button",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "disabled": true,
+                                                        "iconCls": "icon-delete",
+                                                        "layout|flex": null,
+                                                        "reference": "btnTblParamsOut",
+                                                        "text": "Удалить"
+                                                    },
+                                                    "name": "MyButton28",
+                                                    "designerId": "f4544c38-1ab6-4443-bc1b-ea05277d6239",
+                                                    "cn": [
+                                                        {
+                                                            "type": "basiceventbinding",
+                                                            "reference": {
+                                                                "name": "listeners",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "fn": "onButtonClick13",
+                                                                "name": "click",
+                                                                "scope": "me"
+                                                            },
+                                                            "name": "onButtonClick13",
+                                                            "designerId": "4267ed87-5d6a-4e61-8509-67df80595668"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.grid.plugin.RowExpander",
+                                            "reference": {
+                                                "name": "plugins",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MyRowExpanderPlugin1",
+                                            "designerId": "1bec100f-a9ed-4b65-a9d6-052c67579134",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.XTemplate",
+                                                    "reference": {
+                                                        "name": "rowBodyTpl",
+                                                        "type": "object"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|displayName": "rowBodyTpl",
+                                                        "implHandler": [
+                                                            "<i>{C2}</i>"
+                                                        ]
+                                                    },
+                                                    "name": "rowBodyTpl",
+                                                    "designerId": "cb4424ae-23d0-4eb6-a993-c9a260f73261"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onGridpanelItemDblClick3",
+                                                "implHandler": [
+                                                    "var ed = Ext.create('Portal.view.EvalEffectives.ParamsOutEdit').show();",
+                                                    "        ed.down('form').getForm().setValues(record.data);"
+                                                ],
+                                                "name": "itemdblclick",
+                                                "scope": "me"
+                                            },
+                                            "name": "onGridpanelItemDblClick3",
+                                            "designerId": "9adf8c4c-1330-4009-bc52-41a4c3e470e7"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|region": "center",
+                                        "layout|split": true,
+                                        "reference": "tblEffect",
+                                        "store": "EvalEffectives.ParamsEffectives",
+                                        "title": "Показатели эффективности"
+                                    },
+                                    "name": "MyGridPanel10",
+                                    "designerId": "42fed37d-b003-4440-8246-0d3b24dcfe78",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.grid.column.RowNumberer",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MyRowNumberer5",
+                                            "designerId": "873e4c8b-0a81-4564-a912-f7e98d82c14a"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "Punkt",
+                                                "text": "Пункт<br>документа"
+                                            },
+                                            "name": "MyColumn17",
+                                            "designerId": "ffdd50a5-e3ad-452a-933f-0171f06c1c86"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "text": "Процент эффективности"
+                                            },
+                                            "name": "MyColumn18",
+                                            "designerId": "6f9b5409-c024-4b30-954c-a8a81296087d",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.grid.column.Number",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "dataIndex": "Percent1",
+                                                        "format": "0",
+                                                        "text": "С"
+                                                    },
+                                                    "name": "MyNumberColumn5",
+                                                    "designerId": "8be335e3-3d60-429c-85b5-43af384efc31"
+                                                },
+                                                {
+                                                    "type": "Ext.grid.column.Number",
+                                                    "reference": {
+                                                        "name": "columns",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "dataIndex": "Percent2",
+                                                        "format": "0",
+                                                        "text": "По"
+                                                    },
+                                                    "name": "MyNumberColumn6",
+                                                    "designerId": "767fc0bb-1f8c-48a2-ab05-4df39cfaaece"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Number",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "Effective",
+                                                "format": "0",
+                                                "text": "Балл"
+                                            },
+                                            "name": "MyNumberColumn7",
+                                            "designerId": "eb73db79-4561-447c-859a-562af72c1fd2"
+                                        },
+                                        {
+                                            "type": "Ext.view.Table",
+                                            "reference": {
+                                                "name": "viewConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MyTable10",
+                                            "designerId": "0785c138-1370-4365-874a-113ac014ae3d"
+                                        },
+                                        {
+                                            "type": "Ext.toolbar.Toolbar",
+                                            "reference": {
+                                                "name": "dockedItems",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dock": "top"
+                                            },
+                                            "name": "MyToolbar12",
+                                            "designerId": "d7f9336f-169c-49da-8045-ea1f254e96fc",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.button.Button",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "iconCls": "icon-add",
+                                                        "layout|flex": null,
+                                                        "text": "Добавить"
+                                                    },
+                                                    "name": "MyButton29",
+                                                    "designerId": "a2b5a402-ae0c-4998-bc3f-6f644891840a",
+                                                    "cn": [
+                                                        {
+                                                            "type": "basiceventbinding",
+                                                            "reference": {
+                                                                "name": "listeners",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "fn": "onButtonClick11",
+                                                                "implHandler": [
+                                                                    "var ed = Ext.create('Portal.view.EvalEffectives.ParamsEffectives').show();",
+                                                                    "ed.down('form').getForm().setValues({id:0});"
+                                                                ],
+                                                                "name": "click",
+                                                                "scope": "me"
+                                                            },
+                                                            "name": "onButtonClick11",
+                                                            "designerId": "78c51adf-a724-407a-9dfe-2fc5fe3b0784"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.button.Button",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "disabled": true,
+                                                        "iconCls": "icon-delete",
+                                                        "layout|flex": null,
+                                                        "reference": "btnTblEffect",
+                                                        "text": "Удалить"
+                                                    },
+                                                    "name": "MyButton30",
+                                                    "designerId": "ef7862df-43df-4e00-b8b3-63abb91ce1c2",
+                                                    "cn": [
+                                                        {
+                                                            "type": "basiceventbinding",
+                                                            "reference": {
+                                                                "name": "listeners",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "fn": "onButtonClick12",
+                                                                "implHandler": [
+                                                                    "Portal.util.Util.deleteRecord2(",
+                                                                    "this.getReferences().tblEffect.getSelection()[0],",
+                                                                    "Ext.getStore('EvalEffectives.ParamsEffectives'),",
+                                                                    "'data/EvalEffectives/ParamsEffectives-delete.php');"
+                                                                ],
+                                                                "name": "click",
+                                                                "scope": "me"
+                                                            },
+                                                            "name": "onButtonClick12",
+                                                            "designerId": "7665768c-6f1d-46a0-a7c3-ea4dd4caad9e"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onGridpanelItemDblClick4",
+                                                "implHandler": [
+                                                    "var ed = Ext.create('Portal.view.EvalEffectives.ParamsEffectives').show();",
+                                                    "ed.down('form').getForm().setValues(record.data);"
+                                                ],
+                                                "name": "itemdblclick",
+                                                "scope": "me"
+                                            },
+                                            "name": "onGridpanelItemDblClick4",
+                                            "designerId": "36f44d40-3b61-46b2-91f3-0f5d4cec147f"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onGridpanelSelectionChange4",
+                                                "implHandler": [
+                                                    "this.getReferences().btnTblEffect.setDisabled(selected.length === 0);"
+                                                ],
+                                                "name": "selectionchange",
+                                                "scope": "me"
+                                            },
+                                            "name": "onGridpanelSelectionChange4",
+                                            "designerId": "46d0fdc2-41e0-473c-96d6-78802d423b1e"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onPanelActivate",
+                                "implHandler": [
+                                    "Ext.getStore('EvalEffectives.ParamsIn').load();",
+                                    "Ext.getStore('EvalEffectives.ParamsOut').load();",
+                                    "Ext.getStore('EvalEffectives.ParamsEffectives').load();"
+                                ],
+                                "name": "activate",
+                                "scope": "me"
+                            },
+                            "name": "onPanelActivate",
+                            "designerId": "89be866f-0182-46e5-9714-13a11b5556eb"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onEvalEffectivesWinSettingsAfterRender",
+                "implHandler": [
+                    "Ext.getStore('EvalEffectives.JobersGroup').load();",
+                    "Ext.getStore('EvalEffectives.Jobers').load();",
+                    "Ext.getStore('EvalEffectives.GZIcount').load();"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onEvalEffectivesWinSettingsAfterRender",
+            "designerId": "634ae7dd-e203-42fc-be54-8f18dae18412"
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "type": "help"
+            },
+            "name": "MyTool",
+            "designerId": "27cd0f77-7565-4a92-966d-edc69cc85b07",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onToolClick",
+                        "implHandler": [
+                            "Ext.Msg.show({",
+                            "    title:'Help meeeee!..',",
+                            "    message: 'Для каждой группы доступа выбираем отдельный параметр для ввода.<br>Параметры не должны повторяться!',",
+                            "    buttons: Ext.Msg.OK,",
+                            "    icon: Ext.Msg.INFO,",
+                            "    fn: function(btn) {",
+                            "        if (btn === 'yes') {",
+                            "            console.log('Yes pressed');",
+                            "        } else if (btn === 'no') {",
+                            "            console.log('No pressed');",
+                            "        } else {",
+                            "            console.log('Cancel pressed');",
+                            "        } ",
+                            "    }",
+                            "});"
+                        ],
+                        "name": "click",
+                        "scope": "me"
+                    },
+                    "name": "onToolClick",
+                    "designerId": "db9ff1e7-81de-4dd7-92a8-c143a41bf496"
+                }
+            ]
+        }
+    ]
+}

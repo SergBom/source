@@ -1,0 +1,19 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "mywindow",
+        "designer|userClassName": "MyWindow",
+        "height": 250,
+        "title": "My Window",
+        "width": 400
+    },
+    "name": "MyWindow",
+    "designerId": "c1f90912-52a5-4bef-a9eb-370ee359ec73",
+    "viewControllerInstanceId": "effd671f-4240-4d38-8750-17770f49db58",
+    "viewModelInstanceId": "af215097-151c-4b04-b1f3-8cb9bdd47dc8"
+}

@@ -1,0 +1,83 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sys.PortalFAQ",
+        "groupField": "category",
+        "model": "sys.PortalFAQ",
+        "storeId": "sys.PortalFAQ"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "groupField": "datafield",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "1f04642f-0be0-4383-a23c-2743e17eb91e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{create: 'data/sys/portalFAQ-edit.php',",
+                    "read: 'data/sys/portalFAQ-read.php',",
+                    "update: 'data/sys/portalFAQ-edit.php',",
+                    "destroy: 'data/sys/portalFAQ-delete.php'}"
+                ]
+            },
+            "configAlternates": {
+                "api": "object"
+            },
+            "name": "MyAjaxProxy4",
+            "designerId": "e4362e51-1120-4dc3-9a42-0ca0f7ccd4e3",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader4",
+                    "designerId": "53d1427b-5909-4141-a680-65c7fb52b384"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "rootProperty": "data",
+                        "writeAllFields": true
+                    },
+                    "configAlternates": {
+                        "encode": "boolean",
+                        "rootProperty": "string",
+                        "writeAllFields": "boolean"
+                    },
+                    "name": "MyJsonWriter1",
+                    "designerId": "bb6f692c-122c-4744-b3e8-6d380f3e3bc6"
+                }
+            ]
+        }
+    ]
+}

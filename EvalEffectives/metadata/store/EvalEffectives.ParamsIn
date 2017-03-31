@@ -1,0 +1,130 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoSync": true,
+        "designer|userClassName": "EvalEffectives.ParamsIn",
+        "storeId": "EvalEffectives.ParamsIn"
+    },
+    "name": "MyJsonStore7",
+    "designerId": "c4fd0abd-f0c1-4463-bf3e-d5e624c17642",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{create: 'data/EvalEffectives/ParamsIn-post.php',",
+                    "update: 'data/EvalEffectives/ParamsIn-post.php',",
+                    "read: 'data/EvalEffectives/ParamsIn-read.php',",
+                    "destroy: 'data/EvalEffectives/ParamsIn-delete.php'}"
+                ]
+            },
+            "name": "MyAjaxProxy13",
+            "designerId": "4887346d-71f0-4400-8d67-6e71ebd57a97",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader13",
+                    "designerId": "c1d77892-51be-4368-82e0-5cfac1b755d6"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "rootProperty": "data",
+                        "writeAllFields": true
+                    },
+                    "name": "MyJsonWriter2",
+                    "designerId": "1d16fdbc-596a-498b-8c5f-cbb824ef6d4c"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField56",
+            "designerId": "50f0132e-7366-4915-b656-accf130d5bdd"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "R1"
+            },
+            "name": "MyField70",
+            "designerId": "bc88d3b7-1658-4aa5-ac00-2a10a0d422c5"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "R2"
+            },
+            "name": "MyField71",
+            "designerId": "413c316d-4230-4172-ab35-98829e9deacc"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "C"
+            },
+            "name": "MyField72",
+            "designerId": "5df5594e-4c77-4c8e-be8f-88c71bc3874a"
+        },
+        {
+            "type": "Ext.data.field.Boolean",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "on"
+            },
+            "name": "MyBoolean1",
+            "designerId": "781ddac1-9792-4aba-9836-e757b5a64aae"
+        }
+    ]
+}

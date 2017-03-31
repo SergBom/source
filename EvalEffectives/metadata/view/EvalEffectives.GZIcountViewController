@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivesgzicount",
+        "designer|userClassName": "EvalEffectives.GZIcountViewController"
+    },
+    "designerId": "9d2e6bb9-0b21-4004-a28a-2bd609b98184"
+}

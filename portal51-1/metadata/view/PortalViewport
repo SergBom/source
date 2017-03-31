@@ -1,0 +1,260 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "portalviewport",
+        "designer|userClassName": "PortalViewport",
+        "id": "portalviewport",
+        "itemId": "portalviewport",
+        "layout": "border",
+        "stateId": "Portal",
+        "stateful": true
+    },
+    "configAlternates": {
+        "scrollable": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "id": "string",
+        "itemId": "string",
+        "layout": "string",
+        "stateId": "string",
+        "stateful": "boolean"
+    },
+    "designerId": "8c6df8ec-2c91-47a3-920d-c07154727816",
+    "viewControllerInstanceId": "87a095e8-c8ad-4c76-a40a-fcf4d9069e88",
+    "viewModelInstanceId": "082eb46c-0788-4160-9a86-edfca2854c78",
+    "cn": [
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyCls": [
+                    "portal-home-body"
+                ],
+                "bodyPadding": 2,
+                "designer|uiInterfaceName": "default",
+                "header": false,
+                "html": null,
+                "id": "PortalMainPanel",
+                "itemId": "PortalMainPanel",
+                "layout|region": "center",
+                "layout|split": true,
+                "reference": "MainPanel",
+                "stateId": "PortalMainPanel",
+                "stateful": true,
+                "title": "t"
+            },
+            "configAlternates": {
+                "scrollable": "boolean",
+                "bodyCls": "typedarray",
+                "bodyPadding": "auto",
+                "designer|uiInterfaceName": "string",
+                "header": "boolean",
+                "html": "object",
+                "id": "string",
+                "itemId": "string",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "reference": "string",
+                "stateId": "string",
+                "stateful": "boolean",
+                "title": "string"
+            },
+            "name": "MyTabPanel",
+            "designerId": "2400dd3a-bd4d-405c-9f93-024c40d10e1c",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "frameHeader": false,
+                        "weight": null
+                    },
+                    "configAlternates": {
+                        "frameHeader": "boolean",
+                        "weight": "number"
+                    },
+                    "name": "sys.tabmainview",
+                    "designerId": "99eb0217-526e-48e2-84c8-f11cf34dc47b",
+                    "masterInstanceId": "79bf6a52-e7aa-428b-94bb-95dd43b09397",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": null,
+                                "iconCls": "icon-home"
+                            },
+                            "configAlternates": {
+                                "cls": "string",
+                                "iconCls": "string"
+                            },
+                            "name": "TabConfig1",
+                            "designerId": "cb0389df-4a2b-47d8-9058-1b18faa4fe17"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "appHeader",
+                "layout|region": "north"
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "layout|region": "string"
+            },
+            "name": "sys.portalheader",
+            "designerId": "17f80fa4-4f88-481d-9576-3d9257314005",
+            "masterInstanceId": "6338d643-8baf-4e35-b4e9-e606358de59f"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "header": null,
+                "layout": "fit",
+                "layout|region": "east",
+                "layout|split": true,
+                "stateId": "panelFAQ",
+                "stateful": true,
+                "title": "Насущные вопросы"
+            },
+            "configAlternates": {
+                "header": "boolean",
+                "layout": "string",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "stateId": "string",
+                "stateful": "boolean",
+                "title": "string"
+            },
+            "name": "sys.portalfaq",
+            "designerId": "e07f5aea-1bc0-4cc5-92a6-012d54e353f4",
+            "masterInstanceId": "8636c6e5-3bdd-4579-b9c9-8cd12ef347bc"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": true,
+                "iconCls": "home",
+                "layout": "border",
+                "layout|region": "west",
+                "layout|split": true,
+                "title": "Навигатор",
+                "width": 185
+            },
+            "configAlternates": {
+                "collapsible": "boolean",
+                "iconCls": "string",
+                "layout": "string",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "title": "string",
+                "width": "auto"
+            },
+            "name": "MyPanel2",
+            "designerId": "e90bb3bf-df9b-499e-b349-eb9758bb4e4a",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "collapsible": null,
+                        "layout|region": "center",
+                        "stateId": "LeftPanel"
+                    },
+                    "configAlternates": {
+                        "scrollable": "boolean",
+                        "collapsible": "boolean",
+                        "layout|region": "string",
+                        "stateId": "string"
+                    },
+                    "name": "portalmenu",
+                    "designerId": "e71784b5-1336-45e1-a2e2-b392dc1f8478",
+                    "masterInstanceId": "5bb3cbc9-87d8-4318-8906-070e936813e6"
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "collapsed": true,
+                        "collapsible": true,
+                        "height": 230,
+                        "layout": "fit",
+                        "layout|region": "south",
+                        "title": "Календарь"
+                    },
+                    "configAlternates": {
+                        "collapsed": "boolean",
+                        "collapsible": "boolean",
+                        "height": "auto",
+                        "layout": "string",
+                        "layout|region": "string",
+                        "title": "string"
+                    },
+                    "name": "MyPanel3",
+                    "designerId": "3d8693aa-353d-49f8-b997-077a2ca2001e",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.DatePicker",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "floating": false
+                            },
+                            "configAlternates": {
+                                "floating": "boolean"
+                            },
+                            "name": "MyDateMenu",
+                            "designerId": "7fcd301a-41dc-4d90-ac22-90241b08c7bd"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

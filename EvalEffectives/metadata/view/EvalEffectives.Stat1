@@ -1,0 +1,392 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivesstat1",
+        "designer|userClassName": "EvalEffectives.Stat1",
+        "height": 396,
+        "layout": "fit",
+        "maximizable": true,
+        "modal": true,
+        "title": "Статистика",
+        "width": 572
+    },
+    "name": "MyWindow",
+    "designerId": "2943f186-3238-4506-93bf-ba015caa352d",
+    "viewControllerInstanceId": "fb1a7995-067a-471a-899a-127d98588413",
+    "viewModelInstanceId": "3cf9f5b3-a93a-41c0-ba53-a0698fc06386",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "name": "MyToolbar10",
+            "designerId": "e37433d4-4f86-4a78-be47-c22648f307f9",
+            "cn": [
+                {
+                    "type": "Ext.container.ButtonGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "columns": 3,
+                        "layout|flex": null,
+                        "title": "Период"
+                    },
+                    "name": "MyButtonGroup3",
+                    "designerId": "57a9a130-7e5f-41c6-b4f8-f57b27454561",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "с",
+                                "format": "Y-m-d",
+                                "labelWidth": 15,
+                                "reference": "dateB",
+                                "width": 120
+                            },
+                            "name": "MyDateField4",
+                            "designerId": "86a0902c-780a-450c-8370-d3eb6812f692"
+                        },
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "по",
+                                "format": "Y-m-d",
+                                "labelWidth": 15,
+                                "reference": "dateE",
+                                "width": 120
+                            },
+                            "name": "MyDateField5",
+                            "designerId": "b4b6c5c8-1acd-4182-a7ea-d8e83f67a69f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.ButtonGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "columns": 2,
+                        "layout|flex": null,
+                        "title": "Отчёт"
+                    },
+                    "name": "MyButtonGroup4",
+                    "designerId": "49b382fc-ea45-4589-91ac-00d68bf9582e",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "icon-calc",
+                                "text": "Посчитать"
+                            },
+                            "name": "MyButton24",
+                            "designerId": "6b59e134-82e2-46c0-ba5b-2dff86bf1439",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "var ref=this.getReferences(),wd=60,",
+                                            "    gg=ref.grid,",
+                                            "    db=ref.dateB.getValue(),",
+                                            "    de=ref.dateE.getValue();",
+                                            "//console.log(db);console.log(de);",
+                                            "var fields_temp=[],",
+                                            "    newcolumns=[",
+                                            "        {xtype: 'rownumberer'},",
+                                            "        {dataIndex:'Punkt',header:'Пункт',name:'Punkt',width:60,locked:true},",
+                                            "        {dataIndex:'C1',header:'Параметр',name:'C1',locked:true},",
+                                            "        {dataIndex:'C2',header:'Расшифровка',name:'C2',cellWrap:true,locked:true},",
+                                            "        {xtype: 'gridcolumn',",
+                                            "         text: 'Сумма по Управлению',",
+                                            "         tooltip: 'Сумма по Управлению',",
+                                            "         locked:true,",
+                                            "         columns: [",
+                                            "             {dataIndex:'summProc',header:'Равно,%',name:'summProc',",
+                                            "              tdCls:'f-blue',",
+                                            "              width:wd,",
+                                            "              align: 'right',",
+                                            "              renderer: function(value, metaData, record, rowIndex, colIndex, store, view) {",
+                                            "                  if(value>0){return \"<b>\"+value+\"</b>\";}",
+                                            "                  else if(value<0){return \"<font color='green'>\"+value+\"</font>\";}",
+                                            "                  else{return value;}",
+                                            "              }",
+                                            "             },",
+                                            "             {dataIndex:'summBall',header:'Баллов',name:'summBall',",
+                                            "              tdCls:'f-blue',",
+                                            "              width:wd,",
+                                            "              align: 'right',",
+                                            "              renderer: function(value, metaData, record, rowIndex, colIndex, store, view) {",
+                                            "                  if(value>0){return \"<b>\"+value+\"</b>\";}",
+                                            "                  else if(value<0){return \"<font color='green'>\"+value+\"</font>\";}",
+                                            "                  else{return value;}",
+                                            "              }",
+                                            "             }]",
+                                            "        }",
+                                            "    ];",
+                                            "// Список значений таблицы",
+                                            "var Gstore = Ext.getStore('EvalEffectives.Stat1');",
+                                            "// Список полей таблицы",
+                                            "var storeOtdels = this.getViewModel().getStore('otdels');",
+                                            "//Ext.getStore('EvalEffectives.OtdelsList');",
+                                            "//console.log(storeOtdels.getData());",
+                                            "storeOtdels.load();",
+                                            "storeOtdels.on('load', function(storeRef, records, successful){",
+                                            "    //создаем поля каждой группе",
+                                            "    storeOtdels.each(function(record){",
+                                            "        //console.log(record.get('cn')+'Proc');",
+                                            "        //console.log(record.get('cn')+'Ball');",
+                                            "        var o=[];",
+                                            "        if(record.get('cn')!=='summ'){",
+                                            "            var tempvar;",
+                                            "            tempvar={",
+                                            "                dataIndex:record.get('cn')+'Proc',",
+                                            "                header:'Равно',",
+                                            "                width:wd,",
+                                            "                name:record.get('cn')+'Proc',",
+                                            "                align:'right',",
+                                            "                renderer:function(vl,m,r,row,col,s,v){",
+                                            "                    if(vl>0){return \"<b>\"+vl+\"</b>\";}",
+                                            "                    else if(vl<0){return \"<font color='green'>\"+vl+\"</font>\";}",
+                                            "                    else{return vl;}",
+                                            "                }",
+                                            "            };",
+                                            "            o.push(tempvar);",
+                                            "            tempvar={",
+                                            "                dataIndex:record.get('cn')+'Ball',",
+                                            "                header:'Баллов',",
+                                            "                width:wd,",
+                                            "                name:record.get('cn')+'Ball',",
+                                            "                align:'right',",
+                                            "                renderer:function(vl,m,r,row,col,s,v){",
+                                            "                    if(vl>0){return \"<b>\"+vl+\"</b>\";}",
+                                            "                    else if(vl<0){return \"<font color='green'>\"+vl+\"</font>\";}",
+                                            "                    else{return vl;}",
+                                            "                }",
+                                            "            };",
+                                            "            o.push(tempvar);",
+                                            "",
+                                            "            newcolumns.push({",
+                                            "                xtype:'gridcolumn',",
+                                            "                text:record.get('sname'),",
+                                            "                tooltip:record.get('name'),",
+                                            "                columns:o});",
+                                            "        }",
+                                            "    });",
+                                            "",
+                                            "    gg.reconfigure(Gstore, newcolumns);",
+                                            "}, this);",
+                                            "gg.setStore(Gstore);",
+                                            "Gstore.load({params:{db:db,de:de}});",
+                                            "",
+                                            "Ext.Ajax.request({",
+                                            "    url: 'data/EvalEffectives/getQrab.php',",
+                                            "    params:{",
+                                            "        db:db,de:de",
+                                            "    },",
+                                            "    success: function(r,o) {",
+                                            "        //var obj =",
+                                            "        this.getReferences().Q_rab.setValue(",
+                                            "            Ext.decode(r.responseText).data.Q_rab);",
+                                            "        //console.dir(obj);",
+                                            "    },",
+                                            "",
+                                            "    failure: function(response, opts) {",
+                                            "        console.log('server-side failure with status code ' + response.status);",
+                                            "    },",
+                                            "    scope:this",
+                                            "});"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick",
+                                    "designerId": "abca77b2-dfc5-4d20-9758-f8aa61b08144"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "iconCls": "icon-printer",
+                                "text": "Распечатать"
+                            },
+                            "name": "MyButton25",
+                            "designerId": "2832c58c-c1de-4d50-bb82-263df6c7294b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "editable": false,
+                        "fieldLabel": "Q_rab, ч",
+                        "labelWidth": 50,
+                        "layout|flex": null,
+                        "name": null,
+                        "reference": "Q_rab"
+                    },
+                    "name": "MyTextField6",
+                    "designerId": "f290796f-3d8d-4a21-977f-7f53031576e1"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "reference": "grid",
+                "store": "EvalEffectives.Stat1",
+                "title": null
+            },
+            "name": "MyGridPanel4",
+            "designerId": "3f157272-c5db-4035-abdd-cfd0597680da",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.RowNumberer",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": null,
+                        "text": null
+                    },
+                    "name": "MyRowNumberer6",
+                    "designerId": "6da523f7-2f4c-4b25-b64d-5def8c2b7e9f"
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "reference": "table"
+                    },
+                    "name": "MyTable4",
+                    "designerId": "7d95b8bd-6f6b-4610-ab38-33e451db01f9"
+                },
+                {
+                    "type": "Ext.grid.plugin.RowExpander",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyRowExpanderPlugin3",
+                    "designerId": "708b5cad-a619-43cf-ab29-710d445f25f8",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "rowBodyTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "rowBodyTpl",
+                                "implHandler": [
+                                    "<i>{C2} - {formula}</i>"
+                                ]
+                            },
+                            "name": "rowBodyTpl",
+                            "designerId": "c4bb6194-3f7d-45e0-8e4d-2c8bfb960d8a",
+                            "cn": [
+                                {
+                                    "type": "templatefunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "tpl"
+                                    },
+                                    "name": "tpl",
+                                    "designerId": "f74863b2-6486-4f72-8a67-e4db071f60e0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowAfterRender",
+                "implHandler": [
+                    "var de=new Date(),",
+                    "db=new Date(de.getFullYear(),de.getMonth(),1),",
+                    "r=this.getReferences();",
+                    "r.dateB.setValue(db);",
+                    "r.dateE.setValue(de);"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onWindowAfterRender",
+            "designerId": "866fdd48-229d-4837-b643-ce2643bd9691"
+        }
+    ]
+}

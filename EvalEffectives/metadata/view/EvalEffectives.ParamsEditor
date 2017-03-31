@@ -1,0 +1,334 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 5,
+        "designer|userAlias": "evaleffectivesparamseditor",
+        "designer|userClassName": "EvalEffectives.ParamsEditor",
+        "height": 342,
+        "layout": "border",
+        "maximizable": true,
+        "modal": true,
+        "padding": null,
+        "title": "Ввод показателей за день",
+        "width": 496
+    },
+    "name": "MyWindow1",
+    "designerId": "609f174e-e8d5-4a38-8539-d45218417b07",
+    "viewControllerInstanceId": "4a81dac8-7853-4286-a407-17add8caea97",
+    "viewModelInstanceId": "291a5f7f-50c4-4370-a80a-a2a5f1551f1d",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 48,
+                "layout": "hbox",
+                "layout|region": "north",
+                "title": "За какую дату вносим данные"
+            },
+            "name": "MyFieldSet1",
+            "designerId": "6b7db72d-e5e2-450a-b68f-7a6f41ced897",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "format": "Y-m-d",
+                        "reference": "dateParams"
+                    },
+                    "name": "MyDateField2",
+                    "designerId": "d8f00cd6-98ef-4243-9e2d-103d8c070f44"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Подтвердите дату",
+                        "fieldLabel": null,
+                        "padding": "0 0 0 5"
+                    },
+                    "name": "MyCheckbox1",
+                    "designerId": "7d9acc7a-1c90-43dd-87fb-8fae77e9e2fb",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCheckboxfieldChange",
+                                "implHandler": [
+                                    "var ref=this.getReferences();",
+                                    "ref.grid.setDisabled(oldValue);",
+                                    "ref.dateParams.setDisabled(newValue);",
+                                    "if(newValue){",
+                                    "    this.getViewModel().getStore('storeParamEditor').load(",
+                                    "        {params:{",
+                                    "            dateOtchet:ref.dateParams.getValue()",
+                                    "        }}",
+                                    "    );",
+                                    "}"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onCheckboxfieldChange",
+                            "designerId": "aca951f9-152a-4ada-b4df-b2edcee94c54"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "height": null,
+                "labelCls": null,
+                "labelClsExtra": null,
+                "layout|region": "north",
+                "value": "<img class='icon-info' /><b>!</b> Для изменения данных щелкните дважды по полю \"Значение\""
+            },
+            "name": "MyDisplayField",
+            "designerId": "c856cd13-eac5-4e54-bb2d-0d924be85c60"
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disabled": true,
+                "layout|region": "center",
+                "reference": "grid",
+                "store": [
+                    "{storeParamEditor}"
+                ],
+                "title": null
+            },
+            "name": "MyGridPanel7",
+            "configAlternates": {
+                "store": "binding"
+            },
+            "designerId": "f9d02d99-00f3-49a9-a52c-29fd9bdad3a7",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "R1",
+                        "text": "Показатель"
+                    },
+                    "name": "MyColumn10",
+                    "designerId": "93cc0536-7447-4aa5-874e-c96ac5155f8e"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "R2",
+                        "flex": 1,
+                        "text": "Расшифровка"
+                    },
+                    "name": "MyColumn16",
+                    "designerId": "95a3d16c-df3a-44f2-8acf-501ff4fc38ea"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "dataIndex": "value",
+                        "format": "0",
+                        "text": "Значение"
+                    },
+                    "name": "MyNumberColumn",
+                    "designerId": "6838fe65-a0ad-4954-b636-da08965f435a",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "minValue": 0
+                            },
+                            "name": "MyNumberField1",
+                            "designerId": "f2a42d3d-acbf-4391-aa09-9bfb649fec1b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable7",
+                    "designerId": "0af52ab2-2529-4a1f-8ac8-24618b8c97c4"
+                },
+                {
+                    "type": "Ext.grid.plugin.CellEditing",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyCellEditingPlugin1",
+                    "designerId": "fbf5e877-50a5-4551-8708-bf6749fee2f3",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCellEditingEdit",
+                                "implHandler": [
+                                    "var d=this.getReferences().dateParams.getValue(),",
+                                    "s=this.getViewModel().getStore('storeParamEditor');",
+                                    "//console.log(s);",
+                                    "Ext.Ajax.request({",
+                                    "    url: 'data/EvalEffectives/ParamsEdit-edit.php',",
+                                    "    params: {",
+                                    "        action:\"edit\",",
+                                    "        param:context.record.data.R1,",
+                                    "        value:context.record.data.value,",
+                                    "        rec_id:context.record.data.rec_id,",
+                                    "        dateOtchet:d,",
+                                    "        id:context.record.data.id",
+                                    "    },",
+                                    "    success: function(r) {",
+                                    "        s.reload();",
+                                    "    }",
+                                    "});"
+                                ],
+                                "name": "edit",
+                                "scope": "me"
+                            },
+                            "name": "onCellEditingEdit",
+                            "designerId": "9acfbef5-98b5-47ff-893f-869544dc1183"
+                        }
+                    ]
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridpanelSelectionChange",
+                        "implHandler": [
+                            "this.getReferences().R2.setValue(",
+                            "        selected[0].data.R2",
+                            "        );"
+                        ],
+                        "name": "selectionchange",
+                        "scope": "me"
+                    },
+                    "name": "onGridpanelSelectionChange",
+                    "designerId": "4ab1dbd6-69da-4f4a-b047-37d5f9b6044b"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "height": 80,
+                "layout|region": "south",
+                "name": "R2",
+                "reference": "R2"
+            },
+            "name": "MyTextArea1",
+            "designerId": "a9eb59a3-e1ad-4c95-9d7a-eb2b5b40e4ae"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowAfterRender1",
+                "implHandler": [
+                    "this.getView().getReferences().dateParams.setValue(new Date());"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onWindowAfterRender1",
+            "designerId": "f09da35e-23ef-4951-af46-1738ad9f8bf4"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowClose",
+                "implHandler": [
+                    "//Ext.getStore('EvalEffectives.Record').reload();"
+                ],
+                "name": "close",
+                "scope": "me"
+            },
+            "name": "onWindowClose",
+            "designerId": "18f4f21c-04e4-400a-ab53-9c99ae61327f"
+        }
+    ]
+}

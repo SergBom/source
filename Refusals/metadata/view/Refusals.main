@@ -1,0 +1,661 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoShow": true,
+        "designer|initialView": true,
+        "designer|userAlias": "refusals",
+        "designer|userClassName": "Refusals.main",
+        "height": 530,
+        "id": "appRefusals",
+        "layout": "fit",
+        "title": "My Window",
+        "width": 579
+    },
+    "designerId": "13203f99-9c88-4b89-888c-be67af99a0aa",
+    "viewControllerInstanceId": "3fdbac88-8db0-4e30-bb14-e05265a88490",
+    "viewModelInstanceId": "7a218326-5e2d-49e1-bd92-388d6afd79f0",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "reference": "grid",
+                "store": "Refusals.main",
+                "title": null
+            },
+            "name": "MyGridPanel",
+            "designerId": "a4717fb8-660d-4685-a506-96faecd2c0ba",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.RowNumberer",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": 31
+                    },
+                    "name": "MyRowNumberer",
+                    "designerId": "2234d903-d801-4b35-8920-786993ebec19"
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "icon-edit",
+                        "width": 40
+                    },
+                    "name": "MyActionColumn1",
+                    "designerId": "6803ba99-24aa-4dd7-884f-978d92090f48",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyActionColumnItem1",
+                            "designerId": "4c5dc769-2447-4638-a5c1-835b528e4915",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "view",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "item",
+                                            "e",
+                                            "record",
+                                            "row"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var edit=Ext.create('Portal.view.Refusals.Edit');",
+                                            "edit.getReferences().Form.getForm().setValues(record.data);",
+                                            "edit.show();"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "c2dcf0ce-0852-4c2f-b1f3-a37f5b7c8999"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "cad_num",
+                        "flex": 1,
+                        "text": "Кад.номер",
+                        "width": 130
+                    },
+                    "name": "MyColumn",
+                    "designerId": "a02f0bfb-3d7d-4946-bf8b-c1cb2a0ed3be"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "address",
+                        "flex": 1,
+                        "text": "Адрес"
+                    },
+                    "name": "MyColumn1",
+                    "designerId": "bcce9419-517d-4194-afe5-02308991515c"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "dateUpdate2",
+                        "formatter": "date(\"Y-m-d\")",
+                        "text": "Дата",
+                        "width": 75
+                    },
+                    "name": "MyDateColumn",
+                    "designerId": "22575223-0963-4657-90eb-d8684883d84b"
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "document",
+                        "text": "Документ",
+                        "width": 45
+                    },
+                    "name": "MyActionColumn2",
+                    "designerId": "5349efca-56fb-4135-a3f4-cd45e3750a83",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyActionColumnItem2",
+                            "designerId": "cb6db0c1-db4b-43b3-9c37-dcfb0fc4abf6",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "view",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "item",
+                                            "e",
+                                            "record",
+                                            "row"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "/*Ext.create('Ext.Component', {",
+                                            "    renderTo: Ext.getBody(),",
+                                            "    cls: 'x-hidden',",
+                                            "    autoEl: {",
+                                            "        tag: 'iframe',",
+                                            "        src: document.location.href+'data/Refusals/files/'+record.data.document",
+                                            "    }",
+                                            "});*/",
+                                            "window.open(document.location.href+'data/Refusals/files/'+record.data.document);"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "86189bd9-2efc-464a-821f-9322dcf9f127"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value",
+                                    "metaData",
+                                    "record",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store",
+                                    "view"
+                                ],
+                                "fn": "renderer",
+                                "implHandler": [
+                                    "if( value.trim()!==''){",
+                                    "    this.items[0].iconCls='icon-document';",
+                                    "    this.items[0].tooltip='Открыть документ';",
+                                    "}"
+                                ]
+                            },
+                            "name": "renderer",
+                            "designerId": "c1b5ed83-dec4-4433-9654-bd01991df2cf"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "itsOk2",
+                        "text": "Отработан",
+                        "width": 67
+                    },
+                    "name": "MyColumn2",
+                    "designerId": "9ab553fd-de0e-4b66-8ff9-1c1d863746aa"
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "itsOk",
+                        "width": 31
+                    },
+                    "name": "MyActionColumn",
+                    "designerId": "e74e16a2-42a2-4584-9335-29daaa46f6a9",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyActionColumnItem",
+                            "designerId": "eea3b46f-660d-40bf-bc42-f0cb38de87c8",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "view",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "item",
+                                            "e",
+                                            "record",
+                                            "row"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "switch(record.data.itsOk){",
+                                            "    case '0':",
+                                            "Ext.Msg.show({",
+                                            "    title:'Внимание',",
+                                            "    message: 'Данным действием Вы подтверждаете, что данная поездка состоялась в полном объеме!',",
+                                            "    buttons: Ext.Msg.YESNO,",
+                                            "    icon: Ext.Msg.QUESTION,",
+                                            "    fn: function(btn) {",
+                                            "        if (btn === 'yes') {",
+                                            "view.mask('Подождите...');",
+                                            "Ext.Ajax.request({",
+                                            "    url: 'data/Refusals/refus-confirm.php',",
+                                            "    params: {",
+                                            "        id: record.data.id,",
+                                            "        confirm: 1",
+                                            "    },",
+                                            "    success: function(response){",
+                                            "        Ext.getStore('Refusals.main').reload();",
+                                            "}",
+                                            "});",
+                                            "view.unmask();",
+                                            "        }",
+                                            "    }",
+                                            "});",
+                                            "        break;",
+                                            "    case '1':",
+                                            "Ext.Msg.show({",
+                                            "    title:'Внимание',",
+                                            "    message: 'Вы действительно желаете вернуть статус поездки на НЕЗАВЕРШЕННЫЙ?',",
+                                            "    buttons: Ext.Msg.YESNO,",
+                                            "    icon: Ext.Msg.QUESTION,",
+                                            "    fn: function(btn) {",
+                                            "        if (btn === 'yes') {",
+                                            "view.mask('Подождите...');",
+                                            "Ext.Ajax.request({",
+                                            "    url: 'data/Refusals/refus-confirm.php',",
+                                            "    params: {",
+                                            "        id: record.data.id,",
+                                            "        confirm: 0",
+                                            "    },",
+                                            "    success: function(response){",
+                                            "        Ext.getStore('Refusals.main').reload();",
+                                            "}",
+                                            "});",
+                                            "view.unmask();",
+                                            "        }",
+                                            "    }",
+                                            "});",
+                                            "    break;",
+                                            "}"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "b588259c-dc97-4b35-8313-9b48dfad5240"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value",
+                                    "metaData",
+                                    "record",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store",
+                                    "view"
+                                ],
+                                "fn": "renderer",
+                                "implHandler": [
+                                    "switch(value){",
+                                    "    case '0':this.items[0].iconCls='icon-ahtung';",
+                                    "        this.items[0].tooltip='Не отработана';",
+                                    "        break;",
+                                    "    case '1':this.items[0].iconCls='icon-tick-3';",
+                                    "        this.items[0].tooltip='Отработана';",
+                                    "        break;",
+                                    "}"
+                                ]
+                            },
+                            "name": "renderer",
+                            "designerId": "c6791ccd-0713-4786-911a-280e5d54e84b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable",
+                    "designerId": "ecf9c084-d3cd-4db0-876a-86edd6c1a45a"
+                },
+                {
+                    "type": "Ext.grid.plugin.RowExpander",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyRowExpanderPlugin",
+                    "designerId": "ccf0926c-1c6f-4217-ba95-beec13567f8b",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "rowBodyTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "rowBodyTpl",
+                                "implHandler": [
+                                    "<b>Пояснение:</b> {reference}<hr>",
+                                    "<span class=\"ref-NewEdit\">Добавил: {userNameInsert} [{dateInsert}]<br>",
+                                    "    Изменил: {userNameUpdate} [{dateUpdate}]</span>"
+                                ]
+                            },
+                            "name": "rowBodyTpl",
+                            "designerId": "eb3bd294-6ecb-4b2b-8905-1adfc412c3e7"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "name": "MyToolbar",
+                    "designerId": "d443aa2f-0886-4a24-9ba8-d3e91ca14294",
+                    "cn": [
+                        {
+                            "type": "Ext.container.ButtonGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "columns": 3,
+                                "layout|flex": null,
+                                "title": "Редактор"
+                            },
+                            "name": "MyButtonGroup",
+                            "designerId": "ab9051f8-f0b6-4090-b630-5eaf0b63eece",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "icon-add",
+                                        "id": "btnRefusalsAdd",
+                                        "reference": "btnRefusalsAdd",
+                                        "text": "Добавить"
+                                    },
+                                    "name": "MyButton",
+                                    "designerId": "09a43eb7-abb8-43a9-9851-f47273ae1e3f",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnRefusalsAddClick",
+                                                "implHandler": [
+                                                    "var edit = Ext.create('Portal.view.Refusals.Edit').show();",
+                                                    "edit.getReferences().Form.getForm().setValues({id:0});"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onBtnRefusalsAddClick",
+                                            "designerId": "62d2597e-fe75-4f7e-a767-1065b74a3dae"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "disabled": true,
+                                        "iconCls": "icon-delete",
+                                        "id": "btnRefusalsDel",
+                                        "reference": "btnRefusalsDel",
+                                        "text": "Удалить"
+                                    },
+                                    "name": "MyButton2",
+                                    "designerId": "ec22795d-ca05-4571-af50-054f1ae53e7d",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnRefusalsDelClick",
+                                                "implHandler": [
+                                                    "Portal.util.Util.deleteRecord2(",
+                                                    "        this.getReferences().grid.getSelection()[0],",
+                                                    "        Ext.getStore('Refusals.main'),",
+                                                    "        'data/Refusals/table-delete.php');"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onBtnRefusalsDelClick",
+                                            "designerId": "3ed2fcf2-4797-47fb-bf6f-0aef4a6937af"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "icon-refresh",
+                                        "id": "btnRefusalsRefresh",
+                                        "text": "Обновить"
+                                    },
+                                    "name": "MyButton1",
+                                    "designerId": "54344693-e4d7-438c-bfb7-94b82cd0d369",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnRefusalsRefreshClick",
+                                                "implHandler": [
+                                                    "Ext.getStore('Refusals.main').reload();"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onBtnRefusalsRefreshClick",
+                                            "designerId": "25da75cc-cd4b-43a0-bee7-557c51113c80"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "enableKeyEvents": true,
+                                "fieldLabel": "Фильтр по кад.номеру и адресу",
+                                "labelAlign": "top",
+                                "layout|flex": 1
+                            },
+                            "name": "MyTextField",
+                            "designerId": "705f1561-1504-4818-a221-d8f4334a9078",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onTextfieldChange",
+                                        "implHandler": [
+                                            "Ext.getStore('Refusals.main').load({params:{filter:newValue}});"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "name": "onTextfieldChange",
+                                    "designerId": "f0f303da-c121-4ddf-bc65-25c47703f219"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridpanelSelectionChange",
+                        "implHandler": [
+                            "this.getReferences().btnRefusalsDel.setDisabled(selected.length === 0);"
+                        ],
+                        "name": "selectionchange",
+                        "scope": "me"
+                    },
+                    "name": "onGridpanelSelectionChange",
+                    "designerId": "7fc6e874-37fa-4a1f-a9d2-9b89b62fb6ad"
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onAppRefusalsAfterRender",
+                "implHandler": [
+                    "var AccessEdit = Portal.util.Util.appAccessEdit(this.getView().xtype);",
+                    "//console.log('AccessEdit='+AccessEdit);",
+                    "",
+                    "var refs = this.getReferences();",
+                    "if(AccessEdit===false){",
+                    "    console.log('setDisabled');",
+                    "    refs.btnRefusalsAdd.setDisabled(true);",
+                    "    refs.btnRefusalsDel.setDisabled(true);",
+                    "}",
+                    "",
+                    "Ext.getStore('Refusals.main').load();"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onAppRefusalsAfterRender",
+            "designerId": "f283848b-e35b-4aeb-9b16-0294bc8c85f6"
+        }
+    ]
+}

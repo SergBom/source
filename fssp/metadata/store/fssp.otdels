@@ -1,0 +1,50 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "fsspotdels",
+        "designer|userClassName": "fssp.otdels",
+        "model": "fssp.Otdel",
+        "storeId": "fssp.otdels"
+    },
+    "name": "MyJsonStore",
+    "designerId": "980186cb-4f93-4f77-be28-4af6886a2ba6",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{all:0}"
+                ],
+                "url": "data/fssp/otdels.json.php"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "a493b93f-9bef-45b5-b4e6-c1ac25b7a176",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "3eb7b227-211c-46ff-8708-d0e13ba7a1d2"
+                }
+            ]
+        }
+    ]
+}

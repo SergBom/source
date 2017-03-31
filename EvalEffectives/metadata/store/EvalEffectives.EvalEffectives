@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EvalEffectives.EvalEffectives",
+        "model": "EvalEffectives.EvalEffectives",
+        "storeId": "EvalEffectives.EvalEffectives"
+    },
+    "name": "MyJsonStore",
+    "designerId": "49fe81fa-bac7-417e-b2e3-4e524a8cb396",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/EvalEffectives/recordData.php"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "d97a66e5-151c-4a60-8a08-ea82f002c012",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "10a44c71-2756-4eac-a59e-73688177877f"
+                }
+            ]
+        }
+    ]
+}

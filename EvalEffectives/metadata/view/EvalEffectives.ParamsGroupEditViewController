@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivesparamsgroupedit",
+        "designer|userClassName": "EvalEffectives.ParamsGroupEditViewController"
+    },
+    "designerId": "3f07d220-d4b5-4540-92f5-5b420c50aec7"
+}

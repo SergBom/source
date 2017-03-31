@@ -1,0 +1,47 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "UsersStore",
+        "designer|userClassName": "PhonesBook.UsersStore",
+        "groupField": "otdel_name",
+        "model": "PhonesBook.UserData",
+        "storeId": "PhonesBook.UsersStore"
+    },
+    "designerId": "f98492a6-c8ca-4053-9353-ca78595825b0",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/PhonesBook/users.json.php"
+            },
+            "name": "MyAjaxProxy1",
+            "designerId": "fdc62272-cdf4-4241-a7bc-4181551040c1",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "cf4dca7c-e5db-4d7f-839d-852d9943e9b7"
+                }
+            ]
+        }
+    ]
+}

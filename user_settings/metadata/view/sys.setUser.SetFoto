@@ -1,0 +1,19 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "syssetusersetfoto",
+        "designer|userClassName": "sys.setUser.SetFoto",
+        "height": 250,
+        "title": "My Window",
+        "width": 400
+    },
+    "name": "MyWindow",
+    "designerId": "a87eef2d-143d-48c5-b27c-f8ddeb575c84",
+    "viewControllerInstanceId": "dcc62aac-8ce5-4d0d-8ac2-d29506279d01",
+    "viewModelInstanceId": "4f671169-a5b4-45d6-9571-ee10b971a499"
+}

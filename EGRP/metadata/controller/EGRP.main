@@ -1,0 +1,30 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EGRP.main",
+        "models": [
+            "EGRP.stat02",
+            "EGRP.stat05",
+            "EGRP.stat07"
+        ],
+        "views": [
+            "EGRP.flk",
+            "EGRP.fns",
+            "EGRP.main",
+            "EGRP.stat",
+            "EGRP.detail"
+        ]
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "views": "typedarray",
+        "models": "typedarray"
+    },
+    "name": "MyController",
+    "designerId": "7d5b18f9-4b7d-4a2b-a458-2e99e2a30b0b"
+}

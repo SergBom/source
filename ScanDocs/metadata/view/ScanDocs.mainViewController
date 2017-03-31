@@ -1,0 +1,52 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "scandocsmain",
+        "designer|userClassName": "ScanDocs.mainViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "477902ac-7dae-4f5d-bfaa-18411cf650c0",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "filter"
+                ],
+                "fn": "ShowCadNums",
+                "implHandler": [
+                    "var r=this.getReferences(),",
+                    "    frm=r.formPanel.getForm(),",
+                    "    o=r.FilterOpis.getValue(),",
+                    "    fr=r.FilterRetro.getValue(),",
+                    "    s=r.seek.getValue();",
+                    "Ext.getStore('ScanDocs.MainData').load({params:{",
+                    "dateBegin:frm.findField('dateBegin').getValue(),",
+                    "dateEnd:frm.findField('dateEnd').getValue(),",
+                    "Otdel:frm.findField('Otdel').getValue(),",
+                    "cyear:'',opis:o,retro:fr,filter:s}});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "ShowCadNums",
+            "designerId": "81e3ff14-2933-48f2-b02c-769ec4c6c7c9"
+        }
+    ]
+}

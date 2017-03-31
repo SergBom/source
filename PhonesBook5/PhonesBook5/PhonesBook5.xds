@@ -1,0 +1,63 @@
+{
+    "name": "PhonesBook5",
+    "settings": {
+        "cmd": {},
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "urlPrefix": "http://localhost/apps/PhonesBook",
+        "exportPath": "e:/wamp/www/apps/PhonesBook5",
+        "buildShouldOverwriteIndex": false,
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "generateArchitectVersion": true,
+        "displayfield-ExtBox1-2112-inputEl": "Not Installed",
+        "displayfield-ExtBox1-2162-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1707-inputEl": "Not Installed",
+        "displayfield-ExtBox1-3154-inputEl": "Not Installed",
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1137-inputEl": "a new version of the framework is available",
+        "urlPrefixTemplate": "http://localhost:{port}/{path}"
+    },
+    "xdsVersion": "4.0.1",
+    "xdsBuild": 190,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext62",
+    "viewOrderMap": {
+        "view": [
+            "ea102e7e-9682-4c0f-a060-11373615dd69",
+            "45e57e53-8275-4012-aca6-8d90de38c361",
+            "b415da81-e8cc-4da8-adf6-cb2af9798fe1",
+            "4abcf10b-a04d-41ed-9d03-641837023ac1",
+            "bd7ecc29-fe6d-4188-9062-8bb64d895179",
+            "425e32cd-61b5-4cd1-b6a1-749396d0bb15"
+        ],
+        "store": [
+            "fdddb4bd-95bc-4ba5-9653-ad4de1e943eb",
+            "f98492a6-c8ca-4053-9353-ca78595825b0"
+        ],
+        "controller": [
+            "8a48e9b2-f199-4725-911c-507efd5852d5"
+        ],
+        "model": [
+            "7582b427-a26d-4806-9c88-b16674979020",
+            "1738918f-ddb5-48d8-895a-6437a53d5bd3"
+        ],
+        "resource": [
+            "73d47ea1-5b2b-453f-b170-3c4620a32cec"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

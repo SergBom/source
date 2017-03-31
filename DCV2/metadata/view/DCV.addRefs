@@ -1,0 +1,156 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "dcv.addrefs",
+        "designer|userClassName": "DCV.addRefs",
+        "height": 347,
+        "layout": "fit",
+        "title": "Справочник",
+        "width": 488
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "8a06fb52-2d47-4bcb-84ad-4487b917d3b8",
+    "viewControllerInstanceId": "a3324bcd-8fc1-4f36-8961-991b4db0b8d1",
+    "viewModelInstanceId": "3f3a79cf-fd8b-46a7-9c6d-fc36c7423016",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "title": null
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "title": "string"
+            },
+            "name": "MyForm2",
+            "designerId": "d337dd8b-a0f6-4a2f-8ca5-7eb3f1f5a542",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "bottom"
+                    },
+                    "configAlternates": {
+                        "dock": "string"
+                    },
+                    "name": "MyToolbar8",
+                    "designerId": "a5a51873-41d3-434d-9043-7d0956bff3e2",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number"
+                            },
+                            "name": "MyContainer22",
+                            "designerId": "569914b7-e31f-44e0-b5c8-d57da7949b1f",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "MyButton"
+                                    },
+                                    "configAlternates": {
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton24",
+                                    "designerId": "67da3831-33b6-4b03-8d83-4010b45ae8b5"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "MyButton"
+                                    },
+                                    "configAlternates": {
+                                        "text": "string"
+                                    },
+                                    "name": "MyButton23",
+                                    "designerId": "f7590284-1539-4ab4-b70e-6b943d694719"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Наименование",
+                        "layout|anchor": "100%"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|anchor": "string"
+                    },
+                    "name": "MyTextField18",
+                    "designerId": "5c80a756-0279-41a6-bf10-1b36049ece89"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Имя таблицы в БД",
+                        "labelWidth": 150,
+                        "layout|anchor": "100%"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|anchor": "string"
+                    },
+                    "name": "MyTextField26",
+                    "designerId": "d0a52708-8373-4c85-8a4e-5d09b83c0a4b"
+                }
+            ]
+        }
+    ]
+}

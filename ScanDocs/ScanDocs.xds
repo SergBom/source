@@ -1,0 +1,61 @@
+{
+    "name": "ScanDocs",
+    "settings": {
+        "cmd": {},
+        "lockUrlPrefix": true,
+        "exportPath": "E:/wamp/www/apps/scandocs",
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "urlPrefix": "http://localhost:1841/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefixTemplate": "http://localhost:{port}/{path}"
+    },
+    "xdsVersion": "4.1.1",
+    "xdsBuild": 123,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext62",
+    "viewOrderMap": {
+        "view": [
+            "17e187eb-df0b-4f7f-9879-1a1294eef67e",
+            "a7b93210-4260-48c8-bced-46da6bdf4602",
+            "477902ac-7dae-4f5d-bfaa-18411cf650c0",
+            "7e54a99d-aac8-4620-ad6b-67557f09c64d",
+            "cf466136-df31-4cf4-a73b-290df76cedd5",
+            "b03eb71b-ecc7-4197-a4a7-f28635e8bd0f"
+        ],
+        "store": [
+            "e27a84a9-a2b4-4aad-99d1-1c2a39aaa9e2",
+            "ef081e21-9157-4070-a430-3356335377c4",
+            "a561050b-9ef0-4718-95be-bb5f2e1ea33c"
+        ],
+        "controller": [
+            "94872727-f7f6-4be4-bd08-0d1845adcd24"
+        ],
+        "model": [
+            "3e2c1070-ac33-4f5a-87bf-2e73c089e956",
+            "f9b6120e-9888-4302-a0f8-fd88b1c859ed",
+            "ca133cd6-a846-4c0c-91d7-dcfc0fd985e7"
+        ],
+        "resource": [
+            "cf503e0f-9f01-4f16-8b84-961713d326fe",
+            "9bd26283-1515-4d60-9018-6082a1b423c6",
+            "c90155ad-3156-4af1-aebd-51203414d3b7"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

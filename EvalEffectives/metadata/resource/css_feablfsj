@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css_feablfsj",
+        "url": "http://localhost/resources/my.css"
+    },
+    "name": "css",
+    "designerId": "d4da6325-41a9-40e3-bdbe-7b6c90de7ea8"
+}

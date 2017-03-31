@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "syssetorgsorgedit",
+        "designer|userClassName": "sys.setOrgs.OrgEditViewController"
+    },
+    "designerId": "c066769e-b107-42c5-a903-6a81838a0607"
+}

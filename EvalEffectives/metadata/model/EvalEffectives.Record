@@ -1,0 +1,67 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EvalEffectives.Record"
+    },
+    "name": "MyModel",
+    "designerId": "069ff432-932a-4db1-a901-0f6bb4f5d6ac",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField24",
+            "designerId": "c6ee751d-964f-411b-b378-66a91b3b8598"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "R1"
+            },
+            "name": "MyField25",
+            "designerId": "261ea6cf-fa0f-4a59-b940-edd6e7171d98"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "R2"
+            },
+            "name": "MyField26",
+            "designerId": "b2bd4809-da31-4d45-8f6c-68cdd5dcb5db"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Value"
+            },
+            "name": "MyField27",
+            "designerId": "2af51fdf-1126-46d1-bb7d-95d18d036f72"
+        }
+    ]
+}

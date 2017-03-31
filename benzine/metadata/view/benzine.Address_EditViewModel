@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "benzineaddress_edit",
+        "designer|userClassName": "benzine.Address_EditViewModel"
+    },
+    "designerId": "c93cdb5a-74b6-481c-a5e9-b1b3d42a32c6"
+}

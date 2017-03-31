@@ -1,0 +1,93 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EvalEffectives.Stat1"
+    },
+    "name": "MyModel",
+    "designerId": "5f1bb9b7-f19e-4ae5-9f6e-ad5bdc87a3c3",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField81",
+            "designerId": "49d68588-b0c5-4537-8b28-ef44b5b83774"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Punkt"
+            },
+            "name": "MyField82",
+            "designerId": "1eb9dbed-a617-4bbf-b130-1db2fa7b7e94"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "C1"
+            },
+            "name": "MyField83",
+            "designerId": "4364cd97-2f1e-477d-b84b-cff4e49d983a"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "C2"
+            },
+            "name": "MyField84",
+            "designerId": "3b53ec2d-538e-460d-ab17-c03bf3ed3165"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Otvet"
+            },
+            "name": "MyField85",
+            "designerId": "2fca61af-fefe-4d75-83b4-09fffd3bd571"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Effective"
+            },
+            "name": "MyField86",
+            "designerId": "725d75cf-fc39-4a19-b4bf-61b960169b1d"
+        }
+    ]
+}

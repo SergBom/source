@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "syssetusersetfoto",
+        "designer|userClassName": "sys.setUser.SetFotoViewController"
+    },
+    "designerId": "dcc62aac-8ce5-4d0d-8ac2-d29506279d01"
+}

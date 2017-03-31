@@ -1,0 +1,33 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ScanDocs.ScanDocs",
+        "models": [
+            "ScanDocs.MainData",
+            "ScanDocs.District",
+            "ScanDocs.Otdel"
+        ],
+        "stores": [
+            "ScanDocs.MainData",
+            "ScanDocs.District",
+            "ScanDocs.Otdel"
+        ],
+        "views": [
+            "ScanDocs.main",
+            "ScanDocs.Files"
+        ]
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "models": "typedarray",
+        "stores": "typedarray",
+        "views": "typedarray"
+    },
+    "name": "MyController",
+    "designerId": "94872727-f7f6-4be4-bd08-0d1845adcd24"
+}

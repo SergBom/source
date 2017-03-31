@@ -1,0 +1,67 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoShow": true,
+        "designer|initialView": true,
+        "designer|userAlias": "mywindow",
+        "designer|userClassName": "MyWindow",
+        "height": 587,
+        "title": "My Window",
+        "width": 565
+    },
+    "name": "MyWindow",
+    "designerId": "00a55965-f249-43ac-9104-90febb4014f7",
+    "viewControllerInstanceId": "f2c6ba27-cc18-4608-9b86-21b19efbf519",
+    "viewModelInstanceId": "1615c0f0-deb0-4f21-ab0a-09d7455c660e",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "title": "My Form"
+            },
+            "name": "MyForm",
+            "designerId": "a1fbc263-c3bc-4e27-b7e1-2824fa1acab8",
+            "cn": [
+                {
+                    "type": "Ext.form.field.File",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%"
+                    },
+                    "name": "MyFileUpload",
+                    "designerId": "bcb1c970-a9c8-4779-b51b-bdd8cf9e057d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 196,
+                "title": "My Panel"
+            },
+            "name": "MyPanel",
+            "designerId": "b2cb39e5-7b33-4d4d-be5a-a1f775b0e9f6"
+        }
+    ]
+}

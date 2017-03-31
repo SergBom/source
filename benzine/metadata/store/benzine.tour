@@ -1,0 +1,67 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "benzine.tour",
+        "model": "benzine.tour",
+        "storeId": "benzine.tour"
+    },
+    "name": "MyJsonStore",
+    "designerId": "7e8d4867-230a-4e10-8ba3-eb664d984ac1",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "                    create: 'data/benzine/tour-edit.php',",
+                    "                    read: 'data/benzine/tour-read.php',",
+                    "                    update: 'data/benzine/tour-edit.php',",
+                    "                    destroy: 'data/benzine/tour-delete.php'",
+                    "                }"
+                ]
+            },
+            "name": "MyAjaxProxy2",
+            "designerId": "149fb495-1bc1-4a24-a442-f66dd5432da6",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "e33cc8b6-ec2d-4475-9fd1-d11046917e89"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "rootProperty": "data",
+                        "writeAllFields": true
+                    },
+                    "name": "MyJsonWriter1",
+                    "designerId": "dd9a00c2-3b76-409d-81f4-3fc42555ce43"
+                }
+            ]
+        }
+    ]
+}

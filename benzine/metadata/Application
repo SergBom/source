@@ -1,0 +1,19 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "benzine.benzine"
+        ],
+        "name": "Portal",
+        "views": [
+            "MyWindow"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

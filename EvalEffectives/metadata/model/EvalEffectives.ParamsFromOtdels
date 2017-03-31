@@ -1,0 +1,28 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EvalEffectives.ParamsFromOtdels"
+    },
+    "name": "MyModel",
+    "designerId": "e025152d-314d-4d21-8a49-27ca3c38bbcc",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField91",
+            "designerId": "f74c1ee8-88a7-49a6-ad82-f66304ddbdf9"
+        }
+    ]
+}

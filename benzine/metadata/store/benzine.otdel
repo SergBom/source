@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "benzine.otdel",
+        "model": "benzine.otdel",
+        "storeId": "benzine.otdel"
+    },
+    "name": "MyJsonStore",
+    "designerId": "9b7c0240-2dda-4a32-9ff5-4ce8207e6032",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/benzine/otdel-read.php"
+            },
+            "name": "MyAjaxProxy5",
+            "designerId": "7d7436e6-b16a-402b-be14-5e02b459a087",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader5",
+                    "designerId": "0075ab9f-a474-481b-9961-31ddad913903"
+                }
+            ]
+        }
+    ]
+}

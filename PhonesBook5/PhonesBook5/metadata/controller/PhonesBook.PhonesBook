@@ -1,0 +1,29 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": null,
+        "designer|userClassName": "PhonesBook.PhonesBook",
+        "id": "PhonesBook",
+        "models": [
+            "PhonesBook.OrgData",
+            "PhonesBook.UserData"
+        ],
+        "requires": [
+            "Ext.ux.grid.Printer"
+        ],
+        "stores": [
+            "PhonesBook.Orgs",
+            "PhonesBook.UsersStore"
+        ],
+        "views": [
+            "PhonesBook.PhonesBook",
+            "PhonesBook.UserEdit"
+        ]
+    },
+    "designerId": "8a48e9b2-f199-4725-911c-507efd5852d5"
+}

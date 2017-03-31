@@ -1,0 +1,46 @@
+{
+    "name": "installer",
+    "settings": {
+        "cmd": {},
+        "lockUrlPrefix": true,
+        "exportPath": "E:/wamp/www/apps/installer",
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "urlPrefix": "",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        }
+    },
+    "xdsVersion": "3.2.0",
+    "xdsBuild": 75,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext51",
+    "viewOrderMap": {
+        "view": [
+            "00a55965-f249-43ac-9104-90febb4014f7",
+            "1615c0f0-deb0-4f21-ab0a-09d7455c660e",
+            "f2c6ba27-cc18-4608-9b86-21b19efbf519"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "f05f0a60-efba-489a-ad80-bafeffb6ca2d",
+            "49f29083-b20d-4eca-8127-070080a2dc5a"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,210 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "opisdel.export",
+        "designer|userClassName": "OpisDel.Export",
+        "height": 132,
+        "layout": "fit",
+        "resizable": false,
+        "title": "Экспорт данных в отчет",
+        "width": 400
+    },
+    "name": "MyWindow",
+    "configAlternates": {
+        "resizable": "boolean"
+    },
+    "designerId": "4ed17c0d-cf68-4324-853c-169978d793c4",
+    "viewControllerInstanceId": "7263a113-6827-47a6-beca-984756a44d36",
+    "viewModelInstanceId": "0b927d42-99c4-4a26-b88d-0e5050f812f3",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "reference": "form",
+                "title": null
+            },
+            "name": "MyForm1",
+            "designerId": "59d2b0ac-b152-4b78-92f7-4b2c000e69ef",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "bottom"
+                    },
+                    "name": "MyToolbar2",
+                    "designerId": "f67edd18-7ef4-4ee5-ae80-57f9d7a97bc2",
+                    "cn": [
+                        {
+                            "type": "Ext.form.FieldContainer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": null,
+                                "height": null,
+                                "layout|flex": null,
+                                "width": null
+                            },
+                            "name": "MyFieldContainer3",
+                            "designerId": "e868a76b-3911-4a2f-83f8-62dacd85c21e",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "formBind": true,
+                                        "iconCls": "icon-mime-excel",
+                                        "text": "Экспорт"
+                                    },
+                                    "name": "MyButton6",
+                                    "designerId": "6bb4f04f-fd79-4d3b-bd81-8f1170727c5b",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onExportClick",
+                                                "implHandler": [
+                                                    "var r=this.getReferences();",
+                                                    "window.open('data/OpisDel/report.php?Year='+",
+                                                    "           r.Year.getValue()+'&Npp='+r.Npp.getValue());",
+                                                    "this.getView().close();"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onExportClick",
+                                            "designerId": "2263710a-0435-44fe-94ec-a5b9d0a18864"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "dialog-cancel",
+                                        "text": "Отменить"
+                                    },
+                                    "name": "MyButton7",
+                                    "designerId": "964b7734-f193-4e3e-8897-063ae8423e55",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onCancelClick",
+                                                "implHandler": [
+                                                    "this.getView().close();"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onCancelClick",
+                                            "designerId": "a8fc127a-51b3-43e9-936b-10ac5b32081d"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "displayField": "Year",
+                        "editable": false,
+                        "fieldLabel": "За год",
+                        "layout|anchor": "100%",
+                        "name": "Year",
+                        "reference": "Year",
+                        "store": "OpisDel.getYear",
+                        "valueField": "Year"
+                    },
+                    "name": "MyComboBox3",
+                    "designerId": "eee85de6-4c6a-49e7-9db6-890d83bf04d8",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onComboboxChange",
+                                "implHandler": [
+                                    "this.getReferences().form.load({",
+                                    "    url:'data/OpisDel/getNpp.php',",
+                                    "    params:{Year:newValue}",
+                                    "});"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onComboboxChange",
+                            "designerId": "c9973a4a-39e0-4766-b9d0-11763f1419a7"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Начальное значение № п/п",
+                        "labelWidth": 180,
+                        "layout|anchor": "100%",
+                        "name": "Npp",
+                        "reference": "Npp"
+                    },
+                    "name": "MyNumberField2",
+                    "designerId": "249be88d-a0d8-48f5-8659-5b2c9e0f0e58"
+                }
+            ]
+        }
+    ]
+}

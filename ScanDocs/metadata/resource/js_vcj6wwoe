@@ -1,0 +1,22 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_vcj6wwoe",
+        "url": "/portal51/util/Util.js",
+        "x-compile": true
+    },
+    "configAlternates": {
+        "defer": "boolean",
+        "designer|userClassName": "string",
+        "url": "uri",
+        "x-compile": "boolean"
+    },
+    "name": "js",
+    "designerId": "9bd26283-1515-4d60-9018-6082a1b423c6"
+}

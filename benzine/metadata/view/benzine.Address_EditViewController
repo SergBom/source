@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "benzineaddress_edit",
+        "designer|userClassName": "benzine.Address_EditViewController"
+    },
+    "designerId": "734902e3-b4ee-4b92-91f9-e05dc3f1a21c"
+}

@@ -1,0 +1,84 @@
+{
+    "name": "benzine",
+    "settings": {
+        "cmd": {},
+        "projectHasEnabledWebServer": false,
+        "urlPrefix": "http://localhost/",
+        "exportPath": "E:/wamp/www/apps/benzine",
+        "lockUrlPrefix": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefixTemplate": "http://localhost:{port}/{path}"
+    },
+    "xdsVersion": "4.1.1",
+    "xdsBuild": 123,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext51",
+    "viewOrderMap": {
+        "view": [
+            "97cf8ad3-09e4-459e-a760-3f9cbee43dd6",
+            "7bf317dc-d850-4df1-b84d-8209de0e0df6",
+            "0e49f96e-0598-4eb9-ae4c-2c55023175ee",
+            "63ef6402-46cc-4f72-8e08-8196e3a4dede",
+            "8ccfc193-9245-491b-8760-eed0afbbfea6",
+            "439b19d0-096a-4e69-814e-b00732cd3ca8",
+            "5e2199a5-fcde-4cb7-99aa-e7407326d610",
+            "df0cf2e2-d591-4736-89c0-1ba2411f743a",
+            "8508cb49-5ab4-4ebd-b804-6e7d9de83a1b",
+            "c7ebb7db-f604-4745-8dc8-44710158e90a",
+            "49325bc2-2db3-42c2-8ab4-34fa2cb904ea",
+            "c4eee061-e4ea-4468-9e5a-2af0a863a812",
+            "bb1deb41-c4bb-4ea9-9afc-c98e0e474449",
+            "4067a1e6-8231-41d8-ac2b-49f030126d4c",
+            "7dccec80-0226-41fe-b927-8c91eb319519",
+            "deae0596-2de9-4875-8418-346264d7ca49",
+            "c93cdb5a-74b6-481c-a5e9-b1b3d42a32c6",
+            "734902e3-b4ee-4b92-91f9-e05dc3f1a21c",
+            "c1f90912-52a5-4bef-a9eb-370ee359ec73",
+            "af215097-151c-4b04-b1f3-8cb9bdd47dc8",
+            "effd671f-4240-4d38-8750-17770f49db58"
+        ],
+        "store": [
+            "0f48a89f-e1f3-42b1-b8d4-6e434d25f5f7",
+            "ceb506fe-4fe9-408c-b96e-b880b55ad309",
+            "7e8d4867-230a-4e10-8ba3-eb664d984ac1",
+            "dc0286c0-8100-4e5e-806f-4cfa952ee6b5",
+            "f165d126-56ab-4e0b-8609-bc7ed11ec57c",
+            "9b7c0240-2dda-4a32-9ff5-4ce8207e6032"
+        ],
+        "controller": [
+            "769b53d0-8b10-47c7-b362-3e03bf7f84ce"
+        ],
+        "model": [
+            "696946a1-6892-4917-9b28-ab66afda0ff5",
+            "e6848b01-9176-440c-bda8-975336728622",
+            "dc46a0a2-a646-431c-b13c-8d9b94b1fb1e",
+            "06ebb817-25d1-48d3-93b9-8fccc0f1beef",
+            "7a5fdacb-ab8f-44dc-b27d-a437653b1eaa",
+            "51a6a965-14a9-41f0-adc7-d479ef288dd6"
+        ],
+        "resource": [
+            "275ed34b-6d05-4988-8de3-186ecba2b484",
+            "fd7e9d07-2856-4fee-886d-8e57ca47baa1",
+            "16eae569-756b-4a07-a362-ecaa77ed3e9c",
+            "b6e01cd0-8074-4571-817c-946a65789e42"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

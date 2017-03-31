@@ -1,0 +1,53 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PhonesBook.OrgData"
+    },
+    "designerId": "7582b427-a26d-4806-9c88-b16674979020",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField",
+            "designerId": "ed2fe427-3d22-4072-9739-5b23e8850a20"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "code"
+            },
+            "name": "MyField1",
+            "designerId": "2baea780-4fb8-4c7e-a5ec-68fa58e0176b"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyField2",
+            "designerId": "1f6ca0a4-b5b8-42bd-8f77-acde174b533b"
+        }
+    ]
+}

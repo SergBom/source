@@ -1,0 +1,22 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defer": false,
+        "designer|userClassName": "js_ohwy2erk",
+        "url": "app/util/Glyphs.js",
+        "x-compile": true
+    },
+    "configAlternates": {
+        "defer": "boolean",
+        "designer|userClassName": "string",
+        "url": "uri",
+        "x-compile": "boolean"
+    },
+    "name": "js",
+    "designerId": "da1afd02-4658-445b-8901-53d6c48dc93c"
+}

@@ -1,0 +1,49 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "Portal",
+        "designer|userClassName": "Portal",
+        "models": [
+            "PortalMenuItem",
+            "PortalMenuRoot",
+            "sys.PortalDomain",
+            "PortalLinks",
+            "sys.PortalNews",
+            "sys.PortalFAQ"
+        ],
+        "stores": [
+            "PortalMenu",
+            "PortalDomain",
+            "PortalLinks",
+            "sys.PortalNews",
+            "sys.PortalFAQ"
+        ],
+        "views": [
+            "sys.PortalLogin",
+            "PortalViewport",
+            "sys.PortalHeader",
+            "PortalMenu",
+            "PortalMenuItem",
+            "sys.PortalRegister",
+            "sys.PortalNewsEdit",
+            "sys.PortalFAQ",
+            "sys.PortalFAQEdit",
+            "sys.PortalHelp",
+            "sys.InputFile"
+        ]
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "models": "typedarray",
+        "stores": "typedarray",
+        "views": "typedarray"
+    },
+    "name": "MyController",
+    "designerId": "118d5d67-1e91-4096-91c3-6dde4cc2bfaa"
+}

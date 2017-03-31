@@ -1,0 +1,783 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "egrp.stat",
+        "designer|userClassName": "EGRP.statViewModel"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "4499421a-26ea-4616-b5ad-3b6cdf576ad6",
+    "cn": [
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "menu"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyJsonStore4",
+            "designerId": "f4426f5f-0a72-4b02-8010-18e27d28bc51",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "url": "data/EGRP/tir/tir-period-list-new.php"
+                    },
+                    "configAlternates": {
+                        "url": "string"
+                    },
+                    "name": "MyAjaxProxy3",
+                    "designerId": "366a7f5f-5978-43df-8c84-343b1ebd1684",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "configAlternates": {
+                                "rootProperty": "string"
+                            },
+                            "name": "MyJsonReader6",
+                            "designerId": "4d98c1d6-cdac-45ab-914b-97cbccfbc3a1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "ID"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyField2",
+                    "designerId": "4916b6e4-df42-4e0d-b4e5-3dc1b2da3463"
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "NAME"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyField10",
+                    "designerId": "31cf63c2-460c-4fff-a3e9-13a894194b45"
+                }
+            ]
+        },
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "stat01"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyJsonStore6",
+            "designerId": "84a0a68d-e0b0-4cf9-93b6-b101356a4eb8",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "timeout": 300000,
+                        "url": "data/EGRP/tir/tir-stat01.php"
+                    },
+                    "configAlternates": {
+                        "url": "string",
+                        "timeout": "number"
+                    },
+                    "name": "MyAjaxProxy5",
+                    "designerId": "d6de04f5-47ea-40f8-baab-ade7c7002c2a",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "configAlternates": {
+                                "rootProperty": "string"
+                            },
+                            "name": "MyJsonReader8",
+                            "designerId": "0be679ae-dc23-479f-ac07-4810faa2a091"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "id"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyField30",
+                    "designerId": "f9addb5e-3272-45b9-a5ff-891145415b4d"
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "name"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyField31",
+                    "designerId": "d77217a7-b897-4d3a-8a48-8a82386bf30a"
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "d1"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyField32",
+                    "designerId": "4ce89a18-30c3-43cf-b7bc-ddc7cef5b870"
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "d2"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyField33",
+                    "designerId": "19c29404-c651-4e72-8a46-a8a28bcc55a3"
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "d3"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyField34",
+                    "designerId": "648d0631-ae45-4536-a56d-1b0e37f10009"
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "perc"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyField35",
+                    "designerId": "88d42ed2-bef2-4bc3-bf0c-eccce882be94"
+                }
+            ]
+        },
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "model": "EGRP.stat02",
+                "name": "stat02"
+            },
+            "configAlternates": {
+                "model": "model",
+                "name": "string"
+            },
+            "name": "MyJsonStore7",
+            "designerId": "20de89c5-69a3-41fb-b73f-49179f852a97",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "timeout": 300000,
+                        "url": "data/EGRP/tir/tir-stat02.php"
+                    },
+                    "configAlternates": {
+                        "timeout": "number",
+                        "url": "string"
+                    },
+                    "name": "MyAjaxProxy6",
+                    "designerId": "d3b802e6-cb0e-46b0-a4ee-cfce604c0269",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "configAlternates": {
+                                "rootProperty": "string"
+                            },
+                            "name": "MyJsonReader9",
+                            "designerId": "19f94169-58bd-414d-ab71-0a5b75b8f15a"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "model": "EGRP.stat02",
+                "name": "stat03"
+            },
+            "configAlternates": {
+                "name": "string",
+                "model": "model"
+            },
+            "name": "MyJsonStore8",
+            "designerId": "25e46bf9-b1f5-4695-b3d9-cdd4e210a0e5",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "extraParams": [
+                            "{ST:'R'}"
+                        ],
+                        "timeout": 300000,
+                        "url": "data/EGRP/tir/tir-stat02.php"
+                    },
+                    "configAlternates": {
+                        "url": "string",
+                        "extraParams": "object",
+                        "timeout": "number"
+                    },
+                    "name": "MyAjaxProxy6",
+                    "designerId": "a1878de1-213f-41b4-a1da-b26cc5bdc8bf",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "configAlternates": {
+                                "rootProperty": "string"
+                            },
+                            "name": "MyJsonReader9",
+                            "designerId": "bc6ee686-f537-4dac-b8a6-d44a83bb8c65"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "model": "EGRP.stat02",
+                "name": "stat04"
+            },
+            "configAlternates": {
+                "name": "string",
+                "model": "model"
+            },
+            "name": "MyJsonStore9",
+            "designerId": "307d6298-fad1-4d09-bb81-497cb6ecd604",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "extraParams": [
+                            "{ST:'C'}"
+                        ],
+                        "timeout": 300000,
+                        "url": "data/EGRP/tir/tir-stat02.php"
+                    },
+                    "configAlternates": {
+                        "url": "string",
+                        "extraParams": "object",
+                        "timeout": "number"
+                    },
+                    "name": "MyAjaxProxy6",
+                    "designerId": "f91cda99-f4c5-4e91-98d1-85cf9d0dc886",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "configAlternates": {
+                                "rootProperty": "string"
+                            },
+                            "name": "MyJsonReader9",
+                            "designerId": "75334b1f-e935-44a7-9fbc-2c967e4c8366"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "model": "EGRP.stat05",
+                "name": "stat05"
+            },
+            "configAlternates": {
+                "name": "string",
+                "model": "model"
+            },
+            "name": "MyJsonStore10",
+            "designerId": "d25325bc-b1df-485a-98a6-60895b30b825",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "extraParams": [
+                            "{ST:'R'}"
+                        ],
+                        "timeout": 300000,
+                        "url": "data/EGRP/tir/tir-stat05.php"
+                    },
+                    "configAlternates": {
+                        "url": "string",
+                        "extraParams": "object",
+                        "timeout": "number"
+                    },
+                    "name": "MyAjaxProxy6",
+                    "designerId": "cf30c560-6e7f-496f-9eb8-526ce537bf52",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "configAlternates": {
+                                "rootProperty": "string"
+                            },
+                            "name": "MyJsonReader9",
+                            "designerId": "c9a5836f-24f1-4fc4-a17e-19e5233192cb"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "model": "EGRP.stat05",
+                "name": "stat06"
+            },
+            "configAlternates": {
+                "name": "string",
+                "model": "model"
+            },
+            "name": "MyJsonStore11",
+            "designerId": "eefee80e-c87c-444b-b8e3-dfe87329c086",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "extraParams": [
+                            "{ST:'C'}"
+                        ],
+                        "timeout": 300000,
+                        "url": "data/EGRP/tir/tir-stat05.php"
+                    },
+                    "configAlternates": {
+                        "url": "string",
+                        "extraParams": "object",
+                        "timeout": "number"
+                    },
+                    "name": "MyAjaxProxy6",
+                    "designerId": "ce9575a5-f852-44e8-937b-d2b61259fc70",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "configAlternates": {
+                                "rootProperty": "string"
+                            },
+                            "name": "MyJsonReader9",
+                            "designerId": "5aecd290-c886-437c-b8ed-b535fc04c6bd"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "model": "EGRP.stat07",
+                "name": "stat07"
+            },
+            "configAlternates": {
+                "name": "string",
+                "model": "model"
+            },
+            "name": "MyJsonStore12",
+            "designerId": "bd4dddaa-3762-4b9d-b566-0bb457c4e962",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "timeout": 300000,
+                        "url": "data/EGRP/tir/tir-stat07.php"
+                    },
+                    "configAlternates": {
+                        "url": "string",
+                        "extraParams": "object",
+                        "timeout": "number"
+                    },
+                    "name": "MyAjaxProxy6",
+                    "designerId": "f74d945b-ec39-4010-a48f-cc8f2e64a1cc",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "configAlternates": {
+                                "rootProperty": "string"
+                            },
+                            "name": "MyJsonReader9",
+                            "designerId": "be5d304b-3e62-494b-9161-1c64c8c1c1cc"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "model": "EGRP.stat07",
+                "name": "stat08"
+            },
+            "configAlternates": {
+                "name": "string",
+                "model": "model"
+            },
+            "name": "MyJsonStore13",
+            "designerId": "5e6af0d9-5c21-4c84-b634-3f7c73dc5007",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "timeout": 300000,
+                        "url": "data/EGRP/tir/tir-stat08.php"
+                    },
+                    "configAlternates": {
+                        "url": "string",
+                        "extraParams": "object",
+                        "timeout": "number"
+                    },
+                    "name": "MyAjaxProxy6",
+                    "designerId": "d351ede9-9e3b-47dd-9d83-fa4e90be507e",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "configAlternates": {
+                                "rootProperty": "string"
+                            },
+                            "name": "MyJsonReader9",
+                            "designerId": "ddea660a-06a1-4db8-a30b-43782bcb11c0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "model": "EGRP.stat07",
+                "name": "stat09"
+            },
+            "configAlternates": {
+                "name": "string",
+                "model": "model"
+            },
+            "name": "MyJsonStore14",
+            "designerId": "03250aa9-de04-49f6-91d3-ac8d4a4e764b",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "extraParams": [
+                            "{ST:'R'}"
+                        ],
+                        "timeout": 300000,
+                        "url": "data/EGRP/tir/tir-stat09.php"
+                    },
+                    "configAlternates": {
+                        "url": "string",
+                        "extraParams": "object",
+                        "timeout": "number"
+                    },
+                    "name": "MyAjaxProxy6",
+                    "designerId": "0e17430f-a64c-416f-9a36-9fcbbd747582",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "configAlternates": {
+                                "rootProperty": "string"
+                            },
+                            "name": "MyJsonReader9",
+                            "designerId": "0f0a4243-9ab9-47fd-9e13-f3e34309f733"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "model": "EGRP.stat07",
+                "name": "stat10"
+            },
+            "configAlternates": {
+                "name": "string",
+                "model": "model"
+            },
+            "name": "MyJsonStore15",
+            "designerId": "6ac6951d-fafd-4e6e-9f10-ecd4e9f8a069",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "extraParams": [
+                            "{ST:'C'}"
+                        ],
+                        "timeout": 300000,
+                        "url": "data/EGRP/tir/tir-stat09.php"
+                    },
+                    "configAlternates": {
+                        "url": "string",
+                        "extraParams": "object",
+                        "timeout": "number"
+                    },
+                    "name": "MyAjaxProxy6",
+                    "designerId": "bf8bb337-72b3-4538-90a5-8c75fb8b928b",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "data"
+                            },
+                            "configAlternates": {
+                                "rootProperty": "string"
+                            },
+                            "name": "MyJsonReader9",
+                            "designerId": "4d8b1bfd-ea4e-4700-99d6-4c02b05e35a8"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

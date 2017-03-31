@@ -1,0 +1,24 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DCV.main",
+        "views": [
+            "DCV.main",
+            "DCV.ZayavEdit",
+            "DCV.Settings",
+            "DCV.ObjEdit",
+            "DCV.ZayavEdit2"
+        ]
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "views": "typedarray"
+    },
+    "name": "MyController",
+    "designerId": "c452ca41-5058-4ee8-bdc2-0fe5e94f49c6"
+}

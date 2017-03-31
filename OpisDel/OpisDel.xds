@@ -1,0 +1,59 @@
+{
+    "name": "OpisDel",
+    "settings": {
+        "cmd": {},
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "urlPrefix": "http://localhost/",
+        "exportPath": "E:/wamp/www/apps/OpisDel",
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        }
+    },
+    "xdsVersion": "4.0.1",
+    "xdsBuild": 190,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext62",
+    "viewOrderMap": {
+        "view": [
+            "08313fbe-b3ac-46dc-88cd-e9c2ee0441f0",
+            "e31372aa-49f6-487c-9872-325c5e10a322",
+            "b2e0dfb4-61f1-4bb0-80f5-ac6927bf2095",
+            "7462708a-65c2-4c6a-a956-012ef47386d0",
+            "7209418a-ae9c-402a-8437-801c5c04faa3",
+            "240ef5d0-b849-4dfb-87f4-3c873aeeeffa",
+            "4ed17c0d-cf68-4324-853c-169978d793c4",
+            "0b927d42-99c4-4a26-b88d-0e5050f812f3",
+            "7263a113-6827-47a6-beca-984756a44d36"
+        ],
+        "store": [
+            "bcd61e65-f8a4-45d9-b5be-b58719184fe4",
+            "9f5591bc-b7d7-4e25-906e-b3615a7a8ebb"
+        ],
+        "controller": [
+            "d34c2e98-9a93-4fc3-8474-465ad3c9ab69"
+        ],
+        "model": [
+            "4411e2bd-50c3-4de0-a94f-4d4e1d822a38"
+        ],
+        "resource": [
+            "6a8a6eb4-3c23-427a-b53d-5ef4cbda7c2b",
+            "dbd92bf3-9e4e-4d7e-a372-e3934531c53e"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

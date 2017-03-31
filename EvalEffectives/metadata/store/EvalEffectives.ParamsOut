@@ -1,0 +1,143 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoSync": true,
+        "designer|userClassName": "EvalEffectives.ParamsOut",
+        "storeId": "EvalEffectives.ParamsOut"
+    },
+    "name": "MyJsonStore4",
+    "designerId": "d7b3b772-72a6-4188-8f6b-02a442d595c3",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{create: 'data/EvalEffectives/ParamsOut-post.php',",
+                    "update: 'data/EvalEffectives/ParamsOut-post.php',",
+                    "read: 'data/EvalEffectives/ParamsOut-read.php',",
+                    "destroy: 'data/EvalEffectives/ParamsOut-delete.php'}"
+                ]
+            },
+            "name": "MyAjaxProxy9",
+            "designerId": "f824a6a2-67d3-4582-8f43-843590776023",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader9",
+                    "designerId": "8ebcc277-839d-4544-8fe1-4f12e7a4a9b0"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "rootProperty": "data",
+                        "writeAllFields": true
+                    },
+                    "name": "MyJsonWriter",
+                    "designerId": "62bba853-b96d-49ea-bdce-134f0475f264"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField52",
+            "designerId": "94d22f5d-0e71-4617-92fe-22c7597294f7"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Punkt"
+            },
+            "name": "MyField53",
+            "designerId": "426044ec-0571-423c-ab19-002724d624b2"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "C1"
+            },
+            "name": "MyField54",
+            "designerId": "7dd7d64c-889f-4d9b-a6e5-912b559c75a6"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "C2"
+            },
+            "name": "MyField55",
+            "designerId": "13725323-4740-471f-8f21-5c8d0b804879"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dateCalc"
+            },
+            "name": "MyField73",
+            "designerId": "3097503b-ceda-4106-9a6e-69ab42ae19a0"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "formula"
+            },
+            "name": "MyField74",
+            "designerId": "1378d547-b3c7-400c-90c7-2ae6f139d445"
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EvalEffectives.StatOtdels1list",
+        "storeId": "EvalEffectives.StatOtdels1list"
+    },
+    "name": "MyJsonStore7",
+    "designerId": "d5d52010-dd2d-4df5-8b49-55e1ca2c04cd",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/EvalEffectives/StatOtdels1-list.php"
+            },
+            "name": "MyAjaxProxy19",
+            "designerId": "028e6724-e72a-41fb-a1dc-929adc6c80f3",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader19",
+                    "designerId": "7fc2007a-109b-4061-9fd4-34d46e25e395"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField92",
+            "designerId": "03ded92f-006b-4f4f-a189-fe713482a7bb"
+        }
+    ]
+}

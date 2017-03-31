@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "benzinetype_tour_edit",
+        "designer|userClassName": "benzine.Type_Tour_EditViewController"
+    },
+    "designerId": "439b19d0-096a-4e69-814e-b00732cd3ca8"
+}

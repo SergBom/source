@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivesjobersgroupedit",
+        "designer|userClassName": "EvalEffectives.JobersGroupEditViewController"
+    },
+    "designerId": "93692b04-caa9-49e6-ad55-a196469171f9"
+}

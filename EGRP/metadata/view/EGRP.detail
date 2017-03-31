@@ -1,0 +1,136 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "egrp.detail",
+        "designer|userClassName": "EGRP.detail",
+        "height": 320,
+        "layout": "fit",
+        "title": "My Window",
+        "width": 473
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "c60f6e6c-a3f6-48ae-9382-9fe32080cd61",
+    "viewControllerInstanceId": "9190fe0e-9e20-4c55-a534-498fae08cadb",
+    "viewModelInstanceId": "c117e1e7-6bec-4225-af1f-19bf7c90387d",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "store": [
+                    "{detail}"
+                ],
+                "title": null
+            },
+            "configAlternates": {
+                "store": "binding",
+                "title": "string"
+            },
+            "name": "MyGridPanel2",
+            "designerId": "517f7819-3151-42ff-9996-51864ac5de9f",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "name",
+                        "fixed": null,
+                        "flex": 1,
+                        "text": "Параметр"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "fixed": "boolean",
+                        "flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyColumn8",
+                    "designerId": "a7616bf2-f4ec-47f2-9c84-1c8e06c2ab06"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "value",
+                        "flex": 2,
+                        "text": "Значение"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "flex": "number"
+                    },
+                    "name": "MyColumn10",
+                    "designerId": "b4dc2d59-1668-4a0a-ba50-adcf73642598",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTextField7",
+                            "designerId": "81f4ebc5-7a44-439a-a4ec-86bf8f1ab5a3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable2",
+                    "designerId": "02458806-0b10-4ae8-99fa-1437ea67a0f2"
+                },
+                {
+                    "type": "Ext.selection.CellModel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyCellSelectionModel",
+                    "designerId": "cdb0dd2e-88e4-44d7-b5be-ef8ff73b5f4d"
+                },
+                {
+                    "type": "Ext.grid.plugin.CellEditing",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyCellEditingPlugin",
+                    "designerId": "abb8a6f8-b456-45a6-b5a6-2ceaf52796e7"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,443 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoShow": true,
+        "designer|initialView": true,
+        "designer|userAlias": "dcv.main",
+        "designer|userClassName": "DCV.main",
+        "height": 452,
+        "layout": "fit",
+        "maximizable": true,
+        "title": "DisputCadastralValue",
+        "width": 666
+    },
+    "configAlternates": {
+        "autoShow": "boolean",
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "maximizable": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "f7383c49-dcbb-4672-ad47-090778e03c9f",
+    "viewControllerInstanceId": "5ac90bf7-cbd0-40dd-b879-a487083342de",
+    "viewModelInstanceId": "3bc39b25-4e87-473d-98cd-42f073526e57",
+    "cn": [
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "configAlternates": {
+                "dock": "string"
+            },
+            "name": "MyToolbar",
+            "designerId": "19f376ad-765e-40cc-9d15-59d621dffc4e",
+            "cn": [
+                {
+                    "type": "Ext.container.ButtonGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "columns": 2,
+                        "layout|flex": null,
+                        "title": "Редактор"
+                    },
+                    "configAlternates": {
+                        "columns": "number",
+                        "layout|flex": "number",
+                        "title": "string"
+                    },
+                    "name": "MyButtonGroup",
+                    "designerId": "53c063c7-0160-4a68-8b36-6f381cac7896",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "icon-add",
+                                "itemId": "btnDCVZayavAdd",
+                                "text": "Добавить"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton",
+                            "designerId": "c307cd07-7cf5-44de-b7b2-43fbe60eea19",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnDCVZayavAddClick",
+                                        "implHandler": [
+                                            "var ed=Ext.create('Portal.view.DCV.ZayavEdit2');",
+                                            "ed.down('form').getForm().setValues({id:0,DateInput:new Date()});",
+                                            "ed.setTitle('Новое заявление');",
+                                            "ed.show();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnDCVZayavAddClick",
+                                    "designerId": "a1da8115-297c-4e08-a5a6-73385c2e1fa7"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "icon-delete",
+                                "itemId": "btnDCVZayavDel",
+                                "text": "Удалить"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "9b93b95c-dc24-4cfb-aea5-859b6655ba40",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnDCVZayavDelClick",
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnDCVZayavDelClick",
+                                    "designerId": "308e5991-0c0c-47af-aa7a-dbb37be731cd"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.ButtonGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "columns": 2,
+                        "layout|flex": null,
+                        "title": "Buttons"
+                    },
+                    "configAlternates": {
+                        "columns": "number",
+                        "layout|flex": "number",
+                        "title": "string"
+                    },
+                    "name": "MyButtonGroup1",
+                    "designerId": "8812d841-240d-4463-a98e-007bad8f5d35",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": null,
+                                "iconCls": "icon-setting",
+                                "itemId": "btnDCVSettings",
+                                "text": "Настройки"
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "iconCls": "string",
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyButton8",
+                            "designerId": "f207b233-57be-4d28-bde2-31fddb7a20f7",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBtnDCVSettingsClick",
+                                        "implHandler": [
+                                            "var ed=Ext.create('Portal.view.DCV.Settings');",
+                                            "//ed.down('form').getForm().setValues({id:0});",
+                                            "ed.show();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onBtnDCVSettingsClick",
+                                    "designerId": "c97f0a22-9de9-43b3-ab0a-64c24ae87b77"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Button 2"
+                            },
+                            "configAlternates": {
+                                "text": "string"
+                            },
+                            "name": "MyButton9",
+                            "designerId": "cdef9524-bc1f-4cd6-a004-b965f681113b"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Информация о работе комиссий"
+            },
+            "configAlternates": {
+                "title": "string"
+            },
+            "name": "MyGridPanel",
+            "designerId": "53625619-dfe0-49bf-98a4-541f2c333f8e",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.RowNumberer",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyRowNumberer",
+                    "designerId": "1b55f4cd-7321-48e8-a310-bc670fa89568"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "date",
+                        "text": "Дата",
+                        "width": 69
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyDateColumn",
+                    "designerId": "614de289-355c-49fd-a45f-8b2f3d6f71af"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "flex": null,
+                        "text": "Заявитель",
+                        "width": null
+                    },
+                    "configAlternates": {
+                        "flex": "number",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn",
+                    "designerId": "ea1a9da3-52d5-47ed-b938-f915c3ca98f7",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Статус",
+                                "width": 64
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyColumn1",
+                            "designerId": "26c67476-e743-4882-823f-7b7f429d3e12"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "flex": 1,
+                                "text": "ФИО/Наименование",
+                                "width": 110
+                            },
+                            "configAlternates": {
+                                "flex": "number",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyColumn2",
+                            "designerId": "e994bc47-00a8-4ce5-a82c-0ec932a86679"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "number",
+                                "text": "Адрес"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn4",
+                            "designerId": "dcd60c96-d9fd-4316-8de1-27c330dbe7ac"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Boolean",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "bool",
+                        "text": "Статус<br>заявления",
+                        "width": 114
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyBooleanColumn",
+                    "designerId": "53235899-eb38-47e4-9aaf-b6830f845b4d"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Результат<br>комиссии"
+                    },
+                    "configAlternates": {
+                        "text": "string"
+                    },
+                    "name": "MyColumn7",
+                    "designerId": "4159eb1d-b054-476e-a1e3-2d4b398ac2a5"
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable",
+                    "designerId": "3926dbec-daac-4e81-a326-0c13950c1f78"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Объект<br>недвижимости"
+                    },
+                    "configAlternates": {
+                        "text": "string"
+                    },
+                    "name": "MyColumn8",
+                    "designerId": "0185b3fa-57b1-42c0-a764-86d2d8ae97ad"
+                }
+            ]
+        }
+    ]
+}

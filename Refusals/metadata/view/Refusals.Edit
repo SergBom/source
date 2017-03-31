@@ -1,0 +1,255 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "refusalsedit",
+        "designer|userClassName": "Refusals.Edit",
+        "height": 380,
+        "layout": "fit",
+        "modal": true,
+        "title": "Основание отказа регистрации",
+        "width": 527
+    },
+    "name": "MyWindow",
+    "designerId": "7a65e6c3-69a7-4564-9f09-4233a6a1f450",
+    "viewControllerInstanceId": "eef3db0a-1f30-44c1-a25e-0977ef030320",
+    "viewModelInstanceId": "786df77a-19ab-457e-8e7e-512105142f2d",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "method": null,
+                "reference": "Form",
+                "standardSubmit": null,
+                "title": null,
+                "url": null
+            },
+            "name": "MyForm",
+            "designerId": "914a1f6e-7f8c-4e4f-b2d4-3b6efc6ed236",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "id"
+                    },
+                    "name": "MyHiddenField",
+                    "designerId": "f90218e5-a9fa-457b-96e1-1d819628d36e"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Кадастровый номер",
+                        "layout|anchor": "100%",
+                        "name": "cad_num"
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "64e5e829-0479-433d-9061-4eec5da9799a"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Адрес объекта",
+                        "hidden": null,
+                        "layout|anchor": "100%",
+                        "name": "address"
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "f1bf9829-4f34-4433-9ac1-0ed588ebb0b8"
+                },
+                {
+                    "type": "Ext.form.field.File",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "emptyText": "максимальный размер файла 20Мб",
+                        "fieldLabel": "Документ основания",
+                        "layout|anchor": "100%",
+                        "name": "document",
+                        "submitValue": null
+                    },
+                    "name": "MyFileUpload",
+                    "designerId": "cf45481e-fb49-468b-b821-39343015b70c"
+                },
+                {
+                    "type": "Ext.form.field.HtmlEditor",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Примечание",
+                        "layout|anchor": "100%",
+                        "name": "reference"
+                    },
+                    "name": "MyHtmlEditor",
+                    "designerId": "404dc146-ae3e-4946-8e5d-60b410f602ea"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|padding": 5,
+                        "dock": "bottom"
+                    },
+                    "name": "MyToolbar1",
+                    "designerId": "2d4f1e44-eef7-484a-87f3-8315e97a8a68",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "padding": 5
+                            },
+                            "name": "MyContainer",
+                            "designerId": "51833fad-5dea-4fbc-8c22-25d87f35e105",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "dialog-save",
+                                        "id": "btnRefusalsEditSave",
+                                        "text": "Сохранить"
+                                    },
+                                    "name": "MyButton3",
+                                    "designerId": "cc058da8-43bf-40fc-aa3a-225bd3134ce0",
+                                    "cn": [
+                                        {
+                                            "type": "viewcontrollereventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnRefusalsEditSaveClick",
+                                                "implHandler": [
+                                                    "var me = this,",
+                                                    "    form = me.lookupReference('Form'),",
+                                                    "    values = form.getValues(),",
+                                                    "    store = Ext.getStore('Refusals.main');",
+                                                    "",
+                                                    "if (form.isValid()) {",
+                                                    "    form.submit({",
+                                                    "        url: 'data/Refusals/table-edit.php',",
+                                                    "        target : '_blank',",
+                                                    "        waitMsg: 'Загружаю документ...',",
+                                                    "        success: function(fp,o) {",
+                                                    "            console.log(o.result);",
+                                                    "            store.load();",
+                                                    "            me.getView().close();",
+                                                    "        },",
+                                                    "        failure: function(fp,o) {",
+                                                    "            console.log(fp);",
+                                                    "            console.log(o.result);",
+                                                    "            store.load();",
+                                                    "            me.getView().close();",
+                                                    "        }",
+                                                    "    });",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onBtnRefusalsEditSaveClick",
+                                            "designerId": "a4524f48-242e-449b-a6be-7a7bae79a97b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "dialog-cancel",
+                                        "id": "btnRefusalsEditCancel",
+                                        "text": "Отмена"
+                                    },
+                                    "name": "MyButton4",
+                                    "designerId": "dd95ad08-c084-443d-8da6-c92717bac16f",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onBtnRefusalsEditCancelClick",
+                                                "implHandler": [
+                                                    "this.close();"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onBtnRefusalsEditCancelClick",
+                                            "designerId": "49a50d76-1f6b-4242-9d04-c92ff208c0f7"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyComponent",
+            "designerId": "10e035d4-c671-4f5a-8b61-e43b8bca587f"
+        }
+    ]
+}

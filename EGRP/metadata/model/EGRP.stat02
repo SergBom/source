@@ -1,0 +1,82 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EGRP.stat02"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "5f8d7ded-33b3-440e-b422-10cfa74c572a",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField39",
+            "designerId": "da8b9d5f-c877-4e4e-a664-212732f2d80b"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField40",
+            "designerId": "3d5638b1-0af1-4b12-b634-5fda2da24053"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "calc"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField41",
+            "designerId": "e573089c-e51f-4687-bae4-ae07e2ddfc4c"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tire"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField50",
+            "designerId": "f02636b9-8a28-4b51-a5af-1ab7eefe620a"
+        }
+    ]
+}

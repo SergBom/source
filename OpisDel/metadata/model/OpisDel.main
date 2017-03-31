@@ -1,0 +1,158 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "OpisDel.main"
+    },
+    "name": "MyModel",
+    "designerId": "4411e2bd-50c3-4de0-a94f-4d4e1d822a38",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField",
+            "designerId": "b8e851d6-fdd2-46c1-958e-96f15d387595"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Npp"
+            },
+            "name": "MyInteger",
+            "designerId": "31e7dd98-c03a-4b35-bbe0-498fef00c625"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Index"
+            },
+            "name": "MyField2",
+            "designerId": "0e07f270-7fe4-4696-b25c-3ac879cf6ffa"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TitleBook"
+            },
+            "name": "MyField3",
+            "designerId": "00795f21-5dd4-4b31-a893-a104e42cb511"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DateBegin"
+            },
+            "name": "MyField4",
+            "designerId": "08a88c96-1778-4e5b-ac88-708e6fb69dd6"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DateEnd"
+            },
+            "name": "MyField5",
+            "designerId": "ea833745-3a36-4874-9b5b-e6d4357d945f"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Listov"
+            },
+            "name": "MyInteger1",
+            "designerId": "3a4a76e9-45e2-4874-8751-317f6f3e4867"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Refer"
+            },
+            "name": "MyField7",
+            "designerId": "eef864dc-7bb6-4e32-9be9-28591765dc01"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Year"
+            },
+            "name": "MyInteger2",
+            "designerId": "d06ae74c-f678-452f-8b8b-3cc635213eca"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "InsertOtdel"
+            },
+            "name": "MyField9",
+            "designerId": "4a1f999d-2cf9-4d05-8e32-3a6b05abc45f"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TitleNumber"
+            },
+            "name": "MyField11",
+            "designerId": "60ccb721-b5e1-485c-bd5a-4b55b8a34dc1"
+        }
+    ]
+}

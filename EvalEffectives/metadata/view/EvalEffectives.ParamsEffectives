@@ -1,0 +1,292 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivesparamseffectives",
+        "designer|userClassName": "EvalEffectives.ParamsEffectives",
+        "height": 197,
+        "layout": "fit",
+        "modal": true,
+        "resizable": false,
+        "title": "Показатели эффективности",
+        "width": 356
+    },
+    "name": "MyWindow",
+    "configAlternates": {
+        "resizable": "boolean"
+    },
+    "designerId": "30616077-26cf-456f-80a5-89c781bea5eb",
+    "viewControllerInstanceId": "aa07c90c-d425-482c-a947-ab087b3a35db",
+    "viewModelInstanceId": "2b2c7b29-7bbb-4887-898d-5bf1176ff2e6",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "reference": "form",
+                "title": null
+            },
+            "name": "MyForm5",
+            "designerId": "f728ff05-c3ee-47c5-b90d-b462741b5233",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|padding": 10,
+                        "dock": "bottom"
+                    },
+                    "name": "MyToolbar15",
+                    "designerId": "c2e60ec3-9316-404a-af0b-d4f31863d9c8",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "name": "MyContainer5",
+                            "designerId": "1b2b7a50-bbeb-4189-ae66-29b9fce2f9ff",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "dialog-save",
+                                        "text": "Сохранить"
+                                    },
+                                    "name": "MyButton33",
+                                    "designerId": "168c0977-0f14-4e87-96fc-9be4f45ff49b",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onButtonClick1",
+                                                "implHandler": [
+                                                    "var me = this,",
+                                                    "    form = me.down('form'),",
+                                                    "    values = form.getValues(),",
+                                                    "    store = Ext.getStore('EvalEffectives.ParamsEffectives');",
+                                                    "",
+                                                    "if (form.isValid()) {",
+                                                    "    me.mask('Подождите...');",
+                                                    "",
+                                                    "    Ext.Ajax.request({",
+                                                    "        url: 'data/EvalEffectives/ParamsEffectives-edit.php',",
+                                                    "        params: values,",
+                                                    "        success: function(r) {",
+                                                    "            store.reload();",
+                                                    "        }",
+                                                    "    });",
+                                                    "    me.unmask();",
+                                                    "    me.close();",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onButtonClick1",
+                                            "designerId": "ed37b5e1-f12a-40ec-993a-ee600a581153"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "dialog-cancel",
+                                        "text": "Отмена"
+                                    },
+                                    "name": "MyButton34",
+                                    "designerId": "995fa564-ff79-430d-9ae8-af93cad0deca",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onButtonClick",
+                                                "implHandler": [
+                                                    "this.close();"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onButtonClick",
+                                            "designerId": "f9be617b-5dc5-423c-aaa2-c866d087e7cc"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "container|pack": "center",
+                        "height": 34,
+                        "layout": "hbox",
+                        "title": ""
+                    },
+                    "name": "MyFieldSet2",
+                    "designerId": "7de373fc-59e9-442d-a0e2-07ce89f8229e",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "autoLoadOnValue": true,
+                                "displayField": "Punkt",
+                                "fieldLabel": "Пункт документа",
+                                "labelWidth": 110,
+                                "name": "Punkt",
+                                "store": [
+                                    "{storePunkt}"
+                                ],
+                                "valueField": "Punkt",
+                                "width": 170
+                            },
+                            "name": "MyComboBox4",
+                            "configAlternates": {
+                                "store": "binding"
+                            },
+                            "designerId": "76323cb5-4cb5-45e9-b47f-4ba0a017d134"
+                        },
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "fieldLabel": "Балл",
+                                "labelWidth": 50,
+                                "name": "Effective",
+                                "padding": "0 0 0 10",
+                                "width": 120
+                            },
+                            "name": "MyNumberField4",
+                            "designerId": "97dedb3f-ea9d-4093-b0ec-f614a0498aef"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "container|pack": "center",
+                        "height": 51,
+                        "layout": "hbox",
+                        "title": "Процент эффективности"
+                    },
+                    "name": "MyFieldSet",
+                    "designerId": "54b2a76c-cfaa-4558-9d6f-8f9f4f7f36bb",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "fieldLabel": "С",
+                                "labelWidth": 20,
+                                "name": "Percent1",
+                                "width": 100
+                            },
+                            "name": "MyNumberField2",
+                            "designerId": "e9fed426-e7ff-4519-bb12-cbe2a8442de3"
+                        },
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "fieldLabel": "По",
+                                "labelWidth": 20,
+                                "name": "Percent2",
+                                "padding": "0 0 0 10",
+                                "width": 100
+                            },
+                            "name": "MyNumberField3",
+                            "designerId": "ff23ac62-89ae-4558-9b65-566753def750"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "id"
+                    },
+                    "name": "MyHiddenField8",
+                    "designerId": "253a5304-beb4-4701-a2e0-b5c149ab959a"
+                }
+            ]
+        }
+    ]
+}

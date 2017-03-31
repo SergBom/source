@@ -1,0 +1,62 @@
+{
+    "name": "setOrgs",
+    "settings": {
+        "cmd": {},
+        "lockUrlPrefix": true,
+        "exportPath": "E:/wamp/www/apps/setOrgs",
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "urlPrefix": "http://localhost:1841/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "displayfield-ExtBox1-1126-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "3.5.1",
+    "xdsBuild": 348,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext51",
+    "viewOrderMap": {
+        "view": [
+            "76f7bc06-cdfa-4e34-a80d-3edd40730460",
+            "f8abca13-1919-4121-ace7-9fc90fb6d3dc",
+            "82de917a-c6f0-4bf8-8a61-7a2efc159124",
+            "67517e85-a7d3-4b8e-ba3b-0c536a34c9d6",
+            "6ec189f9-cd96-4650-a1ad-03fa56090ba2",
+            "c066769e-b107-42c5-a903-6a81838a0607",
+            "2096bb71-3bf1-4548-bd93-2bbe5e9f4c08",
+            "a609f773-5477-489a-8ef2-ee328d875632",
+            "0bc4a703-e901-48dd-9cba-93623a926e93"
+        ],
+        "store": [
+            "14620b60-d9bc-4e53-b369-1cde3befa957",
+            "823f5af9-5307-4cdc-aba1-375bf9b9df6e",
+            "bdf872d9-9f16-424b-b14b-fa2c56b4392d"
+        ],
+        "controller": [
+            "1826e630-4368-44e9-a8ff-a886baebeac3"
+        ],
+        "model": [
+            "6d1ed2d0-1ce2-428e-aef6-3213e3eeeacb",
+            "c4bdee9e-ffa4-4f26-980b-933442808bbe",
+            "d07dae15-12b4-4021-8d43-8764586cf7b8"
+        ],
+        "resource": [
+            "483e4f9e-be1d-4bc7-90c0-6e4dad21ae05"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

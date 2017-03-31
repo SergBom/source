@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "opisdel.export",
+        "designer|userClassName": "OpisDel.ExportViewController"
+    },
+    "designerId": "7263a113-6827-47a6-beca-984756a44d36"
+}

@@ -1,0 +1,50 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PortalLinks",
+        "model": "PortalLinks",
+        "storeId": "PortalLinks"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyTreeStore",
+    "designerId": "436854c0-69e8-498c-88c0-1fd4ea88a9ee",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/adminurl/url_user.php"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy3",
+            "designerId": "b71e140e-72a0-4bdd-9df9-dbc3e1611e1b",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader3",
+                    "designerId": "4c67b29d-cb37-41c3-aad0-d8bc33586332"
+                }
+            ]
+        }
+    ]
+}

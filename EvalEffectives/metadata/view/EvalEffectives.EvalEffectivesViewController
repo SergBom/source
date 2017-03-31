@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "evaleffectivesevaleffectives",
+        "designer|userClassName": "EvalEffectives.EvalEffectivesViewController"
+    },
+    "designerId": "60fd69b7-6b5e-4ced-a99f-0a70b5dc9fc5"
+}

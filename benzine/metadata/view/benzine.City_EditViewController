@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "benzinecity_edit",
+        "designer|userClassName": "benzine.City_EditViewController"
+    },
+    "designerId": "7dccec80-0226-41fe-b927-8c91eb319519"
+}

@@ -1,0 +1,50 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Portal"
+        ],
+        "name": "Portal",
+        "requires": [
+            "Ext.ux.Alert"
+        ],
+        "views": [
+            "sys.tabMainView"
+        ]
+    },
+    "configAlternates": {
+        "controllers": "typedarray",
+        "name": "string",
+        "requires": "typedarray",
+        "views": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "Ext.Loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "paths": [
+                    "{\"Ext\":\"/ext5/build\",",
+                    "  \"Ext.ux\" : \"/ext5/build/ux\"",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "paths": "object"
+            },
+            "name": "Loader",
+            "designerId": "6700e22c-abc9-4ee4-9166-7c7bf6769f64"
+        }
+    ]
+}

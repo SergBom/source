@@ -1,0 +1,48 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "dcv.editrefer",
+        "designer|userClassName": "DCV.EditRefer",
+        "height": 250,
+        "title": "My Window",
+        "width": 400
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "bcefe0b3-ae84-4224-a4eb-785970f02bef",
+    "viewControllerInstanceId": "15fe5456-7e50-4982-9cff-34f5b7dd10a3",
+    "viewModelInstanceId": "e6b4e691-ea3c-41c8-a97d-a8c620668718",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "reference": "form",
+                "title": "My Form"
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "reference": "string",
+                "title": "string"
+            },
+            "name": "MyForm3",
+            "designerId": "7ab764f9-6c98-46f8-8890-f7814c0c74bf"
+        }
+    ]
+}

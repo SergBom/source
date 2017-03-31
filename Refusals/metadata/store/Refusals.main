@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Refusals.main",
+        "model": "Refusals.main",
+        "storeId": "Refusals.main"
+    },
+    "name": "MyJsonStore",
+    "designerId": "a34fc5da-6ba0-4bf6-8252-abc355bd02da",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/Refusals/table-read.php"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "d0bfbe18-49e0-485a-b074-3bde7e52c37d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "b9db4bc2-c43e-44c6-9b2b-05a655f8fc28"
+                }
+            ]
+        }
+    ]
+}

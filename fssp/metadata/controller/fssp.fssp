@@ -1,0 +1,27 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": null,
+        "designer|userClassName": "fssp.fssp",
+        "id": "fssp",
+        "models": [
+            "fssp.table",
+            "fssp.Otdel"
+        ],
+        "stores": [
+            "fssp.otdels",
+            "fssp.otdels1",
+            "fssp.table"
+        ],
+        "views": [
+            "fssp.fssp"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "426173a0-9dab-4ade-9c36-5c2bb386bfd8"
+}

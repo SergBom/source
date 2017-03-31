@@ -1,0 +1,759 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "dcv.settings",
+        "designer|userClassName": "DCV.Settings",
+        "height": 457,
+        "iconCls": "icon-setting",
+        "layout": "fit",
+        "maximizable": true,
+        "modal": true,
+        "title": "Настройки",
+        "width": 557
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "iconCls": "string",
+        "layout": "string",
+        "maximizable": "boolean",
+        "modal": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyWindow",
+    "designerId": "07b11b92-f36a-4761-8a29-d3d8c17669c7",
+    "viewControllerInstanceId": "5c518385-9527-41e8-85c0-897e7cbbb028",
+    "viewModelInstanceId": "c48e90f6-5dc6-487a-aa5c-a33647c35d73",
+    "cn": [
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0,
+                "border": false,
+                "dock": null,
+                "tabPosition": "left",
+                "tabRotation": [
+                    "0"
+                ],
+                "width": 100
+            },
+            "configAlternates": {
+                "activeTab": "auto",
+                "dock": "string",
+                "tabPosition": "string",
+                "tabRotation": "object",
+                "width": "auto",
+                "border": "boolean"
+            },
+            "name": "MyTabPanel1",
+            "designerId": "8f0efc5b-ba2e-4dd1-8345-a6d5eb0b4d85",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "border",
+                        "reference": null,
+                        "title": "Справочники"
+                    },
+                    "configAlternates": {
+                        "layout": "string",
+                        "reference": "string",
+                        "title": "string"
+                    },
+                    "name": "MyPanel4",
+                    "designerId": "b4ff5a2f-8735-4261-9bd2-38e7cd8e3d1d",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig3",
+                            "designerId": "b1ff2376-2ff3-4ffb-81d4-9b013affa2ec"
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|region": "west",
+                                "layout|split": true,
+                                "reference": "tRefs",
+                                "store": [
+                                    "{refs}"
+                                ],
+                                "title": null,
+                                "width": 306
+                            },
+                            "configAlternates": {
+                                "store": "binding",
+                                "layout|region": "string",
+                                "layout|split": "boolean",
+                                "reference": "string",
+                                "title": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyGridPanel3",
+                            "designerId": "b1472486-7425-475d-91c0-bcf69bbf13d6",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "reference",
+                                        "flex": 1,
+                                        "text": "Справочник"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyColumn6",
+                                    "designerId": "e989b63d-0cb0-4b2b-9e4c-e3a2db0c2b68"
+                                },
+                                {
+                                    "type": "Ext.view.Table",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTable3",
+                                    "designerId": "ba3273b5-c501-416e-b38e-1a49af4f5971"
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top"
+                                    },
+                                    "configAlternates": {
+                                        "dock": "string"
+                                    },
+                                    "name": "MyToolbar7",
+                                    "designerId": "9a07b78e-4009-45b1-a31c-f2d61479e2e9",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "iconCls": "icon-add",
+                                                "layout|flex": null,
+                                                "reference": "btnAddRef",
+                                                "text": null
+                                            },
+                                            "configAlternates": {
+                                                "disabled": "boolean",
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "reference": "string",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton20",
+                                            "designerId": "53bb1ac6-fbed-4430-9912-38191b8cabf6"
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "iconCls": "icon-delete",
+                                                "layout|flex": null,
+                                                "reference": "btnDelRef",
+                                                "text": null
+                                            },
+                                            "configAlternates": {
+                                                "disabled": "boolean",
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "reference": "string",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton21",
+                                            "designerId": "f8307a85-a116-4391-b1e3-279ab4355216"
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconCls": "icon-refresh",
+                                                "layout|flex": null,
+                                                "reference": "btnRefreshRefs",
+                                                "text": null
+                                            },
+                                            "configAlternates": {
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "reference": "string",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton22",
+                                            "designerId": "345f61a2-38e5-4db9-8717-0ea9ce234cc4",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onRefreshRefs",
+                                                        "implHandler": [
+                                                            "this.getViewModel().getStore('refs').reload();"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "configAlternates": {
+                                                        "fn": "string",
+                                                        "implHandler": "code",
+                                                        "name": "string",
+                                                        "scope": "string"
+                                                    },
+                                                    "name": "onRefreshRefs",
+                                                    "designerId": "6c48cb47-68ff-45d5-8096-647066d91703"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelSelectionChange",
+                                        "implHandler": [
+                                            "var r=this.getReferences(),",
+                                            "    refer=r.tRefer,",
+                                            "    st=this.getViewModel().getStore('refer'),",
+                                            "    stFld=this.getViewModel().getStore('fields'),",
+                                            "    nc=[];",
+                                            "stFld.load({params:{table:selected[0].data.name}});",
+                                            "stFld.on('load',function(stRef,r,s){",
+                                            "    stFld.each(function(rec){",
+                                            "        var tmp={",
+                                            "            dataIndex: rec.data.dataIndex,",
+                                            "            header: rec.data.header,",
+                                            "            tooltip: rec.data.tooltip,",
+                                            "            name: rec.data.name,",
+                                            "            //xtype: rec.data.xtype,",
+                                            "            width:rec.data.width,",
+                                            "            flex:rec.data.flex,",
+                                            "            disabled:false",
+                                            "            };",
+                                            "        if(rec.data.dataIndex!='id'){",
+                                            "            tmp.editor={xtype:'textfield'};",
+                                            "        }",
+                                            "        //console.log(tmp);",
+                                            "        nc.push(tmp);",
+                                            "    });",
+                                            "    refer.reconfigure(st,nc);",
+                                            "},this);",
+                                            "st.load({params:{table:selected[0].data.name}});",
+                                            "",
+                                            "r.btnDelRef.setDisabled(selected.length===0);",
+                                            "//r.btnDelRecRef.setDisabled(selected.length===0);",
+                                            "r.btnAddRecRef.setDisabled(selected.length===0);",
+                                            "r.btnRefreshRef.setDisabled(selected.length===0);"
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onGridpanelSelectionChange",
+                                    "designerId": "20df53a2-46d6-494e-87ed-78ba3fef4cbe"
+                                },
+                                {
+                                    "type": "Ext.grid.plugin.RowEditing",
+                                    "reference": {
+                                        "name": "plugins",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyRowEditingPlugin",
+                                    "designerId": "e0b3409e-17bc-4baa-9db2-2fd1909ddae4"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|region": "center",
+                                "layout|split": true,
+                                "reference": "tRefer",
+                                "store": [
+                                    "{refer}"
+                                ],
+                                "title": null
+                            },
+                            "configAlternates": {
+                                "store": "binding",
+                                "layout|region": "string",
+                                "layout|split": "boolean",
+                                "reference": "string",
+                                "title": "string"
+                            },
+                            "name": "MyGridPanel4",
+                            "designerId": "f7a83577-54cd-4448-8ef7-0087460a8534",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.Boolean",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "bool",
+                                        "flex": 0,
+                                        "text": "Boolean"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "flex": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyBooleanColumn2",
+                                    "designerId": "965e9e1c-60ad-4eac-8009-116c44cc9787"
+                                },
+                                {
+                                    "type": "Ext.view.Table",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyTable4",
+                                    "designerId": "39562c33-c8d8-446e-9dbe-632fbdf94f7e"
+                                },
+                                {
+                                    "type": "Ext.toolbar.Toolbar",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top"
+                                    },
+                                    "configAlternates": {
+                                        "dock": "string"
+                                    },
+                                    "name": "MyToolbar6",
+                                    "designerId": "2ccccc6a-8452-4f8f-8025-caca11a845b6",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "iconCls": "icon-add",
+                                                "layout|flex": null,
+                                                "reference": "btnAddRecRef",
+                                                "text": null
+                                            },
+                                            "configAlternates": {
+                                                "disabled": "boolean",
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "reference": "string",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton17",
+                                            "designerId": "d780efa9-a22b-4b08-ac9e-26af861a9e9c",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onAddRecRef",
+                                                        "implHandler": [
+                                                            "var st=this.getViewModel().getStore('refer'),",
+                                                            "    ref=this.getReferences(),",
+                                                            "    tR=ref.tRefer,//plgs=tR.findPlugin('rowediting'),",
+                                                            "    md=st.getModel();",
+                                                            "st.insert(0,{id:0});",
+                                                            "tR.getView().select(0);",
+                                                            "//plgs.doFireEvent('edit',[]); //startEdit(md);"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "configAlternates": {
+                                                        "fn": "string",
+                                                        "implHandler": "code",
+                                                        "name": "string",
+                                                        "scope": "string"
+                                                    },
+                                                    "name": "onAddRecRef",
+                                                    "designerId": "580d67d9-dbc7-422a-8f89-5aef3f5981f7"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "iconCls": "icon-delete",
+                                                "layout|flex": null,
+                                                "reference": "btnDelRecRef",
+                                                "text": null
+                                            },
+                                            "configAlternates": {
+                                                "disabled": "boolean",
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "reference": "string",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton18",
+                                            "designerId": "c7a90a4e-7da4-4ac0-a119-2b21264cd70e",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onDelRecRef",
+                                                        "implHandler": [
+                                                            "var r=this.getReferences(),",
+                                                            "    s=this.getViewModel().getStore('refer'),",
+                                                            "    t=r.tRefs.getSelection()[0].data.name,",
+                                                            "    id=r.tRefer.getSelection()[0].data.id;",
+                                                            "Portal.util.Util.deleteRecord2({id:id,t:t},s,'data/DCV/refer-del.php','');"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "configAlternates": {
+                                                        "fn": "string",
+                                                        "implHandler": "code",
+                                                        "name": "string",
+                                                        "scope": "string"
+                                                    },
+                                                    "name": "onDelRecRef",
+                                                    "designerId": "2e8b3693-91cb-4f66-9d1a-6201fb06b08d"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "disabled": true,
+                                                "iconCls": "icon-refresh",
+                                                "layout|flex": null,
+                                                "reference": "btnRefreshRef",
+                                                "text": null
+                                            },
+                                            "configAlternates": {
+                                                "disabled": "boolean",
+                                                "iconCls": "string",
+                                                "layout|flex": "number",
+                                                "reference": "string",
+                                                "text": "string"
+                                            },
+                                            "name": "MyButton19",
+                                            "designerId": "16dda4a9-9e41-4d32-8a76-6437f10a23d3",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onRefreshRef",
+                                                        "implHandler": [
+                                                            "this.getViewModel().getStore('refer').reload();"
+                                                        ],
+                                                        "name": "click",
+                                                        "scope": "me"
+                                                    },
+                                                    "configAlternates": {
+                                                        "fn": "string",
+                                                        "implHandler": "code",
+                                                        "name": "string",
+                                                        "scope": "string"
+                                                    },
+                                                    "name": "onRefreshRef",
+                                                    "designerId": "6f4d9e8d-63bc-4b45-b847-76a14c3ffa62"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.plugin.RowEditing",
+                                    "reference": {
+                                        "name": "plugins",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|createAlias": null,
+                                        "designer|displayName": null
+                                    },
+                                    "configAlternates": {
+                                        "designer|createAlias": "string",
+                                        "designer|displayName": "string"
+                                    },
+                                    "name": "MyRowEditingPlugin1",
+                                    "designerId": "c33efaa8-cfe9-42d4-ba40-59ede7d9a41c",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onRowEditingEdit",
+                                                "implHandler": [
+                                                    "var r=this.getReferences(),",
+                                                    "    st=this.getViewModel().getStore('refer'),",
+                                                    "    stR=r.tRefs.getSelection()[0].data.name;",
+                                                    "context.newValues._t=stR;",
+                                                    "Ext.Ajax.request({",
+                                                    "    url:'data/DCV/refer-upd.php',",
+                                                    "    params:context.newValues,",
+                                                    "    success:function(r){st.reload();}",
+                                                    "});",
+                                                    "r.btnDelRecRef.setDisabled(true);",
+                                                    "r.btnAddRecRef.setDisabled(false);",
+                                                    "r.btnRefreshRef.setDisabled(false);"
+                                                ],
+                                                "name": "edit",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onRowEditingEdit",
+                                            "designerId": "3f666f8d-1911-49af-ae7c-53df3f5c4dcb"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onRowEditingBeforeEdit",
+                                                "implHandler": [
+                                                    "var r=this.getReferences();",
+                                                    "r.btnDelRecRef.setDisabled(true);",
+                                                    "r.btnAddRecRef.setDisabled(true);",
+                                                    "r.btnRefreshRef.setDisabled(true);"
+                                                ],
+                                                "name": "beforeedit",
+                                                "scope": "me"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string",
+                                                "scope": "string"
+                                            },
+                                            "name": "onRowEditingBeforeEdit",
+                                            "designerId": "9654f863-1fe7-4f50-bda6-92f04b38415e"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onGridpanelSelectionChange1",
+                                        "implHandler": [
+                                            "this.getReferences().btnDelRecRef.setDisabled(selected.length===0);"
+                                        ],
+                                        "name": "selectionchange",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onGridpanelSelectionChange1",
+                                    "designerId": "e7bb5a27-855e-433b-832c-95d53270f94c"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Адреса"
+                    },
+                    "configAlternates": {
+                        "title": "string"
+                    },
+                    "name": "MyPanel5",
+                    "designerId": "f4122eb4-6613-4594-bdab-f57ecf91ad58",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig4",
+                            "designerId": "8c5c3a12-e1eb-4c7e-9f25-47833d2937bc"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Пользователи"
+                    },
+                    "configAlternates": {
+                        "title": "string"
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "9d33a653-3666-4d4c-8785-99a4c5372f0b",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig5",
+                            "designerId": "23466392-ed84-4fa7-b27f-9ecf368ce1a1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowAfterRender",
+                "implHandler": [
+                    "this.getStore('refs').load();"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onWindowAfterRender",
+            "designerId": "fab67ac1-0b54-4804-ae3f-d0cf59d0e339"
+        }
+    ]
+}

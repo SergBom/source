@@ -1,0 +1,303 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "syssetorgsotdeledit",
+        "designer|userClassName": "sys.setOrgs.OtdelEdit",
+        "height": 321,
+        "layout": "fit",
+        "modal": true,
+        "title": "Редактор отдела",
+        "width": 579
+    },
+    "name": "MyWindow",
+    "designerId": "2096bb71-3bf1-4548-bd93-2bbe5e9f4c08",
+    "viewControllerInstanceId": "0bc4a703-e901-48dd-9cba-93623a926e93",
+    "viewModelInstanceId": "a609f773-5477-489a-8ef2-ee328d875632",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "reference": "form",
+                "title": null
+            },
+            "name": "MyForm1",
+            "designerId": "1f283505-8508-4638-96a7-4d04d6bb0664",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|padding": 10,
+                        "dock": "bottom"
+                    },
+                    "name": "MyToolbar4",
+                    "designerId": "aa1b29dc-3e04-4488-bdff-049a1156507c",
+                    "cn": [
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "name": "MyContainer5",
+                            "designerId": "4f7adbdd-672b-47e4-82d8-324dd342c727",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "dialog-save",
+                                        "text": "Сохранить"
+                                    },
+                                    "name": "MyButton8",
+                                    "designerId": "557bfe74-2c04-4385-a222-c70e15f4763d",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onButtonClick1",
+                                                "implHandler": [
+                                                    "var me = this,",
+                                                    "    form = me.down('form'),",
+                                                    "    values = form.getValues(),",
+                                                    "    store = Ext.getStore('sys.setOrgs.Otdels');",
+                                                    "",
+                                                    "if (form.isValid()) {",
+                                                    "    me.mask('Подождите...');",
+                                                    "",
+                                                    "    Ext.Ajax.request({",
+                                                    "        url: 'data/sys/setOrgs/otdels-edit.php',",
+                                                    "        params: values,",
+                                                    "        success: function(r) {",
+                                                    "            console.log(r);",
+                                                    "            store.reload();",
+                                                    "        }",
+                                                    "    });",
+                                                    "    me.unmask();",
+                                                    "    me.close();",
+                                                    "}"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onButtonClick1",
+                                            "designerId": "21886ed3-0187-49fe-97c7-5ec642e06177"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "iconCls": "dialog-cancel",
+                                        "text": "Отменить"
+                                    },
+                                    "name": "MyButton9",
+                                    "designerId": "cbd6a794-45a4-45d7-8dfe-575e27eff830",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onButtonClick",
+                                                "implHandler": [
+                                                    "this.close();"
+                                                ],
+                                                "name": "click",
+                                                "scope": "me"
+                                            },
+                                            "name": "onButtonClick",
+                                            "designerId": "e08d62ec-b005-4f0e-ac53-7399225302c3"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Наименование отдела",
+                        "layout|anchor": "100%",
+                        "name": "name"
+                    },
+                    "name": "MyTextField12",
+                    "designerId": "391d9c31-28ef-46f1-8a28-74a72a510935"
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Привязка к домену"
+                    },
+                    "name": "MyFieldSet4",
+                    "designerId": "94a4ee8f-a74e-4045-a1ef-472185970112",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "cn",
+                                "layout|anchor": "100%",
+                                "name": "cn"
+                            },
+                            "name": "MyTextField13",
+                            "designerId": "74d6da12-4e7c-487e-950e-29ff5ffd8f9e"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "dn",
+                                "layout|anchor": "100%",
+                                "name": "dn"
+                            },
+                            "name": "MyTextField14",
+                            "designerId": "dec4386f-fbab-421e-bd96-de6bde505273"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Info",
+                                "layout|anchor": "100%",
+                                "name": "info"
+                            },
+                            "name": "MyTextField15",
+                            "designerId": "4262de21-d720-4a77-9af1-adbc2fa14932"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Сопоставление отдела"
+                    },
+                    "name": "MyFieldSet5",
+                    "designerId": "81936889-1f2c-42e7-a8d3-8e759845854a",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "autoLoadOnValue": true,
+                                "displayField": "name",
+                                "fieldLabel": "Головной отдел",
+                                "layout|anchor": "100%",
+                                "name": "par_id",
+                                "store": [
+                                    "{OtdelList}"
+                                ],
+                                "valueField": "id"
+                            },
+                            "name": "MyComboBox",
+                            "configAlternates": {
+                                "store": "binding"
+                            },
+                            "designerId": "67baa1f2-6751-4a9e-ba74-70c69cb200d3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|anchor": "100%",
+                        "name": "id"
+                    },
+                    "name": "MyHiddenField1",
+                    "designerId": "f0929720-39aa-4d05-ae00-1713a73e4555"
+                },
+                {
+                    "type": "Ext.form.field.Number",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Порядковый номер в списке",
+                        "labelWidth": 200,
+                        "layout|anchor": "100%",
+                        "name": "code"
+                    },
+                    "name": "MyNumberField",
+                    "designerId": "3245c03e-e220-4841-a2d0-09fcebb5ee44"
+                }
+            ]
+        }
+    ]
+}

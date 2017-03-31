@@ -1,0 +1,93 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "MainData",
+        "designer|userClassName": "ScanDocs.MainData",
+        "model": "ScanDocs.MainData",
+        "storeId": "ScanDocs.MainData"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "ef081e21-9157-4070-a430-3356335377c4",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{create: 'data/ScanDocs/MainData-edit.php',",
+                    "read: 'data/ScanDocs/MainData.json.php',",
+                    "update: 'data/ScanDocs/MainData-edit.php',",
+                    "destroy: 'data/ScanDocs/MainData-delete.php'}"
+                ],
+                "extraParams": [
+                    "{dateBegin:'',dateEnd:'',Otdel:'',cyear:'',opis:'',retro:''}"
+                ],
+                "url": "data/ScanDocs/MainData.json.php"
+            },
+            "configAlternates": {
+                "extraParams": "object",
+                "url": "string",
+                "api": "object"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "c74f2ec4-30fb-4c26-8b91-c692c9115bd5",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "record": null,
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "record": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "27bf32eb-4178-41ef-9540-e5af92ae330b"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "rootProperty": "data",
+                        "writeAllFields": true
+                    },
+                    "configAlternates": {
+                        "encode": "boolean",
+                        "rootProperty": "string",
+                        "writeAllFields": "boolean"
+                    },
+                    "name": "MyJsonWriter",
+                    "designerId": "5a471de6-5f02-4e79-91dd-a7ebd169d53d"
+                }
+            ]
+        }
+    ]
+}

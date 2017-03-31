@@ -1,0 +1,25 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "DCV.main"
+        ],
+        "name": "Portal",
+        "views": [
+            "DCV.addRefs",
+            "DCV.EditRefer"
+        ]
+    },
+    "configAlternates": {
+        "controllers": "typedarray",
+        "name": "string",
+        "views": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application"
+}

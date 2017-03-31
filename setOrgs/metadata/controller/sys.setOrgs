@@ -1,0 +1,28 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sys.setOrgs",
+        "models": [
+            "sys.setOrgs.Org",
+            "sys.setOrgs.Otdels",
+            "sys.setOrgs.Posts"
+        ],
+        "stores": [
+            "sys.setOrgs.Orgs",
+            "sys.setOrgs.Otdels",
+            "sys.setOrgs.Posts"
+        ],
+        "views": [
+            "sys.setOrgs.main",
+            "sys.setOrgs.OrgEdit",
+            "sys.setOrgs.OtdelEdit"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "1826e630-4368-44e9-a8ff-a886baebeac3"
+}

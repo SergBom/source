@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "benzinebenzine",
+        "designer|userClassName": "benzine.benzineViewModel"
+    },
+    "designerId": "7bf317dc-d850-4df1-b84d-8209de0e0df6"
+}

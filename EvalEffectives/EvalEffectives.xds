@@ -1,0 +1,106 @@
+{
+    "name": "EvalEffectives",
+    "settings": {
+        "cmd": {},
+        "lockUrlPrefix": true,
+        "exportPath": "e:/wamp/www/apps/EvalEffectives",
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": false,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "urlPrefix": "http://localhost:1841/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "displayfield-ExtBox1-1122-inputEl": "a new version of the framework is available",
+        "urlPrefixTemplate": "http://localhost:{port}/{path}"
+    },
+    "xdsVersion": "4.0.1",
+    "xdsBuild": 190,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext62",
+    "viewOrderMap": {
+        "view": [
+            "303025cf-b32b-4a1a-8cf0-0437ca144e71",
+            "6ed14a19-1051-4ab8-a635-27b89758ebc1",
+            "60fd69b7-6b5e-4ced-a99f-0a70b5dc9fc5",
+            "577b6399-9f59-46b4-b010-149c4688d4bc",
+            "7ab73131-8757-4eb8-9794-771e03528e55",
+            "373d520b-fb9d-49ee-b031-868458085102",
+            "3e556403-5f83-4b7a-bdfe-3096daaf4ef2",
+            "9efb9824-cee1-40fd-8aa3-3f74f1a16cfd",
+            "93692b04-caa9-49e6-ad55-a196469171f9",
+            "38807887-7863-4e8e-be0f-05bfcfb04079",
+            "d38eaac0-b51e-4797-9fc4-370a30a8cec5",
+            "780032dc-db08-48d4-97cd-4301a099b7bc",
+            "639b77fb-2a16-47fc-935e-4aebb0ddfaa5",
+            "d113163a-0811-46ad-be25-7476ea9bd23b",
+            "3f07d220-d4b5-4540-92f5-5b420c50aec7",
+            "609f174e-e8d5-4a38-8539-d45218417b07",
+            "291a5f7f-50c4-4370-a80a-a2a5f1551f1d",
+            "4a81dac8-7853-4286-a407-17add8caea97",
+            "4829b2d6-27a1-4a57-990c-e318ee6ccff0",
+            "a4a27819-5b06-4d2c-b7e7-02584393a2ea",
+            "9d2e6bb9-0b21-4004-a28a-2bd609b98184",
+            "2943f186-3238-4506-93bf-ba015caa352d",
+            "3cf9f5b3-a93a-41c0-ba53-a0698fc06386",
+            "fb1a7995-067a-471a-899a-127d98588413",
+            "a42330ee-9b5b-44c4-aa29-af36ff257fbc",
+            "d4aee048-7698-46f0-af29-58f9767c0704",
+            "bd2fbf9e-28dd-4679-be35-1925da1c777d",
+            "1bfabd4b-a757-4559-b5db-6d7258aee6bf",
+            "1e46c93e-5a11-4e59-98d2-a29abe1f3541",
+            "f6a5ed9a-af2c-4459-8011-a31be31a7f43",
+            "30616077-26cf-456f-80a5-89c781bea5eb",
+            "2b2c7b29-7bbb-4887-898d-5bf1176ff2e6",
+            "aa07c90c-d425-482c-a947-ab087b3a35db",
+            "aaf051e7-a00f-402f-915c-2f1ce4c07364",
+            "15cfbee9-ec63-40dd-919d-342e3ed92cae",
+            "7cf732e4-d7f5-4dce-a49f-62838270a1bf"
+        ],
+        "store": [
+            "49fe81fa-bac7-417e-b2e3-4e524a8cb396",
+            "0c3e65ad-f83b-44e4-b26f-5ffed4180dbc",
+            "c6cc5e35-5359-451c-870a-75eca3230abf",
+            "659707f8-2571-484d-b403-70d3ea6f55a5",
+            "91b54eaa-3813-491d-aea7-591d47478c2c",
+            "ea3ec54e-979a-402a-a81d-a137835ac1eb",
+            "c4fd0abd-f0c1-4463-bf3e-d5e624c17642",
+            "d7b3b772-72a6-4188-8f6b-02a442d595c3",
+            "393f6ab9-0249-4a9f-bdbb-b7d5ec885abd",
+            "086a4b62-1e3d-4be9-93a4-55ce209355db",
+            "07515707-8812-4508-8661-d18e360a9118",
+            "11f45594-abaa-4354-97ff-51577e37cbd8",
+            "d5d52010-dd2d-4df5-8b49-55e1ca2c04cd"
+        ],
+        "controller": [
+            "b68a23cf-2465-44ab-a12f-5c139608adfd"
+        ],
+        "model": [
+            "a48f73a9-645c-4d20-b0c3-cc6f61bbf118",
+            "069ff432-932a-4db1-a901-0f6bb4f5d6ac",
+            "c4639859-9b59-4aa3-a271-629ee816647f",
+            "7dc8c2f3-1bfc-4e4c-8111-bd2b3deada4b",
+            "28c3bcf5-44da-4f34-85e9-d8cd2db06e1c",
+            "5f1bb9b7-f19e-4ae5-9f6e-ad5bdc87a3c3",
+            "e025152d-314d-4d21-8a49-27ca3c38bbcc"
+        ],
+        "resource": [
+            "ca9a9e55-5088-4b7c-9e9a-7c30832436b5",
+            "98234def-dd67-4915-8513-a2f885853203",
+            "d4da6325-41a9-40e3-bdbe-7b6c90de7ea8"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

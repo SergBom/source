@@ -1,0 +1,23 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Refusals.Refusals",
+        "models": [
+            "Refusals.main"
+        ],
+        "stores": [
+            "Refusals.main"
+        ],
+        "views": [
+            "Refusals.main",
+            "Refusals.Edit"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "f77c9eda-10b4-4588-b9bf-8e4b5fa8efbc"
+}

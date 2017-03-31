@@ -1,0 +1,21 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "EGRP.main"
+        ],
+        "name": "Portal"
+    },
+    "configAlternates": {
+        "controllers": "typedarray",
+        "name": "string",
+        "views": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application"
+}

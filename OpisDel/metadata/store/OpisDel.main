@@ -1,0 +1,67 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "OpisDel.main",
+        "groupField": "InsertOtdel",
+        "model": "OpisDel.main",
+        "storeId": "OpisDel.main"
+    },
+    "name": "MyJsonStore",
+    "designerId": "bcd61e65-f8a4-45d9-b5be-b58719184fe4",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{create:'data/OpisDel/Opis-edit.php',",
+                    "read:'data/OpisDel/Main-list.php',",
+                    "destroy:'data/OpisDel/Opis-delete.php',",
+                    "update:'data/OpisDel/Opis-edit.php'}"
+                ],
+                "url": "data/OpisDel/Main-list.php"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "03a575ab-31d4-4a1c-bbf7-ac7628ce9df9",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "d0dcf2aa-c45f-4141-aede-7fd4eb87b324"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "rootProperty": "data",
+                        "writeAllFields": true
+                    },
+                    "name": "MyJsonWriter",
+                    "designerId": "1b0a456c-64af-4e77-9372-9c18822c0831"
+                }
+            ]
+        }
+    ]
+}

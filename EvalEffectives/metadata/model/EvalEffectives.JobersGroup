@@ -1,0 +1,54 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EvalEffectives.JobersGroup"
+    },
+    "name": "MyModel",
+    "designerId": "c4639859-9b59-4aa3-a271-629ee816647f",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField28",
+            "designerId": "9bebee98-82d8-4f9e-a669-00a765949ccf"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "groupname"
+            },
+            "name": "MyField29",
+            "designerId": "25d91ffa-e8bc-4133-8608-ceefd216a90e"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "info"
+            },
+            "name": "MyField30",
+            "designerId": "37a8e63b-70b9-493f-9b20-d4cbb2c4c972"
+        }
+    ]
+}

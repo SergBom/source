@@ -1,0 +1,48 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "benzinebenzine",
+        "designer|userClassName": "benzine.benzineViewController"
+    },
+    "designerId": "0e49f96e-0598-4eb9-ae4c-2c55023175ee",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "n"
+                ],
+                "fn": "fnBenzinePlanerGo",
+                "implHandler": [
+                    "var refs = this.getReferences();",
+                    "if(n!==0){",
+                    "    refs.CurrentWeek.setValue( parseInt(refs.CurrentWeek.getValue())+n );",
+                    "}else{",
+                    "    refs.CurrentWeek.setValue( parseInt(0) );",
+                    "}",
+                    "var startOfWeek = moment().startOf('week').add(1+refs.CurrentWeek.getValue()*7,'d'),",
+                    "endOfWeek = moment().endOf('week').add(1+refs.CurrentWeek.getValue()*7,'d');",
+                    "refs.btngrpPlanerWeek.setTitle(startOfWeek.format('YYYY-MM-DD')+' ... '+",
+                    "                               endOfWeek.format('YYYY-MM-DD'));",
+                    "Ext.getStore('benzine.planer').load({",
+                    "    params:{",
+                    "        startOfWeek:startOfWeek.format('YYYY-MM-DD')",
+                    "    }",
+                    "});"
+                ]
+            },
+            "name": "fnBenzinePlanerGo",
+            "designerId": "593d1e81-944c-49d3-8c6b-6cd60711adb0"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "benzine.otdel"
+    },
+    "name": "MyModel",
+    "designerId": "51a6a965-14a9-41f0-adc7-d479ef288dd6",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField25",
+            "designerId": "d74b2a0b-ce9e-4a1c-a896-dd2f29683c5a"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyField26",
+            "designerId": "27e0e612-887a-4d7d-804b-359278cc676f"
+        }
+    ]
+}

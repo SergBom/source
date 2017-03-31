@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EvalEffectives.Jobers",
+        "model": "EvalEffectives.Jobers",
+        "storeId": "EvalEffectives.Jobers"
+    },
+    "name": "MyJsonStore1",
+    "designerId": "659707f8-2571-484d-b403-70d3ea6f55a5",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/EvalEffectives/Jobers-read.php"
+            },
+            "name": "MyAjaxProxy4",
+            "designerId": "ebd2a708-8dbf-4662-8218-a042d006ed68",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader4",
+                    "designerId": "f49a38be-8723-4958-821f-83ffb07b8bd1"
+                }
+            ]
+        }
+    ]
+}

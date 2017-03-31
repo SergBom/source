@@ -1,0 +1,57 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "OpisDel.getYear",
+        "storeId": "OpisDel.getYear"
+    },
+    "name": "MyJsonStore3",
+    "designerId": "9f5591bc-b7d7-4e25-906e-b3615a7a8ebb",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/OpisDel/getYear-list.php"
+            },
+            "name": "MyAjaxProxy5",
+            "designerId": "daafc801-1495-47fb-bb89-b3da342d5fac",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader4",
+                    "designerId": "0c676118-92cc-4ef8-acdb-32255ac86651"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Year"
+            },
+            "name": "MyField12",
+            "designerId": "a81e05b1-0deb-4ec3-aba5-4c1a53b424f1"
+        }
+    ]
+}

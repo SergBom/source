@@ -1,0 +1,75 @@
+{
+    "type": "Ext.tree.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": false,
+        "designer|userAlias": "portalmenuitem",
+        "designer|userClassName": "PortalMenuItem",
+        "height": null,
+        "root": null,
+        "rootVisible": false,
+        "scrollable": true,
+        "title": "",
+        "width": null
+    },
+    "configAlternates": {
+        "scrollable": "boolean",
+        "border": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "root": "object",
+        "rootVisible": "boolean",
+        "title": "string",
+        "width": "auto"
+    },
+    "designerId": "c197c749-4484-4347-ab9d-0125b9990d96",
+    "viewControllerInstanceId": "58c35c30-de2f-4631-bc59-5cba6c9eeafc",
+    "viewModelInstanceId": "b2810f4b-81cd-4f19-96a6-23f0092bfe64",
+    "cn": [
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTreepanelItemClick",
+                "implHandler": [
+                    "console.log(\"ClassName=\"+record.data.className+\" ** index=\"+index+\" ** id=\"+record.data.id+\" ** text=\"+record.get('text'));",
+                    "var mainPanel = Ext.getCmp('PortalMainPanel');",
+                    "var newTab = mainPanel.items.findBy(",
+                    "    function (tab){",
+                    "        return tab.title === record.get('text');",
+                    "    }",
+                    ");",
+                    "if (!newTab){",
+                    "    newTab = mainPanel.add({",
+                    "        xtype: record.data.className,",
+                    "        closable: true,",
+                    "        iconCls: record.get('iconCls'),",
+                    "        title: record.get('text'),",
+                    "        id: record.data.className+'_'+record.data.id",
+                    "    });",
+                    "}",
+                    "mainPanel.setActiveTab(newTab);"
+                ],
+                "name": "itemclick",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onTreepanelItemClick",
+            "designerId": "57bfe0fe-c49d-4454-a567-34d341fc8a9e"
+        }
+    ]
+}
